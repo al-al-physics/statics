@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../css.css" media="screen" title="aleix" />
+</head>
+<body>
+<ul><!root>
+
+<h2><a href="#last" onclick="toggle('cross')">Cross product</a></h2>
+    <ul id="cross" style="display:none"><!cross>
+
+We saw how to multiply two vectors in such a way that we obtained a scalar, but this is not the only way to multiply
+them. We now learn another way, in which the result will not be a scalar but another vector. We call it <i>cross product</i>.
+We take two vectors \(\vec{a}\) and \(\vec{b}\) and, instead of putting a little dot in the middle, we will place a \(\times\). 
+In calculators and in elementary school it is usual to use this symbol for regular multiplication, but in more advanced 
+mathematics it is reserved just for cross products. So we write \(\vec{a}\times\vec{b}\) and this gives another vector that
+we can call \(\vec{c}\). In summary,<br><br>
+
+\(\vec{a}\times\vec{b}=\vec{c}\) <br><br>
+
+Now we need to know how to calculate it. As a curiosity, cross products can only exist in 3 and in 7 dimensions. We will work
+with just 3, of course. But it is important to notice that you cannot have a 2 dimensional cross product, never. We need to
+construct a <i>determinant</i> that looks like<br><br>
+
+<a  href="files/figures/27.png" target=_blank><img src="files/figures/27.png" width=200></a><br><br>
+
+The first row has our three unit vectors for the x,y and z axes. The second row has the components of the first vector in the
+cross product, in this case \(\vec{a}\), and the last row has the components of the second vector in the cross product, in this
+case \(\vec{b}\). No commas here! And notice that the walls are vertical lines. Now see how we operate in it:<br><br>
+
+\(\vec{a}\times\vec{b}=a_yb_z\hat{i}+a_xb_y\hat{k}+a_zb_x\hat{j}-b_xa_y\hat{k}-b_ya_z\hat{i}-a_xb_z\hat{j}\)  <br><br>
+
+These are six terms and they seem difficult to remember, but notice how you can see them graphically:<br><br>
+
+<a  href="files/figures/28.png" target=_blank><img src="files/figures/28.png" width=400></a><br><br>
+
+The first three terms sum, while the three last substract. The first three have negative slope (\) while the last three have positive
+slope (/). Notice as well that in each group of three, the first is a whole diagonal. <br><br>
+
+If you prefer, there is another way of memorizing this. Look how the whole cross product appears when arranged in components:<br><br>
+
+\(\vec{a}\times\vec{b}=(a_yb_z-a_zb_y,a_zb_y-a_yb_z,a_xb_y-a_yb_x)  \) <br><br>
+
+In each component, we always have \(a_ib_j-a_jb_i \), and we always have the two components that do not 'belong' there: in the x-component we have only y's and z's, in the y-component we only have z's and x's 
+and in the z-component we only have y's and x's. Moreover, if we have a 'zy' in the positive term, we have a 'yz' in the negative one. See how
+x,y,z labels change order in the negative term. Finally, see how in the first and third term they appear in order (yz and xy) while in the second term they appear in
+reverse order (zy). <br><br>
+
+Time to practice the cross product. Calculate it for each two given vectors:<br><br>
+
+1. \((2,5,1)\times(3,5,4) \)  <br><br>
+2. \((3,5,4)\times(2,5,1) \)  <br><br>
+3. \((1,-2,-4)\times(3,5,-1) \)  <br><br>
+4. \((3,5,-1)\times(1,-2,-4) \)  <br><br>
+
+At this point, have you noticed what happens when you invert the order of the input vectors? Yes, you get an extra minus sign. While we had<br><br>
+
+\( \vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}\) <br><br>
+\( \vec{a}\times\vec{b}=-\vec{b}\times\vec{a}\) <br><br>
+
+This implies that the scalar product is commutative while the cross product is not. Practice some more:<br><br>
+
+5. \((0,1,-5)\times(2,0,3) \)  <br><br>
+6. \((3,-2,7)\times(7,-2,1) \)  <br><br>
+7. \((1,-4,7)\times(-1,0,4) \)  <br><br>
+
+Now let's see another important property of the cross product. You will be given two vectors, \(\vec{a}\) and \(\vec{b}\). Do the cross product and then 
+call the result \(\vec{c}\). Then do the scalar products \(\vec{a}\cdot\vec{c}\) and \(\vec{b}\cdot\vec{c}\):<br><br>
+
+8.\(\vec{a}=(-2,3,6), \vec{b}=(5,-2,1)  \)  <br><br>
+9.\(\vec{a}=(8,-1,3), \vec{b}=(-9,3,0)  \)  <br><br>
+10.\(\vec{a}=(4,1,-9), \vec{b}=(-2,-1,8)  \)  <br><br>
+
+As you have noticed, the scalar products always give zero. This means that <i>the cross product always gives a vector perpendicular to both vectors
+in the product</i>.<br><br>
+
+Now let's move to a situation that is of great importance in this course. You will have to calculate the cross products of vectors that only have
+nonzero x and y components, like (2,3,0) or (-1,4,0). It could seem that they are in 2 dimensions and we could write (2,3) and (-1,4) but remember,
+cross products only exist in 3 (and 7) dimensions, so we need to keep the third dimension there, even though we set it to zero. Why is this so
+important? Because in this course, almost all the problems will be in two dimensions, x and y. But even if the z-dimensions will seem to be missing,
+it will be there, hidden and subtle, so it is better to understand how and why. As you know, understanding always come with practice, so calculate
+the following cross products:<br><br>
+
+11.\((2,3,0)\times(-1,4,0) \)  <br><br>
+12.\((-1,6,0)\times(-2,-6,0) \)  <br><br>
+13.\((7,-4,0)\times(3,7,0) \)  <br><br>
+14.\((9,2,0)\times(2,9,0) \)  <br><br>
+15.\((-8,-7,0)\times(-2,1,0) \)  <br><br>
+
+What is happening here? Clearly, all results give (0,0,something). Think about it: if the vectors are all in the xy plane, the paper or the blackboard or the
+screen,
+and if the cross product must give a vector that is perpendicular to both of them, what will be its direction? Clearly, perpendicular to the xy plane. So,
+even if the problems seem to be in 2 dimensions, there will be quantities that will try to get out from the paper! Keep this in mind for now. And learn
+how to represent vectors that are perpendicular to the paper.<br><br>
+
+<a  href="files/figures/29.png" target=_blank><img src="files/figures/29.png" width=400></a><br><br>
+
+Then, see these graphical examples and analyze them:<br><br>
+
+<a  href="files/figures/30.png" target=_blank><img src="files/figures/30.png" width=400></a><br><br>
+
+Notice how the z axis is represented!<br><br>
+
+Finally, there is a second method to calculate the cross product, but it can only provide the modulus of the result, not the whole vector.
+If \(\vec{c}=\vec{a}\times\vec{b}\), then, the modulus of \(\vec{c}\) can be given by<br><br>
+
+\(|\vec{c}|=c=|\vec{a}||vec{b}|\sin{\alpha}\) <br><br>
+
+where again, \(\alpha\) is the angle between the two input vectors. Remember that in the scalar product we had a similar expression
+but with the cosine. Here we have the sine, and sadly, the choice of the angle here does affect the total result, so in fact the
+previous expression is not exactly a modulus but a modulus plus a sign, but do not worry about this. What is important is, in simple
+notation, that<br><br>
+
+\(sign|\vec{a}\times\vec{b}|=ab\sin{\alpha}\)<br><br>
+
+This means that if the two input vectors are parallel or antiparallel (forming 180 degrees), the result will be zero. Keep all this in mind with some practice.
+Calculate the modulus (forget about signs here) of the cross product for the following pairs of input vectors. Use the component method and the modulus method
+and calculate the angle between the vectors. Do the same using scalar products and compare the angles you obtain. They should be equal, and if not, here is a
+clue of what could be happening, but don't worry about this:<br><br>
+<a  href="files/figures/31.png" target=_blank><img src="files/figures/31.png" width=400></a><br><br>
+
+
+16.\((1,5,-2),(4,-3,2) \)  <br><br>
+17.\((-2,8,3),(2,7,1) \)  <br><br>
+18.\((4,2,0),(-1,4,0) \)  <br><br>
+
+</ul><!cross>
+
+<h2><a href="#last" onclick="toggle('levers')">Levers</a></h2>
+    <ul id="levers" style="display:none"><!levers>
+
+Brute force is not usually the clever way of doing things. In fact, take the word 'clever' and substract the 'c'. What do we get? That's right, lever!
+You use levers all the time: scissors, doors, your own body, gym machines. They are everywhere. <br><br>
+
+<a  href="files/figures/32.png" target=_blank><img src="files/figures/32.png" width=400></a><br><br>
+
+Look at this picture. We have a seesaw in which a stone of 10 tones competes against a person of 60kg. Is it possible to use the weight of the
+person to equilibrate the seesaw? Of course. See that in a lever we always need a point of support, or hinge, also called <i>fulcrum</i>. A lever
+<i>pivots</i> around the fulcrum. The distance from the fulcrum to the point of application of a force is called the <i>lever arm</i>. Notice that the stone has its own (red
+and short) lever arm, while the person has its own (green and long) lever arm. Of course, the weight (force) of the stone will be greater
+than the person's, but can the difference in <i>leverage</i> compensate the difference in weights? We use the word 'leverage' as using
+a lever to compensate or win something. You will often hear this term in negotiations, when no real levers are in place!<br><br>
+
+Imagine the seesaw is 10m long, and x=0 is where the person is, more or less. The stone is at x=10. What is the x of the fulcrum in order
+to have equilibrium? Intuitively, we see that we need to multiply the length of the lever arm by the force, so we do<br><br>
+
+\( x\cdot 60=(10-x)\cdot 10000\implies x=9.94m\)<br><br>
+
+And if the fulcrum is beyond this position, the person will be able to lift the 10 tones stone! We see now why lever is clever.<br><br>
+
+Take a door knob. Why are they always locate at the other extreme of the rotation axis, where the hinges are located? Imagine a door in which
+the knob were located near the hinges. It would be quite difficult to push or to pull the door! Imagine a pair of scissors. Could you tell
+where the fulcrum is? Are they one or two levers in this case? Think of where you apply the force and where the cut is made. What about a trolley?
+What about your own arm? Think your limbs as levers and your joints as fulcrums. Levers are the clever way to apply forces. <br><br>
+
+But there is one missing ingredient. In all these examples we seem to be applying forces perpendicularly to the direction of the lever arm. Is this
+necessary? Not at all. In general , we can have the following:<br><br>
+
+<a  href="files/figures/33.png" target=_blank><img src="files/figures/33.png" width=400></a><br><br>
+
+Notice that the weight is still perpendicular to the its lever arm, but now on the left we apply a generic force with an arbitrary direction modulated
+by an angle. Think about it, if the angle is less than 90 degrees, or more, will the leverage will be more effective or less? Our intution with levers
+is always right, because we use them since we are born, and it tells us that for angles different from 90 degrees the leverage will be weaker, and in
+fact, for and angle equal to zero (or 180), we will apply no leverage at all! So our formula for the leverage cannot be just (lever arm)(force). It lacks
+something related with the angle, and there you have it:<br><br>
+
+leverage=(lever arm)(force)\(\sin{(angle)}  \) <br><br>
+
+Is this expression familiar to you? <br><br>
+</ul><!levers>
+
+<h2><a href="#last" onclick="toggle('moment')">Moment of force</a></h2>
+    <ul id="moment" style="display:none"><!moment>
+
+
+
+It is the cross product! In the last picture, notice that the lever arms are drawn a bit differently from the previous one,
+we are now depicted at vectors that <i>have their base at the fulcrum</i>. That's right: lever arms will be vectors from now on and they will have their base
+at the fulcrum and the tip at <i>the point of application of the force</i>, or where the force arrow has its base. We will call the lever arm \(\vec{r}_L\), and
+the force \(\vec{F}\) as usual. Then, the leverage will be the cross product of these two vectors, in this order. But the word leverage is not used in physics.
+We will call this vector <i>torque, moment of force or just moment</i>. In physics we usually use torque and depict it by \(\vec{\tau}\), but in this course
+for architecture we will call it just moment and will depict it by \(\vec{M}\). Then, you have the rigorous expression that will be true always given a lever
+arm and a force:<br><br>
+
+\(\vec{M}=\vec{r}_L\times\vec{F}\)<br><br>
+
+As a consequence, if the (International System=IS) unit of distance is the meter (m) and for forces is the Newton (N), the moment will be given in (\(N\cdot m\)). 
+But if your problem gives forces in kiloponds (kp) and distances in centimeters (cm), for example, you can give the moment in \(kp\cdot cm\), althought they will
+not be IS units.<br><br>
+
+Now learn something: <i>a moment of force does not need to be calculated <b>with respect to</b> the fulcrum</i>. This may surprise you, since the
+lever arm emerges from it. The natural choice is always the fulcrum as the base point for the lever arm, but mathematics can also be generalized
+beyond what is intuitive. Then, instead of writing \(\vec{r}_L\) we will simply write \(\vec{r}\) and the moment expression will be written as <br><br>
+
+\(\vec{M}=\vec{r}\times\vec{F}\)<br><br>
+
+where now <i>\vec{r}</i> has its base at a certain arbitrary point P and the moment will be calculated <b>with respect to the point P</b>. Don't worry,
+the tip of the \(\vec{r}\) vector is still at the point of the application of the force. But since the point P is arbitrary and we can choose whatever
+point we want, we will have to include it in our notation. And as we will have many forces in our problems, it is also useful to keep track of the force
+that we are considering. Then, we will write moment as <br><br>
+
+\(\vec{M}(P,\vec{F})=\) Moment done <b>by</b> \(\vec{F}\) <b>with respect to</b> the point P<br><br>.
+
+You will have noticed that the expression <b>with respect to</b> is marked in bold. Why? Because students frequently say 'the moment of the
+point P...' and this is incorrect, and this language reveals a poor understanding of the concept of moment. Give importance to how you say it and learn
+to say it well. Since the moment depends on the choice of P and you can choose the point P you like, you always need to emphasize such point. And since
+the moment is usually produced <b>by</b> a force you need to mention it as well. <br><br>
+
+It can be the case that a moment is given to you without mentionin which force or forces produced it. In that case, just write \(\vec{M}(P)\). What is
+important is that you have clear what is the meaning of each point:<br><br>
+
+-The base of the force vector is the point at which the force is suffered. <br><br>
+
+-The base of the lever arm vector is a point P which can be the fulcrum or not, but then the moment will be calculated with respect to P.<br><br>
+
+-The point P is as well the point at which you have to put <i>the base of the moment vector \(\vec{M}\).</i> <br><br>
+
+Since we are dealing a lot with vectors here, let's learn another trick that will render our pictures more clear sometimes. Consider the situation
+in the figure where we have a fixed column where two points suffer a force:<br><br>
+
+<a  href="files/figures/34.png" target=_blank><img src="files/figures/34.png" width=400></a><br><br>
+
+The situation is clear: sometimes placing the birth of the vector at the suffering point makes the arrow to penetrate into some object in the drawing,
+and all becomes messy and dirty. You are then allowed to shift the vector along its direction line, but in order to remember where the force is
+suffered, keep the base (the little line) where it corresponds. This is very important, because a force always <i>pulls</i> from the suffering
+point, never pushes towards it. And in the clean and green depiction on the right we achieve a clearer representation, yes, but the forces
+seem to be pushing the suffering points. Then, the little line will remind us where the base of the vector is, so we keep the notion that
+forces pull from suffering points, never push them.<br><br>
+
+It is time to practice moments of force. You will be given the position of the fulcrum (P) and the point of the application of a force (Q), so you need to calculate
+the moment in each case. Consider that all distances are given in meters and all forces in Newtons:<br><br>
+19.\( \vec{r}_P=(2,1,0), \vec{r}_Q=(-3,-2,1), \vec{F}=(7,-2,3) \)  <br><br>
+20.\( \vec{r}_P=(5,-8,3), \vec{r}_Q=(-8,-6,-4), \vec{F}=(10,-8,-2) \)  <br><br>
+21.\( \vec{r}_Q=(-9,0,-5), \vec{r}_P=(1,3,-2), \vec{F}=(-2,-7,9) \)  <br><br>
+22.\( \vec{r}_P=(3,-1,-8), \vec{r}_Q=(4,8,3), \vec{F}=(-7,4,-7) \)  <br><br>
+
+And now calculate the <b><i>moment vector</i></b> examples for two-dimensional cases:<br><br>
+23.\( \vec{r}_P=(3,-2), \vec{r}_Q=(4,1), \vec{F}=(8,-3) \)  <br><br>
+24.\( \vec{r}_P=(0,3), \vec{r}_Q=(-7,3), \vec{F}=(10,4) \)  <br><br>
+25.\( \vec{r}_P=(-8,9), \vec{r}_Q=(-1,-2), \vec{F}=(-4,-8) \)  <br><br>
+26.\( \vec{r}_Q=(-4,7), \vec{r}_P=(2,-6), \vec{F}=(-9,-7) \)  <br><br>
+
+At this point, you are surely starting to notice that in this course, since all forces and distances are going to be in the xy plane, all moments
+are going to be in the z direction, either pointing at you or at the paper. Why not dropping \(M_x\) and \(M_y\), which will be always 0, and just
+keep \(M_z\). This is what we are going to do from now: only \(M_z\). You are free to write just \(M\) if you want, as long as you remember that the
+moment is not a scalar, but a vector that in this course is either pointing at you or inside the paper, always perpendicular to it. And as long
+as you remember that what you are really calculating is \(M_z\) and not the whole moment. Here we will always write \(M_z\). Why? Because M is the
+modulus of \(\vec{M}\), and a modulus must be positive by definition, while \(M_z\) can be either positive or negative.<br><br>
+
+
+So if you don't like 3D vectors and determinants you can just use the following:<br><br>
+
+\(M_z=rF\sin\alpha\)
+
+but this comes at a price: <b>signs danger</b>.<br><br>
+
+Let's do a trick to simplify the last expression. Consider the figure:<br><br>
+
+<a  href="files/figures/35.png" target=_blank><img src="files/figures/35.png" width=400></a><br><br>
+
+Here we have the point P (our choice), a force and a lever arm. Yes, we still call it lever arm even though
+it is not necessarily pinned at the fulcrum (sometimes there is no fulcrum after all!). Notice how we extend
+the line of the lever arm so you can easily depict the angle between the two vectors. The sine of this angle
+is what you would need to introduce in the previous formula. Remember: to visualize the angle between two 
+vectors, it is useful to place the two bases together. But there is a trick that we can do. Notice that we
+have extended the force line as well. What if we make the force vector run along this line? Like this:<br><br>
+
+<a  href="files/figures/36.png" target=_blank><img src="files/figures/36.png" width=400></a><br><br>
+
+We have shifted the force vector until a point at which its perpendicular crosses P. Why would we want to do
+such a weird thing? If the force would be there, what would <i>the new lever arm</i>? Look at it:<br><br>
+
+
+<a  href="files/figures/37.png" target=_blank><img src="files/figures/37.png" width=400></a><br><br>
+
+So now the lever arm and the force are perpendicular to each other! And what is the reason to do that? Well,
+the sine of 90 degrees is 1, so if we do this we can forget about the sine, and just write<br><br>
+
+\(M_z=r'F\)<br><br>
+
+But wait a minute. Is this legal? We have spent a big deal of time saying that it is important that vectors, and
+specially forces, must be pinned at the suffering points. Can we really slide and shift forces along their directions?
+The answer is <b>no</b>. What we have done here is just a trick, an imaginary voyage to get rid of the sine, but the situation
+is not real. However, it gives the correct result. The reason is simply that \(r'=r\sin{\alpha}\), as you can see from the pictures.
+The false lever arm r' is just the opposite cathetus of the real lever arm, which is the hypotenuse. Conclusion: this trick does
+not represent a real situation for the forces, but it gives a correct result, so we will use it, all the time. Just remember where
+it comes from.<br><br>
+
+</ul><!moment>
+
+
+<h2><a href="#last" onclick="toggle('screw')">Screw that moment!</a></h2>
+    <ul id="screw" style="display:none"><!screw>
+
+Are you familiar with screws and screwdrivers? If not, grab some and get some intuition on them before resuming the work here. When we turn
+a screw in a clockwise direction (like the hands of a clock), we tighten it, or in other words, we make it penetrate the wall or whatever the
+object. Its direction of motion will be towards the surface. On the other hand, if we turn the screwdriver in a counterclockwise direction (against
+the hands of a clock), the screw is loosened and its motion is towards us. Remember now the vectors perpendicular to the paper and relate them
+with screwing directions, as we can see in the figure:<br><br>
+
+<a  href="files/figures/38.png" target=_blank><img src="files/figures/38.png" width=400></a><br><br>
+
+In blue, we have the vector going towards us (which matches the orientation of the z axis, this is important) and it can be depicted with a circle
+with a dot in the middle or just with a clockwise turn. This implies a positive moment. On the other hand, the vector pointint towards the paper,
+has a negative moment, and it can be depicted either with the crossed-circle or with a counterclockwise turn. Let's insist on the fact that the
+sign of the moment has to be the consistent with the orientation of the z axis, so always draw in your problems the xyz frame, and always in the
+same form. Be careful because other books may use different conventions for the signs!<br><br>
+
+Now, consider a point P of our choice and a force vector applied to the suffering point Q. We need you to imagine that we have a pin, a pencil and 
+a piece of cotton thread. We do a lace on the pencil and another at the pin, so now the pin and the pencil are connected by the thread. Then we attach
+the pin to the point P so it remains there, fixed. But we can move the pencil. The idea is that we put the pencil at the suffering point and then start
+to draw following the arrow of the force. Every time you calculate a moment you should picture this scenario in your mind, and then ask: what kind of 
+circumference will the pencil draw on the paper? Clockwise or counterclockwise? If it is clockwise, the moment will be negative, and if it is counterclockwise,
+the moment will be positive. Always do this mental exercise and check the sign of the moment, and correct it by hand if necessary. In the following
+picture we see this phenomena for a positive moment case:<br><br>
+
+<a  href="files/figures/39.png" target=_blank><img src="files/figures/39.png" width=400></a><br><br>
+
+And now for a negative moment case:<br><br>
+
+<a  href="files/figures/40.png" target=_blank><img src="files/figures/40.png" width=400></a><br><br>
+
+
+Again, if we are not using strict 3D vectors, signs are troubling, and we need to make a choice. When there is a force that we already know,
+we do what we showed in the two pictures above, and we are done: we will know the sign of the moment. But but happens when we don't know the
+force yet? Many times, we have an unknown force and we need to calculate <b><i>the moment that this unknown force does!</i></b> That can be
+troubling. As we did with forces, we have to make a hypothesis vector and draw it, and we need to play the pin/thread/pencil movies <b><i>as if
+the hypothesized force were true.</i></b> We have two choices, the sames as with forces: the first choice is to depict the unknown force as 
+positive in all components (looking towards the NorthEast, or up-right) and then we will get all the signs correctly. The second choice is,
+again, to draw the force in a direction that looks intuitive to us, but the price is that the sign of the force that we obtain will not
+be its true sign, but rather an indicator that the hypothesis was wrong (if -) or right (if +) and then we need to fix the signs by hand. 
+Whatever method you decide, use the same as you did in the last section and master it!<br><br>
+
+We already know the first law of statics,<br><br>
+
+\( \sum_i\vec{F}=\vec{0}\)<br><br>
+
+but now you need to add the second law,
+
+\( \sum_i\vec{M}=\vec{0}\)<br><br>.
+
+Conclusion: all forces must add up to nothing, and the same must be true for moments. With this knowledge you are ready to solve some exercises.<br><br>
+
+27. In the following figure you have a static frame. Don't worry about its staticity now: the reactions at the ground will take of that. You have a force
+applied to each of the marked points. In blue you can read the modulus of each. What you need to do is to calculate the moment made <b>by</b> each force
+<b>with respect to</b> each point. There are 9 points and 9 forces, so you need to calculate 81 moments. It is very important that in each moment you
+specify between ( ) the force that produces it and the point of reference. Otherwise it will be a mess. Good luck!<br><br>
+
+<a  href="files/figures/41.png" target=_blank><img src="files/figures/41.png" width=400></a><br><br>
+
+Congratulations! Now you are ready to begin the official list of problems. <br><br>
+
+</ul><!screw>
+<h2><a href="#last" onclick="toggle('solu3')">Solutions</a></h2>
+    <ul id="solu3" style="display:none"><!solu3>
+
+<h2>Cross product</h2>
+
+1. (15, -5, -5) <br><br>
+ 
+2. (-15, 5, 5) <br><br>
+
+3. (22, -11, 11) <br><br>
+
+4. (-22, 11, -11) <br><br>
+
+5. (3, -10, -2) <br><br>
+
+6. (12, 46, 8) <br><br>
+
+7. (-16, -11, -4) <br><br>
+
+8. (15, 32, -11) <br><br>
+
+9. (-9, -27, 15) <br><br>
+
+10. (-1, -14, -2) <br><br>
+
+11. (0, 0, 11) <br><br>
+
+12. (0, 0, 18) <br><br>
+
+13. (0, 0, 61) <br><br>
+
+14. (0, 0, 77) <br><br>
+
+15. (0, 0, -22) <br><br>
+
+16. cross: 59.4329º, scalar: 120.567º<br><br>
+
+17. cross: 31.4667º, scalar: 31.4667º <br><br>
+
+18. cross: 77.4712º, scalar 77.4712º <br><br>
+
+<h2>Moment of force</h2>
+
+19. (-7, 22, 31) <br><br>
+
+20. (-60, -96, 84) <br><br>
+
+21. (-48, 96, 64) <br><br>
+
+22. (-107, -70, 67) <br><br>
+
+23. (80, 0, -27) <br><br>
+
+24. (0, 0, -28) <br><br>
+
+25. (0, 0, -100) <br><br>
+
+26. (0, 0, 159) <br><br>
+
+<h2>Screw that moment!</h2>
+
+27. 
+
+
+
+
+
+<br><br>
+
+
+</ul><!solu3>
+
+<br><br>
+
+
+</ul><!root>
+<!Code to expand/collapse branches>
+<script type="text/javascript">
+function toggle(id) {
+  var e = document.getElementById(id);
+  if (e.style.display == '')
+    e.style.display = 'none';
+  else
+    e.style.display = '';}
+function toggle2(id, link) {
+  var e = document.getElementById(id);
+  if (e.style.display == '') {
+    e.style.display = 'none';
+    link.innerHTML = 'Expand';
+  } else {
+    e.style.display = '';
+    link.innerHTML = 'Collapse';  }}
+</script>
+</body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../css.css" media="screen" title="aleix" />
+</head>
+<body>
+<ul><!root>
+
+<h2><a href="#last" onclick="toggle('sums')">Sums</a></h2>
+    <ul id="sums" style="display:none"><!sums>
+
+A first thing to know here is the symbol \(\Sigma\), which is the capital S of the Greek alphabet, Sigma. In mathematics 
+it is used to call a Sum (or a \(\Sigma\)um if you like). It has a subscript and a superscript,<br><br>
+
+\(\Sigma_{i=1}^n \)  <br><br>
+
+This expression means: 'sum from i=1 up to i=n whatever is on the right, incrementing i one by one, i->1,2,3,...,n'.<br><br>
+Don't confuse this i, which is just an index, with the imaginary number! Let's see some examples: <br><br>
+
+\(\Sigma_{i=1}^3 i^2\)=1^2+2^2+3^2=1+4+9=14  <br><br>
+
+\(\Sigma_{i=1}^4 i(i-1)\)= 1(0)+2(1)+3(2)+4(3)=0+2+6+12=20 <br><br>
+
+\(\Sigma_{i=2}^7 -i)\)= -2-3-4-5-6-7=-27 <br><br>
+
+Now it is your turn practising this: <br><br>
+
+1. \(\Sigma_{i=1}^4 (1-i)\)  <br><br>
+2. \(\Sigma_{i=1}^3 1/i^2\)  <br><br>
+3. \(\Sigma_{i=1}^3 (-1)^ii\)  <br><br>
+4. \(\Sigma_{i=0}^4 i+i^2\)  <br><br>
+
+We will use the Sum symbol essentially to sum forces, as we will see later. Usually, you will encounter just
+a \(\Sigma\) without sub or superscripts. In this case, it means that you just need to sum over all the forces
+you have. 
+
+</ul><!sums>
+
+<h2><a href="#last" onclick="toggle('partsvec')">Parts of a vector</a></h2>
+    <ul id="partsvec" style="display:none"><!partsvec>
+
+
+Graphically, a vector is just an arrow. As an arrow, it will have a length or <i>modulus</i> or <i>magnitude</i>. It will also have a
+<i>direction</i>, which is the inclination or slope of the straight line to which it belongs (or to which is parallel), and the orientation
+of the tip of the arrow. In other languages, such Spanish, direction (dirección) is referred just to the slope, while orientation (sentido) is 
+where the tip of the arrow points. Let's see all this in a figure:<br><br>
+
+<a  href="files/figures/08.png" target=_blank><img src="files/figures/08.png" width=400></a><br><br>
+
+In the figure we have a vector with a horizontal direction (dirección), right orientation (sentido) and with some magnitude or length marked on it.
+We have also marked the tip, which gives the vector its orientation and the base (or tail) of the vector, an important part about which we will talk 
+later. 
+
+In the following picture we present two vectors with same magnitude, same direction, but opposing orientations (sentidos).<br><br>
+
+<a  href="files/figures/09.png" target=_blank><img src="files/figures/09.png" width=400></a><br><br>
+
+Mathematically, we usually represent vectors with <i>components</i>, and the name of the vector has a little arrow over it, so we write<br><br>
+
+\(\vec{a}=(a_x,a_y,a_z)\).<br><br>
+
+Notice that components are separated by commas and that all the components are encapsulated by (). This was an example in 3 dimensions, and that is
+why we had 3 components. In 4D we would have four components, and in 2D just two. What would a vector be with just one component? This would be just a
+single number, also called a <i>scalar</i>. In the example above, \(a_x\) is the x-component of the vector \(\vec{a}\), while \(a_y\) and \(a_z\) are 
+the y and z components, respectively. We know that in space we have three axis, x, y and z, so each component is the <i>projection</i> of the vector
+into its corresponding axis. In this course, we will mainly work in 2D, so let's give an example:<br><br>
+
+<a  href="files/figures/10.png" target=_blank><img src="files/figures/10.png" width=400></a><br><br>
+
+Let's analyze this figure in depth because it is very important. We have an inclined vector in a x-y plane. We depict red light to make a projection
+into the x axis. Such light will give a shadow of the whole vector into the x axis. This is the definition of a projection: a shadow done by a light
+that shines perpendicularly to the axis where we project. The blue light gives the other shadow, which is the y-component of the vector. A final, and a
+very important thing to notice here is that <i>the vector plus the two components always form a right-angled triangle!</i> in which the vector will give
+the hypotenuse and the two components will be the two other sides. We will use this result all the time in this course. 
+
+</ul><!partsvec>
+
+<h2><a href="#last" onclick="toggle('unit')">Magnitude and unit vectors</a></h2>
+    <ul id="unit" style="display:none"><!unit>
+
+We define the magnitude or the modulus \(|\vec{a}|\) of a vector \(\vec{a}\) in a very simple way: it is simply the length of the hypotenuse! So we apply Pythagoras' theorem to 
+write<br><br>
+
+\(|vec{a}|\)\equiv a\equiv \sqrt{a_x^2+a_y^2+a_z^2+\ldots}<br><br>
+
+where \(\equiv\) means 'definition', and the \ldots indicate that we could add more components if we are in higher dimensional spaces. Notice as well that we write the
+modulus as the vector with two vertical bars or simply the letter without the arrow above. And, as we have built a right-angled rectangle, notice that we can relate
+the different sides with the triangle's angles by means of the basic trigonometric functions. For example, the angle \(\theta\) can be used to notice that<br><br>
+
+\(\sin{\theta}=\frac{a_y}{a}\qquad\cos{\theta}=\frac{a_x}{|\vec{a}|}\qquad \tan{\theta}=\frac{a_y}{a_x} \) <br><br>
+
+We define a <i>unit vector</i> as a vector that has modulus=1. Unit vectors carry a hat above instead of an arrow, so \(\hat{b}\) would be a vector with magnitude
+equal to one. Can we build a unit vector \(\hat{a}\) if we know \(\vec{a}\)? Of course, we only need to divide by its modulus! So, if we have \(\vec{a}\) and we want
+to calculate its unit vector we simply do<br><br>
+
+\(\hat{a}=\frac{\vec{a}}{a}=(\frac{a_x}{a},\frac{a_y}{a},\frac{a_z}{a}) \)  <br><br>
+
+Let's practice this! Calculate the unit vector for the following non-unit vectors:<br><br>
+
+5.\((4,3)  \)<br><br>
+6.\((-1,2,-3)  \)<br><br>
+7.\(4,3,2,1) \)<br><br>
+8.\((0,-2,1) \)<br><br>
+
+The unit vectors allow us to introduce a set of three very important vectors: \(\hat{i}\), \(\hat{j}\) and \(\hat{k}\). Yes, you have guessed it, they all
+are unit vectors! Their definitions are<br><br>
+
+\(\hat{i}\equiv (1,0,0)  \)<br>
+\(\hat{i}\equiv (0,1,0)  \)<br>
+\(\hat{i}\equiv (0,0,1)  \)<br><br>
+
+So notice that they are the unit vectors that are parallel to the x, y and z axis, respectively. We introduce these vectors because regular vectors can be 
+written either with components and also as <i> sums</i> of \(\hat{i},\hat{j},\hat{k}\) vectors. For example, notice that<br><br>
+
+\((3,4,2)=3(1,0,0)+4(0,1,0)+2(0,0,1) \)  <br><br>
+
+where we need to learn that a scalar (a simple number) multiplied by a vector penetrates into all the components and multiplies all of them:<br><br>
+
+\( 3(a_x,a_y,a_z)=(3a_x,3a_y,3a_z)\) <br><br>
+
+Consequently, in the previous example, we can notice that we can simply write<br><br>
+
+\((3,4,2)=3\hat{i}+4\hat{j}+2\hat{k}<br><br>
+
+Let's practice this. Write the following vectors from components to unit-vectors notation:<br><br>
+
+9.\( (4,2) \) <br><br>
+10.\( (2,-1,3) \) <br><br>
+11.\( (3,1,-4) \) <br><br>
+12.\( (2,-1) \) <br><br>
+
+In each case, perform the modulus of the final vector to check that it is unitary! Now the opposite, just transform the unit-vectors notation into component form: <br><br>
+
+13.\(-\hat{i}+3\hat{j}-4\hat{k} \) <br><br>
+14.\(4\hat{j}-9\hat{i}+\frac{3}{2}\hat{k} \) <br><br>
+15.\(-8\hat{k}+(\frac{3}{2}-\frac{1}{3})\hat{j}+3\hat{i} \) <br><br>
+16.\(-2\hat{i}+7\hat{j}-4\hat{k}-3\hat{j}+6\hat{k}-8\hat{i} \) <br><br>
+17.\(10\hat{i}+2\hat{j}-9\hat{j}-8\hat{i} \) <br><br>
+
+</ul><!unit>
+
+<h2><a href="#last" onclick="toggle('add')">Add and substract vectors</a></h2>
+    <ul id="add" style="display:none"><!add>
+
+So now you are ready to practice sums and substractions of vectors. Have fun!<br><br>
+18.\( (2,3)-(-1,4)+(8,-7)  \)<br><br>
+19.\( (-1,3)-(-3,-4)+(-13,-14)  \)<br><br>
+20.\( (2,0,-3)+(-6,2,1)-(-3,-7,2)  \)<br><br>
+21.\( (13,-42,14)-(15,-22,-21)+(21,-12,-31)  \)<br><br>
+22.\( 3\hat{i}-(2,-6,3)+4\hat{k}-(-1,-1,-1)+8\hat{i} \)<br><br>
+23.\( 8\hat{k}+4(-21,2,5)+2\hat{i}+3(-2,-11,-13)+2\hat{j} \)<br><br>
+
+What is the graphical meaning of adding vectors? We can summarize vector addition in just one rule:<br><br>
+
+<i>Connect the base of one vector to the tip of the previous vector, and repeat this process until you build a chain with all the vectors to
+be added. The order in which you chain the vectors is not important.
+When finished, make a new vector by connecting the base of the first vector to the tip of the last. This new vector is the sum. </i>
+
+Let's look at an example:<br><br>
+
+<a  href="files/figures/11.png" target=_blank><img src="files/figures/11.png" width=400></a><br><br>
+
+Here we have the following sum (notice the Sum symbol!): <br><br>
+
+\(\vec{a}=\sum_i\vec{a}_i=\vec{a}_1+\vec{a}_2+\vec{a}_3+\vec{a}_4+\vec{a}_5  \) <br><br>
+
+where <br><br>
+
+\(\vec{a}_1=(2,4)  \)  <br><br>
+\(\vec{a}_2=(0,3)  \)  <br><br>
+\(\vec{a}_3=(4,-2)  \)  <br><br>
+\(\vec{a}_4=(3,2)  \)  <br><br>
+\(\vec{a}_5=(0,-4)  \)  <br><br>
+
+so the sum gives, just by looking at the total arrow and counting squares,<br><br>
+
+\(\vec{a}=(9,3)  \)  <br><br>
+
+Using a grid paper, do the following vector sums by using the graphical method:<br><br>
+
+24.\( (2,3)+(-1,3)+(6,-1)  \)<br><br>
+25.\( (-1,-2)+(4,4)+(-1,-2)  \)<br><br>
+26.\( (3,1)+(0,4)+(-3,-2)  \)<br><br>
+27.\( (2,0)+(1,3)+(2,4)  \)<br><br>
+
+What about substracting vectors? Very easy: simply displace the minus operator into the coordinates so outside we get a '+', <br><br>
+
+\( (2,4)-(3,1)-(5,-7)=(2,4)+(-3,-1)+(-5,7)\)  <br><br>
+
+Notice that when you displace the minus into the vector, you are in fact reversing its orientation. Let's see an example:<br><br>
+
+\(\vec{a}=\vec{a}_1-\vec{a}_2+\vec{a}_3+\vec{a}_4-\vec{a}_5  \) <br><br>
+
+where, if we convert this into a sum, we perform the trick in the second and fifth vectors,<br><br>
+
+\(\vec{a}=\vec{a}_1+(-\vec{a}_2)+\vec{a}_3+\vec{a}_4+(-\vec{a}_5)  \) <br><br>
+
+Graphically, we have the following:<br><br>
+
+<a  href="files/figures/12.png" target=_blank><img src="files/figures/12.png" width=400></a><br><br>
+
+Notice how we have simply inverted the orientation of the second and fifth vectors, but then the rule of chaining tip-with-base must
+hold, so the total vector is different now. Practice yourself this method with a grid paper, again without doing numbers, just graphically.<br><br>
+
+28.\( (2,3)-(-1,3)-(6,-1)  \)<br><br>
+29.\( (-1,-2)-(4,4)-(-1,-2)  \)<br><br>
+30.\( (3,1)-(0,4)-(-3,-2)  \)<br><br>
+31.\( (2,0)-(1,3)-(2,4)  \)<br><br>
+
+</ul><!add>
+
+
+<h2><a href="#last" onclick="toggle('scalar')">Scalar product</a></h2>
+    <ul id="scalar" style="display:none"><!scalar>
+
+Now you are ready to learn the <i>scalar product</i>, also called dot product. You already know that a scalar is just a number, so the scalar product is just an operation
+that takes two vectors and outputs a single scalar. The symbol for this product is a little dot \(\cdot\) put between the two vectors of interest,
+like \(\vec{a}\cdot\vec{b}\). That would be the scalar product of \(\vec{a}\) and \(\vec{b}\). <i>There are two ways of perfoming this operation.</i>
+The first way is by using components:<br><br>
+
+\(\vec{a}\cdot\vec{b}=a_xb_x+a_yb_y+az_b_z+\ldots   \)<br><br>
+
+where the \(\ldots\) are for more dimensions. The rule is very simple: take the first coordinates of the two vectors and multiply them, then do
+the same with second coordinates, with third coordinates... and finally sum all these results to give a final number. Practice this method, by hand:<br><br>
+
+32.\( (3,4)\cdot(4,-2) \)<br><br>
+33.\( (-1,2)\cdot(3,-7) \)<br><br>
+34.\( (1,-3)\cdot(2,2/3) \)<br><br>
+35.\( (4,1,-4)\cdot(1,-3,-1) \)<br><br>
+36.\( (1,0,2)\cdot(0,13,0) \)<br><br>
+37.\( (6,4,2)\cdot(2,-2,4) \)<br><br>
+38.\( (-2,7,6)\cdot(4,4,4) \)<br><br>
+39.\( (-3/1,-5/2,-7/2)\cdot(-5/3,-2/4,-1/4) \)<br><br>
+
+The second method consists in calculating the modulus of both vectors, so the scalar product is<br><br>
+
+\(\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos{\alpha} \)=ab\cos{\alpha}  <br><br>
+
+where \(\alpha\) is the angle formed between the two vectors. But which one, you can think. There are two choices for such angle, as
+we can see in the figure:<br><br>
+<a  href="files/figures/13.png" target=_blank><img src="files/figures/13.png" width=400></a><br><br>
+
+You will always have this dychotomy, and only the context will tell which of the two angles is the one you wish. However, for the
+scalar product there are good news: both angles give the same cosine, so each choice will give the same scalar product!
+In other words, \(\cos{\alpha_1}=\cos{\alpha_2}\). If you go back to
+the picture of the unit circle in the basic trigonometry section you will clearly see why is that. <br><br>
+
+</ul><!scalar>
+
+<h2><a href="#last" onclick="toggle('anglesvec')">Angles between vectors</a></h2>
+    <ul id="anglesvec" style="display:none"><!anglesvec>
+
+The fact that we have two ways of calculating the same thing gives us a powerful tool: if we are given two vectors and we want to know
+the angle formed between them, we can calculate the scalar product by the component method, calculate the modulus of both and isolate the
+term of the cosine. Then we apply the inverse cosine and get the angle. Notice that inverse trigonometric functions do not have unique results,
+as different angles can give the same cosine (or sine). Let's practice this. You will be given two vectors and you need to calculate the two possible
+angles (in degrees) between them. The calculator will give you one, and then you need to give its complementary (hint: both must sum 360 degrees):<br><br>
+
+40.\( (1,2), (2,-2) \)<br><br>
+41.\( (3,5), (1,7) \)<br><br>
+42.\( (7,-3), (-2,-4) \)<br><br>
+43.\( (8,1,-3), (-2,3,-9) \)<br><br>
+44.\( (3,-5,2), (-5,4,6) \)<br><br>
+45.\( (4/2,7/2,5/3), (-4/16,-2/3,4/6) \)<br><br>
+46.\( (3/2,2/3,-9/36), (2/4,-2/8,3/9) \)<br><br>
+
+(Whenever you are presented with a fraction, try to reduce it first if you can). Which angle gives your calculator in each case?<br><br>
+
+Notice that if two vectors give a zero scalar product, it means that <i>both vectors are mutually perpendicular</i>.
+
+</ul><!anglesvec>
+
+<h2><a href="#last" onclick="toggle('projections')">Projections</a></h2>
+    <ul id="projections" style="display:none"><!projections>
+
+The scalar product is very useful, and ubiquitous in physics. For example, to calculate mechanical power you multiply the force by velocity
+\(\vec{F}\cdot\vec{v}\), or to calculate an electric flux we multiply the electric field by the surface vector, \(\vec{E}\cdot\vec{dS}\). You
+don't need to know this here, but remember that scalar products are everywhere, so learn them well. Here we will learn a second and very useful
+thing to do with these products: to project vectors into other directions. We already know that a component x of a vector is the projection of
+a vector into the x axis. But we also know that the x axis is characterized by the unit vector \(\hat{i}\). Then, what happens if we do the
+scalar product of a vector \(\vec{a}\) and the unit vector \(\hat{i}\)? Let's see:<br><br>
+
+\(  \vec{a}\cdot\hat{i}=(a_x,a_y,a_z)\cdot (1,0,0)=a_x\)  <br><br>
+
+So we deduce that in order to project a vector \(\vec{a}\) into a direction defined by a vector \(\vec{b}\) what we need is to do
+the scalar product of \(\vec{a}\) and the unit-vector version of \(\vec{b}\) which is \(\hat{b}\). Summarizing:<br><br>
+
+<i>The projection of \(\vec{a}\) into a direction defined by \(\vec{b}\) is \(\vec{a}\cdot\hat{b}\).</i><br><br>
+
+Let's practice this new tool. Calculate the projection of the first given vector into the direction given by the second:<br><br>
+
+47.\( (3,1), (1,-2) \)<br><br>
+48.\( (1,3), (-1,4) \)<br><br>
+49.\( (7,2), (-2,-3) \)<br><br>
+50.\( (-2,2), (6,-7) \)<br><br>
+51.\( (2,-1,4), (2,-5,-2) \)<br><br>
+52.\( (6,-9,5), (-3,8,6) \)<br><br>
+53.\( (2,-1,-4), (5,4,-6) \)<br><br>
+54.\( (-4,6,8), (-3,-5,2) \)<br><br>
+
+As you see, you are getting a scalar, a number. This is in fact the <i>length of the projection</i>. <i>What if we want the total projection vector</i>?
+Easy, we multiply the length of the projection by the unit vector of the direction of the projection (\(\hat{b}\)). So the whole thing becomes:<br><br>
+
+<i>The vector projection of \(\vec{a}\) into a direction defined by \(\vec{b}\) is \((\vec{a}\cdot\hat{b})\hat{b}\).</i> <br><br>
+
+Practice this by calculating the projection vector of the first vector into the direction defined by the second. Here you will only work with 2 dimensions
+because appart from the calculation you must draw the whole picture and understand the concept of projection. Draw the initial vector to be projected,
+draw the projection direction defined by \(\vec{b}\) as a whole and extended straight line. Then draw the projection length as a shadow and finally the
+projection vector along the straight line. Use grid paper and count one square as the unit.<br><br>
+
+55.\( (6,3), (1,0) \)<br><br>
+56.\( (2,4), (0,1) \)<br><br>
+57.\( (2,-4), (2,4) \)<br><br>
+58.\( (-3,2), (-1,4) \)<br><br>
+59.\( (7,7), (-2,-4) \)<br><br>
+60.\( (5,2), (2,-3) \)<br><br>
+
+</ul><!projections>
+
+
+<h2><a href="#last" onclick="toggle('positions')">Position and displacement vectors</a></h2>
+    <ul id="positions" style="display:none"><!positions>
+
+
+Each point in space is described by a position vector \(\vec{r}=(x,y,z)\). What is important here is that the base of the vector will always be
+anchored at the origin (0,0,0), while the tip of the arrow will be pinned at the point we are describing. <br><br>
+
+<a  href="files/figures/14.png" target=_blank><img src="files/figures/14.png" width=400></a><br><br>
+
+Can we have a vector which is not attached to the origin, but going from point A to point B instead? Yes, but that would not be a position vector
+but a <i>displacement</i> vector, and we will write with a capital Greek letter Delta \(\Delta\). Then, <br><br>
+
+\(\Delta\vec{r}=\vec{r}_{final}-\vec{r}_{\initial}\)  <br><br>
+
+Remember this: an increment \(\Delta\) is always 'final minus initial', while the vector will point from initial (base) to final (tip). Let's
+draw this:<br><br>
+
+<a  href="files/figures/15.png" target=_blank><img src="files/figures/15.png" width=400></a><br><br>
+
+
+From these given position vectors, draw them and draw also the displacement vector from the first to the second. Check the result by calculating
+the substraction using components:<br><br>
+
+61.\( (1,3), (4,-2) \)<br><br>
+62.\( (-2,-3), (2,8) \)<br><br>
+63.\( (1,-2), (9,-7) \)<br><br>
+64.\( (-3,6), (-6,5) \)<br><br>
+
+Now, drawing again and also calculating the numbers to check the result, calculate the position vector \(\vec{r}_2\) if we give first \(\vec{r}_1\) and
+second \(\Delta\vec{r}=\vec{r}-\vec{r}_1\):<br><br>
+
+65.\( (2,-6), (-7,3) \)<br><br>
+66.\( (2,-3), (1,2) \)<br><br>
+67.\( (4,-2), (9,-7) \)<br><br>
+68.\( (-5,5), (7,5) \)<br><br>
+
+<br><br>
+
+</ul><!position<>
+
+<h2><a href="#last" onclick="toggle('signscomp')">Signs of the components</a></h2>
+    <ul id="signscomp" style="display:none"><!signscomp>
+
+
+
+Let's consider a displacement vector \(\Delta\vec{r}\) in two dimensions, as most often will be the case in this course. It will have two components
+\((\Delta x,\Delta y)\). Notice that each component can have a positive or a negative sign. There are four combinations in total, which are:<br><br>
+
+(+,+), (-,-), (+,-), (-,+) <br><br>
+
+We can see this in a picture:<br><br>
+
+<a  href="files/figures/16.png" target=_blank><img src="files/figures/16.png" width=400></a><br><br>
+
+(+,+) means we go NorthEast (NE). <br>
+(-,-) means we go SouthWest (SW). <br>
+(+,-) means we go NorthWest (NW). <br>
+(-,+) means we go SouthEast (SE). <br>
+
+Why is this important? Imagine that you need to guess a vector, and you are given the direction, but not the orientation. Then, you
+can already discard two of the fourth choices. Let's see the examples:<br><br>
+
+In the first example we are given a (black) direction. Then we can see how only the (+,+) and the (-,-) are compatible. <br><br>
+
+<a  href="files/figures/17.png" target=_blank><img src="files/figures/17.png" width=400></a><br><br>
+
+If you are able to calculate the sign of one component, then you will know the sign of the other <i>automatically</i>.
+The other case is the following. We are given another direction and only the (-,+) and (+,-) choices are compatible.
+Again, if you get to know one sign, automatically you know the other.<br><br>
+
+<a  href="files/figures/18.png" target=_blank><img src="files/figures/18.png" width=400></a><br><br>
+
+This will be very important through the course. Let's put it into practice. You will have to rebuild a vector \(\vec{a}\) from the 
+following ingredients: you will know the sign of the slope, + is / and - is \, the modulus and one component. Give the whole vector:<br><br>
+
+69. + , 7, \(a_x=2\)<br><br>
+70. - , 5, \(a_y=-1\)<br><br>
+71. - , 11, \(a_y=3\)<br><br>
+72. + , 8, \(a_x=-5\)<br><br>
+73. - , 13, \(a_y=-6\)<br><br>
+74. + , 9, \(a_y=-4\)<br><br>
+
+</ul><!signscomp>
+
+
+
+<h2><a href="#last" onclick="toggle('forces')">Forces</a></h2>
+    <ul id="forces" style="display:none"><!forces>
+
+
+Forces are also vectors, written as \(\vec{F}=(F_x,F_y,F_z)\). Remember this:
+
+<i>The base of a force vector \(\vec{F}\) must be pinned at the point which <b>suffers</b> such force.</i><br><br>
+
+Don't forget that a force must be produced by someone and suffered by someone else. We always draw on an object the
+forces that this object is suffering, and not the ones that it is producing, which will be depicted at other places. 
+Of course, by the third law of Newton, we know that if we have two particles A and B and A produces a force \(\vec{F}_{A\to B}\) on B, B
+will answer with a force \(\vec{F}_{B\to A}=-\(\vec{F}_{A\to B}\)\). Graphically, we need to draw:<br><br>
+
+<a  href="files/figures/19.png" target=_blank><img src="files/figures/19.png" width=400></a><br><br>
+
+Notice that both forces are pinned at the suffering points. Notice also the dotted line to indicate that both action and reaction must lie
+on this same line. <br><br>
+
+The second law of Netwon's mechanics is that (when the object does not experience changes in its mass),<br><br>
+
+\( \sum_i\vec{F}_i=m\vec{a}\) <br><br>
+
+where \(m \) is the mass of the object (assumed constant here) and \(\vec{a}\) is the acceleration of the object. The sum on the left simply means:
+'sum over all the forces suffered by this object' and then we will obtain the acceleration experienced by it as a consequence. 
+
+But do not worry about accelerations, because this course is about <i>statics</i>, which means that we are interested in objects that do not
+accelerate. Then, through all the course we simply set \(\vec{a}=\vec{0}\), which gives the first law of statics:<br><br>
+
+\( \sum_i\vec{F}_i=\vec{0}\)<br><br>
+
+Notice that i is an index meaning that we need to consider all possible forces acting on the object, and see as well how a vector zero needs to have 
+a little arrow above.<br>
+
+In the International System of Units, forces are measured in Newtons (N). Learn that \(1N=\frac{1kg\cdot m}{s^2}\). <br><br>
+
+
+Let's practice this a bit. You will be given a set of 3 forces and you need to calculate an extra force 4 that will render the system static:<br><br>
+75.\( ( \vec{F}_1=(2,-3,6)N\qquad \vec{F}_2=(4,6,-7)N\qquad\vec{F}_3=(-4,5,13)N \)<br><br>
+76.\( ( \vec{F}_1=-(1,4,-6)N\qquad \vec{F}_2=(-8,2,4)N\qquad\vec{F}_3=(1,0,-11)N \)<br><br>
+77.\( ( \vec{F}_1=(-75.1,12.5,-2.0)N\qquad \vec{F}_2=-(8.5,62.1,-21.3)N\qquad\vec{F}_3=(-4.3,5.2,17.6)N \)<br><br>
+78.\( ( \vec{F}_1=(-72.0,32.5,7.4)N\qquad \vec{F}_2=(0.2,-31.4,-73.5)N\qquad\vec{F}_3=(-4.7,-53.2,-21.4)N \)<br><br>
+
+Notice that each exercise is not an equation, but three equations, one for x, one for y and another for z.<br><br>
+
+When our object of interest touches another object, there will be forces at the touching interface. Specifically, the external
+object will make our object suffer a <i>reaction</i>. The typical example is the reaction produced by the ground against an object on it. 
+Notice that we are not usually interested in what the ground suffers, so we don't depict forces on it (but they exist nevertheless). <br><br>
+
+<a  href="files/figures/20.png" target=_blank><img src="files/figures/20.png" width=400></a><br><br>
+
+We will have other types of supports that produce different kind of reactions. What is important here is that we will focus on what the supports do
+on the object, and almost never what the supports suffer themselves. 
+
+</ul><!forces>
+
+<h2><a href="#last" onclick="toggle('trouble')">The trouble with forces and signs</a></h2>
+    <ul id="trouble" style="display:none"><!trouble>
+
+
+The most common cause of exam failing is sign mistakes, specially when dealing with force vectors. Let's consider an example to illustrate
+the problem here. <br><br>
+
+<a  href="files/figures/21.png" target=_blank><img src="files/figures/21.png" width=400></a><br><br>
+
+This is a crucial point in this course: we are given an object suffering many forces, but we want it static so there is an unknown force (depicted in cyan) 
+that we need to calculate. And we are presented with a dilemma that will determine a great deal of your approach to this course. If you have a strict
+mathematical mind, you know that the statics law says that the <b>SUM</b> of forces must be equal to zero, so you write<br><br>
+
+\( (0,10)+(0,-10)+(-3,2)+(6,3)+(2,4)+(F_x,F_y)=(0,0)  \)<br><br>
+
+you solve these two equations that can also be written as<br><br>
+
+\( 0+0-3+6+2+Fx=0\) <br><br>
+\( 10-10+2+3+4+Fy=0\) <br><br>
+
+and find the values of \(F_x\) and \(F_y\). If these components are positive, they are positive. If some of them is negative,
+it is negative, as simple as this. In the equation we just have to <b>SUM</b> so we sum, but then the <i>hypothesis</i> for the unknown force is that it is positive
+in both components (choice 1 in the picture). If you are not so mathematically minded but more intuitive, you see the other forces in action and say 'OK, I see that
+the unknown force is going to point SW (SouthWest, or left-down), so I prefer to draw the force pointing there'. You can do this as well, and we call it choice 2. 
+But beware, because now your static equation will look like this:<br><br>
+
+\( (0,10)+(0,-10)+(-3,2)+(6,3)+(2,4)-(F_x,F_y)=(0,0)  \)<br><br>
+
+Or if you prefer, we break it into two separate equations:<br><br>
+
+\( 0+0-3+6+2-Fx=0\) <br><br>
+\( 10-10+2+3+4-Fy=0\) <br><br>
+
+The problem is that now you are not doing a <b>SUM</b> but a <b>SUBSTRACTION</b> of forces!! It is not incorrect, but then you have to keep in mind the following:
+if you get a positive sign in a component it does not mean that the component is positive, but it means that your hypothesis in the picture was true! A negative sign,
+as you can guess, will not mean that the component is negative, but that your hypothesis in the picture was wrong, so you need to reverse it.<br><br>
+
+Both choices have pro's and con's. In choice 1, the con is that you draw a hypothesis that may not be intuitive, but then you just sum forces and all the numbers will
+be correct, with each component with its proper sign. In choice 2, the drawing can be more intuitive (if your intuition is good), but when you obtain the results, the signs are not those of the components, but simply indicate that the hypothesis was correct or wrong, and then you need to put by hand the correct signs. <br><br>
+
+Let's solve the example with choice 1. We obtain that \(F_x=-5\) and \(F_y=-9\). Of course, the hypothesis in the picture was badly depicted, but now we know that our force is just \(\vec{F}=(-5,-9)\) and we can correct the arrow in the picture.<br><br>
+
+Now let's solve it with choice 2. We obtain that \(F_x=5\) and that \(F_y=9\). The positive signs indicate that the hypothesis was correct in both cases (it could be correct in one component and wrong in the other!) so now we need to put the signs by hand and set our force as \(\vec{F}=(-5,-9)\). You make the choice, as long as you
+don't make mistakes!<br><br>
+
+It is time to practice all these concepts with some problems:<br><br>
+
+79. Find the forces made by the cables on the object if it is in equilibrium. Draw all the forces suffered by the object, and only these forces. In all these problems, take \(g=9.8m/s^2\) (positive) and m=2kg. In all following problems, \(\vec{P}\) and \(\vec{T}\) are the weight and tension vectors, respectively.<br><br>
+<a  href="files/figures/22.png" target=_blank><img src="files/figures/22.png" width=400></a><br><br>
+
+80. In the previous case, now draw all the forces experienced by the support points A and B. Notice that cables always do forces along its own direction.<br><br>
+
+81. Do as in 79 for the following picture.  <br><br>
+
+<a  href="files/figures/23.png" target=_blank><img src="files/figures/23.png" width=400></a><br><br>
+
+82. Do as in 80.<br><br>
+
+83. Do the same as in 81 for the following picture. Notice that there is one green rod that connects 
+the two masses. This rod is necessarily aligned with the cable that connects the
+upper mass with B, and must suffer some tension. Maybe it is useful to use the sines theorem here!<br><br>
+
+<a  href="files/figures/24.png" target=_blank><img src="files/figures/24.png" width=400></a><br><br>
+
+84. As a last training in trigonometry you need to solve this exercise. The goal is to draw and calculate all the force vectors acting on the object that is
+on the tilted plane. You need to know that the blue cable connects points B and F, and that the plane will produce a reaction that will be perpendicular 
+\(\perp\) to the surface. The sign \(\parallel\) means 'parallel', to indicate a 90 degrees relation with the \(\perp\) direction. <br><br>
+
+<a  href="files/figures/26.png" target=_blank><img src="files/figures/26.png" width=400></a><br><br>
+
+If this problem seems too difficult for you and you surrender, you can get a hint on which results we give and in which order. 
+
+</ul><!trouble>
+
+
+
+<h2><a href="#last" onclick="toggle('solu2')">Solutions</a></h2>
+    <ul id="solu2" style="display:none"><!solu2>
+
+<h3>Sums</h3> <br><br>
+
+1. -6 <br><br>
+
+2. 49/36 <br><br>
+
+3. -2 <br><br>
+
+4. 40 <br><br>
+
+<h3>Magnitude and unit vectors</h3> <br><br>
+
+
+5. (4/5, 3/5) <br><br>
+
+6. \((-(1/\sqrt{14}]), \sqrt{2/7}, -(3/\sqrt{14}))\) <br><br>
+
+7. \( (2 \sqrt{2/15}, \sqrt{3/10}, \sqrt{2/15}, 1/\sqrt{30})\)  <br><br>
+
+8. \( (0, -(2/\sqrt{5}), 1/\sqrt{5})\)   <br><br>
+
+
+9. \(4\hat{i}+2\hat{j}\) <br><br>
+
+10. \( 2\hat{i}-\hat{j}+3\hat{k}\)  <br><br>
+
+11. \(3\hat{i}+\hat{j}-4\hat{k}\)  <br><br>
+
+12. \( 2\hat{i}-\hat{j}\) <br><br>
+
+13. \( (-1,3,-4)\)  <br><br>
+
+14. \( (-9,4,3/2)\)  <br><br>
+
+15. \( (3,7/6,-8)\)  <br><br>
+
+16. \( (-10,4,2)\)  <br><br>
+
+17. \( (2,-7)\)  <br><br>
+
+<h3>Add and substract vectors</h3> <br><br>
+
+
+18. (11, -8) <br><br>
+
+19. (-11, -7) <br><br>
+
+20. (-1, 9, 2) <br><br>
+
+21. (19, -32, 4) <br><br>
+
+22. (10, 7, 2) <br><br>
+
+23. (-88, -23, -11) <br><br>
+
+24. (7, 5) <br><br>
+
+25. (2, 1) <br><br>
+
+26. (0, 3) <br><br>
+
+27. (5, 7) <br><br>
+
+28. (-3, 1) <br><br>
+
+29. (-4, -3) <br><br>
+
+30. (6, -1) <br><br>
+
+31. (-1, -7) <br><br>
+
+<h3>Scalar product</h3> <br><br>
+
+
+32. 4 <br><br>
+
+33. -17 <br><br>
+
+34. 0 <br><br>
+
+35. 5 <br><br>
+
+36. 0 <br><br>
+
+37. 12 <br><br>
+
+38. 44 <br><br>
+
+39. 57/8 <br><br>
+
+<h3>Angles between vectors</h3> <br><br>
+
+40. 108.435, 251.565 <br><br>
+
+41. 22.8337, 337.166 <br><br>
+
+42. 93.3665, 266.634 <br><br>
+
+43. 80.3366, 279.663 <br><br>
+
+44. 115.163, 244.837 <br><br>
+
+45. 113.877, 246.123 <br><br>
+
+46. 62.4404, 297.56 <br><br>
+
+<h3>Projections</h3> <br><br>
+
+
+
+47. \( 1/\sqrt{5} \)<br><br>
+
+48. \( 11/\sqrt{17} \)<br><br>
+
+49. \( -(20/\sqrt{13}) \)<br><br>
+
+50. \( -(26/\sqrt{85})\) <br><br>
+
+51. \( 1/\sqrt{33}\) <br><br>
+
+52. \( -(60/\sqrt{109})\) <br><br>
+
+53. \( 30/\sqrt{77}\) <br><br>
+
+54. \( -\sqrt{(2/19)} \)<br><br>
+
+55. (6, 0) <br><br>
+
+56. (0, 4) <br><br>
+
+57. (-(6/5), -(12/5)) <br><br>
+
+58. (-(11/17), 44/17) <br><br>
+
+59. (21/5, 42/5) <br><br>
+
+60. (8/13, -(12/13)) <br><br>
+
+<h3>Position and displacement vectors</h3> <br><br>
+
+
+61. (3, -5) <br><br>
+
+62. (4, 11) <br><br>
+
+63. (8, -5) <br><br>
+
+64. (-3, -1) <br><br>
+
+65. (-5, -3) <br><br>
+
+66. (3, -1) <br><br>
+
+67. (13, -9) <br><br>
+
+68. (2, 10) <br><br>
+
+<h3>Signs of the components </h3><br><br>
+
+
+69. (2., 6.7082) <br><br>
+
+70. (4.89898, -1.) <br><br>
+
+71. (-10.583, 3.) <br><br>
+
+72. (-5., -6.245) <br><br>
+
+73. (11.5326, -6.) <br><br>
+
+74. (-8.06226, -4.) <br><br>
+
+<h3>Forces</h3> <br><br>
+
+75. \( F4_x -> -2, F4_y -> -8, F4_z -> -12 \) <br><br>
+
+76. \( F4_x -> 8, F4_y -> 2, F4_z -> 1 \) <br><br>
+
+77. \( F4_x -> 87.9, F4_y -> 44.4, F4_z -> -36.9\)  <br><br>
+
+78. \( F4_x -> 76.5, F4_y -> 52.1, F4_z -> 87.5\)  <br><br>
+
+<h3>The trouble with forces and signs</h3> <br><br>
+
+79. \( \vec{T}_B=(11.4537, 12.9872), \vec{T}_A=(-11.4537, 6.61277), \vec{P}=(0, -19.6)  \)  <br><br>
+
+80. In A: \( \vec{F}_{cable}=(11.4537, -6.61277), \vec{F}_{roof}=(-11.4537, 6.61277) \)<br>
+ In B: \( \vec{F}_{cable}=(-11.4537, -12.9872) \vec{F}_{roof}=(11.4537, 12.9872) \)<br><br>
+
+81.\( \vec{P}=(0,-19.6), \vec{F}_A=(-12.4259, 12.4259), \vec{F}_B=(12.4259, 7.1741) \)  <br><br>
+
+82. In A: \(\vec{F}_{cable}=(12.4259, -12.4259), \vec{F}_{roof}=(-12.4259, 12.4259) \)  <br>
+In B: \(\vec{F}_{cable}=(-12.4259, -7.1741), \vec{F}_{roof}=(12.4259, 7.1741) \)<br><br>
+
+83. In the upper mass: \(\vec{P}=(0,-19.6), \vec{F}_A=(-3.68863}, 15.9114), \vec{F}_B=(13.3885, 13.3885), \vec{T}=(-9.69988, -9.69988)\)  <br>
+In the bottom mass:  \( \vec{P}=(0,-19.6), \vec{F}_A=(-9.69988, 9.90012), \vec{T}=(9.69988, 9.69988) \)   <br><br>
+
+84. \(\vec{r}_A=(0,0), \vec{r}_B=(9,0), \vec{r}_C={9, 5.19615), \vec{r}_D=(9, 6.35085), \alpha=66.4435, \beta=36.4435, \vec{r}_E=(7.13985,0),\vec{r}_F=(7.13985, 5.27689), \vec{P}=(0, -19.6), \vec{T}=(19.726, -14.5664), \vec{N}= (-19.726, 34.1664)\)<br><br>
+
+</ul><!solu2>
+
+
+
+<br><br>
+
+
+</ul><!root>
+<!Code to expand/collapse branches>
+<script type="text/javascript">
+function toggle(id) {
+  var e = document.getElementById(id);
+  if (e.style.display == '')
+    e.style.display = 'none';
+  else
+    e.style.display = '';}
+function toggle2(id, link) {
+  var e = document.getElementById(id);
+  if (e.style.display == '') {
+    e.style.display = 'none';
+    link.innerHTML = 'Expand';
+  } else {
+    e.style.display = '';
+    link.innerHTML = 'Collapse';  }}
+</script>
+</body>
+</html>
