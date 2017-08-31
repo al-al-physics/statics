@@ -13,23 +13,23 @@
 A first thing to know here is the symbol \(\Sigma\), which is the capital S of the Greek alphabet, Sigma. In mathematics 
 it is used to call a Sum (or a \(\Sigma\)um if you like). It has a subscript and a superscript,<br><br>
 
-\(\Sigma_{i=1}^n \)  <br><br>
+$$\sum{i=1}^n $$  <br><br>
 
 This expression means: 'sum from i=1 up to i=n whatever is on the right, incrementing i one by one, i->1,2,3,...,n'.<br><br>
 Don't confuse this i, which is just an index, with the imaginary number! Let's see some examples: <br><br>
 
-\(\Sigma_{i=1}^3 i^2\)=1^2+2^2+3^2=1+4+9=14  <br><br>
+$$\sum{i=1}^3 i^2=1^2+2^2+3^2=1+4+9=14$$  <br><br>
 
-\(\Sigma_{i=1}^4 i(i-1)\)= 1(0)+2(1)+3(2)+4(3)=0+2+6+12=20 <br><br>
+$$\sum_{i=1}^4 i(i-1)= 1(0)+2(1)+3(2)+4(3)=20$$ <br><br>
 
-\(\Sigma_{i=2}^7 -i)\)= -2-3-4-5-6-7=-27 <br><br>
+$$\sum_{i=2}^7 -i)= -2-3-4-5-6-7=-27$$ <br><br>
 
 Now it is your turn practising this: <br><br>
 
-1. \(\Sigma_{i=1}^4 (1-i)\)  <br><br>
-2. \(\Sigma_{i=1}^3 1/i^2\)  <br><br>
-3. \(\Sigma_{i=1}^3 (-1)^ii\)  <br><br>
-4. \(\Sigma_{i=0}^4 i+i^2\)  <br><br>
+$$1. \sum_{i=1}^4 (1-i)$$
+$$2. \sum_{i=1}^3 1/i^2$$
+$$3. \sum_{i=1}^3 (-1)^ii$$
+$$4. \sum_{i=0}^4 i+i^2$$
 
 We will use the Sum symbol essentially to sum forces, as we will see later. Usually, you will encounter just
 a \(\Sigma\) without sub or superscripts. In this case, it means that you just need to sum over all the forces
@@ -82,7 +82,7 @@ the hypotenuse and the two components will be the two other sides. We will use t
 We define the magnitude or the modulus \(|\vec{a}|\) of a vector \(\vec{a}\) in a very simple way: it is simply the length of the hypotenuse! So we apply Pythagoras' theorem to 
 write<br><br>
 
-\(|vec{a}|\)\equiv a\equiv \sqrt{a_x^2+a_y^2+a_z^2+\ldots}<br><br>
+\(|\vec{a}|\equiv a\equiv \sqrt{a_x^2+a_y^2+a_z^2+\ldots}\)<br><br>
 
 where \(\equiv\) means 'definition', and the \ldots indicate that we could add more components if we are in higher dimensional spaces. Notice as well that we write the
 modulus as the vector with two vertical bars or simply the letter without the arrow above. And, as we have built a right-angled rectangle, notice that we can relate
@@ -100,15 +100,15 @@ Let's practice this! Calculate the unit vector for the following non-unit vector
 
 5.\((4,3)  \)<br><br>
 6.\((-1,2,-3)  \)<br><br>
-7.\(4,3,2,1) \)<br><br>
+7.\((4,3,2,1) \)<br><br>
 8.\((0,-2,1) \)<br><br>
 
 The unit vectors allow us to introduce a set of three very important vectors: \(\hat{i}\), \(\hat{j}\) and \(\hat{k}\). Yes, you have guessed it, they all
 are unit vectors! Their definitions are<br><br>
 
 \(\hat{i}\equiv (1,0,0)  \)<br>
-\(\hat{i}\equiv (0,1,0)  \)<br>
-\(\hat{i}\equiv (0,0,1)  \)<br><br>
+\(\hat{j}\equiv (0,1,0)  \)<br>
+\(\hat{k}\equiv (0,0,1)  \)<br><br>
 
 So notice that they are the unit vectors that are parallel to the x, y and z axis, respectively. We introduce these vectors because regular vectors can be 
 written either with components and also as <i> sums</i> of \(\hat{i},\hat{j},\hat{k}\) vectors. For example, notice that<br><br>
@@ -121,7 +121,7 @@ where we need to learn that a scalar (a simple number) multiplied by a vector pe
 
 Consequently, in the previous example, we can notice that we can simply write<br><br>
 
-\((3,4,2)=3\hat{i}+4\hat{j}+2\hat{k}<br><br>
+\((3,4,2)=3\hat{i}+4\hat{j}+2\hat{k}\)<br><br>
 
 Let's practice this. Write the following vectors from components to unit-vectors notation:<br><br>
 
@@ -219,9 +219,9 @@ that takes two vectors and outputs a single scalar. The symbol for this product 
 like \(\vec{a}\cdot\vec{b}\). That would be the scalar product of \(\vec{a}\) and \(\vec{b}\). <i>There are two ways of perfoming this operation.</i>
 The first way is by using components:<br><br>
 
-\(\vec{a}\cdot\vec{b}=a_xb_x+a_yb_y+az_b_z+\ldots   \)<br><br>
+\(\vec{a}\cdot\vec{b}=a_xb_x+a_yb_y+a_zb_z+...   \)<br><br>
 
-where the \(\ldots\) are for more dimensions. The rule is very simple: take the first coordinates of the two vectors and multiply them, then do
+where the ... are for more dimensions. The rule is very simple: take the first coordinates of the two vectors and multiply them, then do
 the same with second coordinates, with third coordinates... and finally sum all these results to give a final number. Practice this method, by hand:<br><br>
 
 32.\( (3,4)\cdot(4,-2) \)<br><br>
@@ -235,7 +235,7 @@ the same with second coordinates, with third coordinates... and finally sum all 
 
 The second method consists in calculating the modulus of both vectors, so the scalar product is<br><br>
 
-\(\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos{\alpha} \)=ab\cos{\alpha}  <br><br>
+\(\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos{\alpha} =ab\cos{\alpha} \) <br><br>
 
 where \(\alpha\) is the angle formed between the two vectors. But which one, you can think. There are two choices for such angle, as
 we can see in the figure:<br><br>
@@ -331,7 +331,7 @@ anchored at the origin (0,0,0), while the tip of the arrow will be pinned at the
 Can we have a vector which is not attached to the origin, but going from point A to point B instead? Yes, but that would not be a position vector
 but a <i>displacement</i> vector, and we will write with a capital Greek letter Delta \(\Delta\). Then, <br><br>
 
-\(\Delta\vec{r}=\vec{r}_{final}-\vec{r}_{\initial}\)  <br><br>
+\(\Delta\vec{r}=\vec{r}_{final}-\vec{r}_{initial}\)  <br><br>
 
 Remember this: an increment \(\Delta\) is always 'final minus initial', while the vector will point from initial (base) to final (tip). Let's
 draw this:<br><br>
@@ -367,7 +367,7 @@ second \(\Delta\vec{r}=\vec{r}-\vec{r}_1\):<br><br>
 Let's consider a displacement vector \(\Delta\vec{r}\) in two dimensions, as most often will be the case in this course. It will have two components
 \((\Delta x,\Delta y)\). Notice that each component can have a positive or a negative sign. There are four combinations in total, which are:<br><br>
 
-(+,+), (-,-), (+,-), (-,+) <br><br>
+\((+,+), (-,-), (+,-), (-,+)\) <br><br>
 
 We can see this in a picture:<br><br>
 
@@ -416,7 +416,7 @@ Forces are also vectors, written as \(\vec{F}=(F_x,F_y,F_z)\). Remember this:
 Don't forget that a force must be produced by someone and suffered by someone else. We always draw on an object the
 forces that this object is suffering, and not the ones that it is producing, which will be depicted at other places. 
 Of course, by the third law of Newton, we know that if we have two particles A and B and A produces a force \(\vec{F}_{A\to B}\) on B, B
-will answer with a force \(\vec{F}_{B\to A}=-\(\vec{F}_{A\to B}\)\). Graphically, we need to draw:<br><br>
+will answer with a force \(\vec{F}_{B\to A}=-(\vec{F}_{A\to B})\). Graphically, we need to draw:<br><br>
 
 <a  href="files/figures/19.png" target=_blank><img src="files/figures/19.png" width=400></a><br><br>
 
@@ -441,11 +441,11 @@ a little arrow above.<br>
 In the International System of Units, forces are measured in Newtons (N). Learn that \(1N=\frac{1kg\cdot m}{s^2}\). <br><br>
 
 
-Let's practice this a bit. You will be given a set of 3 forces and you need to calculate an extra force 4 that will render the system static:<br><br>
-75.\( ( \vec{F}_1=(2,-3,6)N\qquad \vec{F}_2=(4,6,-7)N\qquad\vec{F}_3=(-4,5,13)N \)<br><br>
-76.\( ( \vec{F}_1=-(1,4,-6)N\qquad \vec{F}_2=(-8,2,4)N\qquad\vec{F}_3=(1,0,-11)N \)<br><br>
-77.\( ( \vec{F}_1=(-75.1,12.5,-2.0)N\qquad \vec{F}_2=-(8.5,62.1,-21.3)N\qquad\vec{F}_3=(-4.3,5.2,17.6)N \)<br><br>
-78.\( ( \vec{F}_1=(-72.0,32.5,7.4)N\qquad \vec{F}_2=(0.2,-31.4,-73.5)N\qquad\vec{F}_3=(-4.7,-53.2,-21.4)N \)<br><br>
+Let's practice this a bit. You will be given a set of 3 forces and you need to calculate an extra force 4 that will render the system static (all forces are in N):<br><br>
+75. \( \vec{F}_1=(2,-3,6),\)<br>\( \vec{F}_2=(4,6,-7),\)<br>\(\vec{F}_3=(-4,5,13) \)<br><br>
+76. \( \vec{F}_1=-(1,4,-6),\)<br>\( \vec{F}_2=(-8,2,4),\)<br>\(\vec{F}_3=(1,0,-11) \)<br><br>
+77. \( \vec{F}_1=(-75.1,12.5,-2.0),\)<br>\(\vec{F}_2=-(8.5,62.1,-21.3),\)<br>\(\vec{F}_3=(-4.3,5.2,17.6) \)<br><br>
+78. \( \vec{F}_1=(-72.0,32.5,7.4),\)<br>\( \vec{F}_2=(0.2,-31.4,-73.5),\)<br>\(\vec{F}_3=(-4.7,-53.2,-21.4) \)<br><br>
 
 Notice that each exercise is not an equation, but three equations, one for x, one for y and another for z.<br><br>
 
@@ -473,7 +473,7 @@ This is a crucial point in this course: we are given an object suffering many fo
 that we need to calculate. And we are presented with a dilemma that will determine a great deal of your approach to this course. If you have a strict
 mathematical mind, you know that the statics law says that the <b>SUM</b> of forces must be equal to zero, so you write<br><br>
 
-\( (0,10)+(0,-10)+(-3,2)+(6,3)+(2,4)+(F_x,F_y)=(0,0)  \)<br><br>
+\( (0,10)+(0,-10)+(-3,2)+(6,3)+\)<br>\(+(2,4)+(F_x,F_y)=(0,0)  \)<br><br>
 
 you solve these two equations that can also be written as<br><br>
 
@@ -486,7 +486,7 @@ in both components (choice 1 in the picture). If you are not so mathematically m
 the unknown force is going to point SW (SouthWest, or left-down), so I prefer to draw the force pointing there'. You can do this as well, and we call it choice 2. 
 But beware, because now your static equation will look like this:<br><br>
 
-\( (0,10)+(0,-10)+(-3,2)+(6,3)+(2,4)-(F_x,F_y)=(0,0)  \)<br><br>
+\( (0,10)+(0,-10)+(-3,2)+(6,3)+\)<br>\(+(2,4)-(F_x,F_y)=(0,0)  \)<br><br>
 
 Or if you prefer, we break it into two separate equations:<br><br>
 
@@ -713,30 +713,41 @@ If this problem seems too difficult for you and you surrender, you can get a hin
 
 <h3>Forces</h3> <br><br>
 
-75. \( F4_x -> -2, F4_y -> -8, F4_z -> -12 \) <br><br>
+75. \( F4_x = -2, F4_y = -8, F4_z = -12 \) <br><br>
 
-76. \( F4_x -> 8, F4_y -> 2, F4_z -> 1 \) <br><br>
+76. \( F4_x = 8, F4_y = 2, F4_z = 1 \) <br><br>
 
-77. \( F4_x -> 87.9, F4_y -> 44.4, F4_z -> -36.9\)  <br><br>
+77. \( F4_x = 87.9, F4_y = 44.4, F4_z = -36.9\)  <br><br>
 
-78. \( F4_x -> 76.5, F4_y -> 52.1, F4_z -> 87.5\)  <br><br>
+78. \( F4_x = 76.5, F4_y = 52.1, F4_z = 87.5\)  <br><br>
 
 <h3>The trouble with forces and signs</h3> <br><br>
 
-79. \( \vec{T}_B=(11.4537, 12.9872), \vec{T}_A=(-11.4537, 6.61277), \vec{P}=(0, -19.6)  \)  <br><br>
+79. \( \vec{T}_B=(11.4537, 12.9872),\)<br>\( \vec{T}_A=(-11.4537, 6.61277),\)<br>\( \vec{P}=(0, -19.6)  \)  <br><br>
 
-80. In A: \( \vec{F}_{cable}=(11.4537, -6.61277), \vec{F}_{roof}=(-11.4537, 6.61277) \)<br>
- In B: \( \vec{F}_{cable}=(-11.4537, -12.9872) \vec{F}_{roof}=(11.4537, 12.9872) \)<br><br>
+80. In A: \( \vec{F}_{cable}=(11.4537, -6.61277),\)<br>\( \vec{F}_{roof}=(-11.4537, 6.61277) \)<br><br>
+ In B: \( \vec{F}_{cable}=(-11.4537, -12.9872),\)<br>\( \vec{F}_{roof}=(11.4537, 12.9872) \)<br><br>
 
-81.\( \vec{P}=(0,-19.6), \vec{F}_A=(-12.4259, 12.4259), \vec{F}_B=(12.4259, 7.1741) \)  <br><br>
+81.\( \vec{P}=(0,-19.6),\)<br>\( \vec{F}_A=(-12.4259, 12.4259), \)<br>\(\vec{F}_B=(12.4259, 7.1741) \)  <br><br>
 
-82. In A: \(\vec{F}_{cable}=(12.4259, -12.4259), \vec{F}_{roof}=(-12.4259, 12.4259) \)  <br>
-In B: \(\vec{F}_{cable}=(-12.4259, -7.1741), \vec{F}_{roof}=(12.4259, 7.1741) \)<br><br>
+82. In A: \(\vec{F}_{cable}=(12.4259, -12.4259),\)<br>\( \vec{F}_{roof}=(-12.4259, 12.4259) \)  <br><br>
+In B: \(\vec{F}_{cable}=(-12.4259, -7.1741),\)<br>\( \vec{F}_{roof}=(12.4259, 7.1741) \)<br><br>
 
-83. In the upper mass: \(\vec{P}=(0,-19.6), \vec{F}_A=(-3.68863}, 15.9114), \vec{F}_B=(13.3885, 13.3885), \vec{T}=(-9.69988, -9.69988)\)  <br>
-In the bottom mass:  \( \vec{P}=(0,-19.6), \vec{F}_A=(-9.69988, 9.90012), \vec{T}=(9.69988, 9.69988) \)   <br><br>
+83. In the upper mass: 
+\(\vec{P}=(0,-19.6),\)<br>\( \vec{F}_A=(-3.68863, 15.9114),\)<br>\( \vec{F}_B=(13.3885, 13.3885),\)<br>\( \vec{T}=(-9.69988, -9.69988)\)  <br><br>
+In the bottom mass:  
+\( \vec{P}=(0,-19.6), \)<br>\(\vec{F}_A=(-9.69988, 9.90012), \)<br>\(\vec{T}=(9.69988, 9.69988) \)   <br><br>
 
-84. \(\vec{r}_A=(0,0), \vec{r}_B=(9,0), \vec{r}_C={9, 5.19615), \vec{r}_D=(9, 6.35085), \alpha=66.4435, \beta=36.4435, \vec{r}_E=(7.13985,0),\vec{r}_F=(7.13985, 5.27689), \vec{P}=(0, -19.6), \vec{T}=(19.726, -14.5664), \vec{N}= (-19.726, 34.1664)\)<br><br>
+84. \(\vec{r}_A=(0,0),\)<br>\(
+ \vec{r}_B=(9,0),\)<br>\(
+ \vec{r}_C=(9, 5.19615),\)<br>\(
+ \vec{r}_D=(9, 6.35085), \)<br>\(
+\alpha=66.4435, \beta=36.4435,\)<br>\(
+ \vec{r}_E=(7.13985,0),\)<br>\(
+\vec{r}_F=(7.13985, 5.27689),\)<br>\(
+ \vec{P}=(0, -19.6), \)<br>\(
+\vec{T}=(19.726, -14.5664),\)<br>\(
+ \vec{N}= (-19.726, 34.1664)\)<br><br>
 
 </ul><!solu2>
 

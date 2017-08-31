@@ -29,7 +29,7 @@ The first row has our three unit vectors for the x,y and z axes. The second row 
 cross product, in this case \(\vec{a}\), and the last row has the components of the second vector in the cross product, in this
 case \(\vec{b}\). No commas here! And notice that the walls are vertical lines. Now see how we operate in it:<br><br>
 
-\(\vec{a}\times\vec{b}=a_yb_z\hat{i}+a_xb_y\hat{k}+a_zb_x\hat{j}-b_xa_y\hat{k}-b_ya_z\hat{i}-a_xb_z\hat{j}\)  <br><br>
+\(\vec{a}\times\vec{b}=a_yb_z\hat{i}+a_xb_y\hat{k}+a_zb_x\hat{j}-\)<br>\(-b_xa_y\hat{k}-b_ya_z\hat{i}-a_xb_z\hat{j}\)  <br><br>
 
 These are six terms and they seem difficult to remember, but notice how you can see them graphically:<br><br>
 
@@ -105,7 +105,7 @@ Notice how the z axis is represented!<br><br>
 Finally, there is a second method to calculate the cross product, but it can only provide the modulus of the result, not the whole vector.
 If \(\vec{c}=\vec{a}\times\vec{b}\), then, the modulus of \(\vec{c}\) can be given by<br><br>
 
-\(|\vec{c}|=c=|\vec{a}||vec{b}|\sin{\alpha}\) <br><br>
+\(|\vec{c}|=c=|\vec{a}||\vec{b}|\sin{\alpha}\) <br><br>
 
 where again, \(\alpha\) is the angle between the two input vectors. Remember that in the scalar product we had a similar expression
 but with the cosine. Here we have the sine, and sadly, the choice of the angle here does affect the total result, so in fact the
@@ -165,7 +165,7 @@ is always right, because we use them since we are born, and it tells us that for
 fact, for and angle equal to zero (or 180), we will apply no leverage at all! So our formula for the leverage cannot be just (lever arm)(force). It lacks
 something related with the angle, and there you have it:<br><br>
 
-leverage=(lever arm)(force)\(\sin{(angle)}  \) <br><br>
+leverage=(lever arm)·(force)·sin(angle)   <br><br>
 
 Is this expression familiar to you? <br><br>
 </ul><!levers>
@@ -195,12 +195,12 @@ beyond what is intuitive. Then, instead of writing \(\vec{r}_L\) we will simply 
 
 \(\vec{M}=\vec{r}\times\vec{F}\)<br><br>
 
-where now <i>\vec{r}</i> has its base at a certain arbitrary point P and the moment will be calculated <b>with respect to the point P</b>. Don't worry,
+where now \(\vec{r}\) has its base at a certain arbitrary point P and the moment will be calculated <b>with respect to the point P</b>. Don't worry,
 the tip of the \(\vec{r}\) vector is still at the point of the application of the force. But since the point P is arbitrary and we can choose whatever
 point we want, we will have to include it in our notation. And as we will have many forces in our problems, it is also useful to keep track of the force
 that we are considering. Then, we will write moment as <br><br>
 
-\(\vec{M}(P,\vec{F})=\) Moment done <b>by</b> \(\vec{F}\) <b>with respect to</b> the point P<br><br>.
+\(\vec{M}(P,\vec{F})=\) Moment done <b>by</b> \(\vec{F}\) <b>with respect to</b> the point P<br><br>
 
 You will have noticed that the expression <b>with respect to</b> is marked in bold. Why? Because students frequently say 'the moment of the
 point P...' and this is incorrect, and this language reveals a poor understanding of the concept of moment. Give importance to how you say it and learn
@@ -230,16 +230,16 @@ forces pull from suffering points, never push them.<br><br>
 
 It is time to practice moments of force. You will be given the position of the fulcrum (P) and the point of the application of a force (Q), so you need to calculate
 the moment in each case. Consider that all distances are given in meters and all forces in Newtons:<br><br>
-19.\( \vec{r}_P=(2,1,0), \vec{r}_Q=(-3,-2,1), \vec{F}=(7,-2,3) \)  <br><br>
-20.\( \vec{r}_P=(5,-8,3), \vec{r}_Q=(-8,-6,-4), \vec{F}=(10,-8,-2) \)  <br><br>
-21.\( \vec{r}_Q=(-9,0,-5), \vec{r}_P=(1,3,-2), \vec{F}=(-2,-7,9) \)  <br><br>
-22.\( \vec{r}_P=(3,-1,-8), \vec{r}_Q=(4,8,3), \vec{F}=(-7,4,-7) \)  <br><br>
+19. \( \vec{r}_P=(2,1,0), \vec{r}_Q=(-3,-2,1),\)<br>\( \vec{F}=(7,-2,3) \)  <br><br>
+20. \( \vec{r}_P=(5,-8,3), \vec{r}_Q=(-8,-6,-4),\)<br>\( \vec{F}=(10,-8,-2) \)  <br><br>
+21. \( \vec{r}_Q=(-9,0,-5), \vec{r}_P=(1,3,-2),\)<br>\( \vec{F}=(-2,-7,9) \)  <br><br>
+22. \( \vec{r}_P=(3,-1,-8), \vec{r}_Q=(4,8,3),\)<br>\( \vec{F}=(-7,4,-7) \)  <br><br>
 
 And now calculate the <b><i>moment vector</i></b> examples for two-dimensional cases:<br><br>
-23.\( \vec{r}_P=(3,-2), \vec{r}_Q=(4,1), \vec{F}=(8,-3) \)  <br><br>
-24.\( \vec{r}_P=(0,3), \vec{r}_Q=(-7,3), \vec{F}=(10,4) \)  <br><br>
-25.\( \vec{r}_P=(-8,9), \vec{r}_Q=(-1,-2), \vec{F}=(-4,-8) \)  <br><br>
-26.\( \vec{r}_Q=(-4,7), \vec{r}_P=(2,-6), \vec{F}=(-9,-7) \)  <br><br>
+23. \( \vec{r}_P=(3,-2), \vec{r}_Q=(4,1),\)<br>\( \vec{F}=(8,-3) \)  <br><br>
+24. \( \vec{r}_P=(0,3), \vec{r}_Q=(-7,3), \)<br>\(\vec{F}=(10,4) \)  <br><br>
+25. \( \vec{r}_P=(-8,9), \vec{r}_Q=(-1,-2),\)<br>\( \vec{F}=(-4,-8) \)  <br><br>
+26. \( \vec{r}_Q=(-4,7), \vec{r}_P=(2,-6), \)<br>\(\vec{F}=(-9,-7) \)  <br><br>
 
 At this point, you are surely starting to notice that in this course, since all forces and distances are going to be in the xy plane, all moments
 are going to be in the z direction, either pointing at you or at the paper. Why not dropping \(M_x\) and \(M_y\), which will be always 0, and just
@@ -336,9 +336,13 @@ We already know the first law of statics,<br><br>
 
 \( \sum_i\vec{F}=\vec{0}\)<br><br>
 
-but now you need to add the second law,
+but now you need to add the second law,<br><br>
 
-\( \sum_i\vec{M}=\vec{0}\)<br><br>.
+\( \sum_i\vec{M}=\vec{0}\)<br><br>
+
+A very important thing about the last equation is that in order to be true,
+<b>all moments must be calculated with respect to the same point!</b> If you
+calculate moments with mixed reference points, you cannot sum them and equaling them to zero, never.<br><br>
 
 Conclusion: all forces must add up to nothing, and the same must be true for moments. With this knowledge you are ready to solve some exercises.<br><br>
 
