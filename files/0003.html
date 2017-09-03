@@ -340,16 +340,34 @@ but now you need to add the second law,<br><br>
 
 \( \sum_i\vec{M}=\vec{0}\)<br><br>
 
-A very important thing about the last equation is that in order to be true,
+In the first equation, we read that the sum of all forces <b>acting on a
+same suffering point</b> is zero for a static situation. Similarly,
+in the last equation,
 <b>all moments must be calculated with respect to the same point!</b> If you
-calculate moments with mixed reference points, you cannot sum them and equaling them to zero, never.<br><br>
+calculate moments with mixed reference points, you cannot sum them and equaling them to zero. Conclusion: all forces are referred to the same suffering point and all moments are referred to the same reference point. These two equations are for single mathematical points, not for extended objects. For a more
+realistic situation we will have to wait to the next chapter.<br><br>
 
-Conclusion: all forces must add up to nothing, and the same must be true for moments. With this knowledge you are ready to solve some exercises.<br><br>
+You may wonder what we would have instead of 0 in the second equation for
+a non-static situation. In the first equation, all forces sum up to give \(m\vec{a}\) where m is the mass and \(\vec{a}\) the (linear) acceleration. Since we want a static situation, we set \(\vec{a}=\vec{0}\). What is mass? It is a scalar (number) that measures the <i>reluctance</i> to change velocity, or to
+be accelerated. The second equation encapsulates the same ideas but for a
+rotational world. Instead of forces we have moments. Instead of linear acceleration we have angular acceleration \(\vec{\alpha}\) and instead of mass
+we have <i>moment of inertia</i> \(I\) which measures the reluctance to change angular velocity. For simple objects, \(I \) is a scalar, but for more realistic 
+ones, it is a tensor, represented by a matrix. Not for the level of this course. But keep in mind the idea of \(I\) as a kind of rotational mass, as resistance to change the rotational state. This quantity will appear further in the course.<br><br>
+
+
+Summarizing: all forces in a point must add up to nothing, and the same must be true for moments. With this knowledge you are ready to solve some exercises.<br><br>
 
 27. In the following figure you have a static frame. Don't worry about its staticity now: the reactions at the ground will take of that. You have a force
-applied to each of the marked points. In blue you can read the modulus of each. What you need to do is to calculate the moment made <b>by</b> each force
+applied to each of the marked points. In blue you can read the modulus of each. What you need to do is to calculate:<br><br>
+-the coordinates of all points.<br><br>
+-the vector coordinates for all forces.<br><br>
+- the moment made <b>by</b> each force
 <b>with respect to</b> each point. There are 9 points and 9 forces, so you need to calculate 81 moments. It is very important that in each moment you
-specify between ( ) the force that produces it and the point of reference. Otherwise it will be a mess. Good luck!<br><br>
+specify between ( ) the force that produces it and the point of reference. Otherwise it will be a mess. You should calculate each moment by using two techniques: 1) As you have the position and force coordinates and you know that only the z-component of the moment will be not-zero, simply apply the expression 
+\(M_z=r_xF_y-r_yF_z \) to obtain the moment. And 2) once you have calculates all
+81 moments with this technique, now repeat the process just by looking at the
+figure and use the method of displacing the force vector until the lever arm
+is perpendicular to the force. In this method you need to carry the signs by hand. Good luck!<br><br>
 
 <a  href="files/figures/41.png" target=_blank><img src="files/figures/41.png" width=400></a><br><br>
 
@@ -418,6 +436,43 @@ Congratulations! Now you are ready to begin the official list of problems. <br><
 <h2>Screw that moment!</h2>
 
 27. <br><br>
+
+\(\vec{r}_A=(0, 0, 0) \)<br><br>
+
+\(\vec{r}_B=(0, 3, 0) \)<br><br>
+
+\(\vec{r}_C=(-3, 3, 0) \)<br><br>
+
+\(\vec{r}_D=(3, 3, 0) \)<br><br>
+
+\(\vec{r}_E=(7, 3, 0) \)<br><br>
+
+\(\vec{r}_F=(3, 5, 0) \)<br><br>
+
+\(\vec{r}_G=(0, 5, 0) \)<br><br>
+
+\(\vec{r}_H=(-2, 5, 0) \)<br><br>
+
+\(\vec{r}_I=(3, 8, 0) \)<br><br>
+
+\(\vec{F}_A=(2, 0, 0) \)<br><br>
+
+\(\vec{F}_B=(-3, 0, 0) \)<br><br>
+
+\(\vec{F}_C=(-(5/\sqrt{2}), -(5/\sqrt{2}), 0) \)<br><br>
+
+\(\vec{F}_D=(0, -3, 0) \)<br><br>
+
+\(\vec{F}_E=(-2 \sqrt{3}, -2, 0) \)<br><br>
+
+\(\vec{F}_F=(0, 2, 0) \)<br><br>
+
+\(\vec{F}_G=((5 \sqrt{3})/2, -(5/2), 0) \)<br><br>
+
+\(\vec{F}_H=(0, -2, 0) \)<br><br>
+
+\(\vec{F}_I=(5/\sqrt{2}, 5/\sqrt{2}, 0) \)<br><br>
+
 
 \(M_z(F_A,A)=0\) <br><br>
 
@@ -580,9 +635,6 @@ Congratulations! Now you are ready to begin the official list of problems. <br><
 \(M_z(F_I,H)=5 \sqrt{2}\) <br><br>
 
 \(M_z(F_I,I)=0\) <br><br>
-
-
-
 
 
 
