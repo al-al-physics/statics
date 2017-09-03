@@ -1,4 +1,3 @@
 # physics1
 
-This is educational material for engineers and architects to introduce basic vector mathematics and prepare them to the study of
-structures.
+Educational material for future engineers and architects. Introduction to basic vector mathematics and preparation for the study of structures.
