@@ -13,41 +13,42 @@
 We already know that a moment depends on our choice of reference point P. If
 we take different points of reference, we, in general, obtain different results
 for the moment \(\vec{M}\). In that case, the moment vector must have its base
-pinned at the reference point P. It is a <i>fixed</i> vector. Fixed vectors are those which have their base necessarily pinned to a point. By contrast, a <i>free</i> vector does not need to have its base attached to a certain location. So, remember that \(\vec{M}\), in general, is a fixed vector. <br><br>
+pinned at the reference point P. It is a <i>fixed</i> vector. Fixed vectors are those which have their base necessarily pinned to a point. The position
+vectors \(\vec{r}\) (don't confuse them with lever arms which are written the same way!) are fixed, because their base must be always pinned at the origin of coordinates. Force vectors are also fixed because their tails are pinned to the suffering points.  By contrast, a <i>free</i> vector does not need to have its base attached to a certain location. So, remember that \(\vec{M}\), in general, is a fixed vector. <br><br>
 
 But there is a special and particular case of importance here. Sometimes, in
-a body, the sum of all forces in a body is zero (yes, the sum of all forces even
-if they are suffered at different points, we will later see that sometimes we can do this). In those cases, if the total force is zero but the net moment is not zero, such moment can also be called a <i>couple</i>. And couples are very special, because their value is independent from the reference point, so their
-vector base can be attached anywhere, or in other words, it is a free vector. This result is called the Varignon's Second Moment Theorem.<br><br>
+a body, the sum of all forces in a body is zero. Yes, we have written 'the sum of all forces even if they are suffered at different points'. We will later see that sometimes we can do this. In those cases, if the total force is zero but the net moment is not zero, such <b>net moment</b> can also be called a <i>couple</i>. Notice that each individual moment will not be a couple: only the total moment will. Usually, many forces are acting on the same object, but we take just a pair of forces that sums zero, and we take the sum of the two moments that they make and call it a couple, which is where the name comes from. But in general, a couple can be understood as the sum of moments made by any group of forces summing zero.<br><br>
 
-We call it couple because it can be expressed as the sum of moments produced
+
+Couples are very special, because their value are <i>independent from the reference point</i>, so their
+vector base can be attached anywhere, or in other words, they are a free vectors. This result is called the Varignon's Second Moment Theorem.<br><br>
+
+As we said, we call it couple because it is usually expressed as the sum of two moments produced
 by two forces that have opposed lever arms, like:<br><br>
 
 <a  href="files/figures/42.png" target=_blank><img src="files/figures/42.png" width=450></a><br><br>
 
-We see how the two forces in a couple are equal in modulus and direction but of
+We see how the two forces in a classical couple are equal in modulus and direction but of
 opposed orientation. The lever arms are also equal in magnitude but opposed.<br><br>
 
-Varingon's second theorem is easy to understand. If our total moment is<br><br>
+Varingon's second theorem is important and easy to understand. If our total moment comes from the contribution of two forces, we write<br><br>
 
-\( \vec{M}=\vec{r}_1\times\vec{F}_1+\vec{r}_2\times\vec{F}_2\)<br><br>
+\( \vec{M}=\vec{r}_1\times\vec{F}_1+\vec{r}_2\times\vec{F}_2.\)<br><br>
 
-and now we change our reference point P, we will get a different moment
-where to each lever arm we need to add a displacement vector \(\Delta\vec{r}\),
-so<br><br>
+Now we change our reference point P to P' to see if we get a different result. For generic moments, the result should change, indeed. To change the reference point P to P' we need to add a displacement vector \(\Delta\vec{r}\) to the lever arms, so<br><br>
 
 \(\vec{M}'=\vec{r}'_1\times\vec{F}_1+\vec{r}'_2\times\vec{F}_2\)<br><br>
 
-where <br><br>
+where each new lever arm can be detailed as<br><br>
 
 \(\vec{r}'_1=\vec{r}_1+\Delta\vec{r}\)<br><br>
-\(\vec{r}'_2=\vec{r}_2+\Delta\vec{r}\)<br><br>
+\(\vec{r}'_2=\vec{r}_2+\Delta\vec{r}\).<br><br>
 
-so we can write<br><br>
+We substitute this on the previous equation to get<br><br>
 
 \(\vec{M}'=(\vec{r}_1+\Delta\vec{r})\times\vec{F}_1+(\vec{r}_2+\Delta\vec{r})\times\vec{F}_2\)<br><br>
 
-We can arrange the terms to write<br><br>
+We can rearrange the terms to write<br><br>
 
 \(\vec{M}'=\vec{r}_1\times\vec{F}_1+\vec{r}_2\times\vec{F}_2+\)<br>
 \(+\Delta\vec{r}\times(\vec{F}_1+\vec{F}_2)\)<br><br>
@@ -56,7 +57,8 @@ but we know that \(\vec{F}_1+\vec{F}_2=\vec{0}\) in this case, so we obtain that
 \(\vec{M}'=\vec{M}\). <br><br>
 
 Conclusion: wherever you are given a special moment called couple, you are free to
-pin its vector wherever you want, because all reference points will give the same total moment.<br><br>
+pin its vector wherever you want, because all reference points will give the same total moment. However, the advice is that if you are told that the coupled is applied at a point, draw it at such point to avoid confussion. <br><br>
+
 
 </ul><!couple>
 
@@ -71,7 +73,7 @@ where <i>reactions</i> occur. For example:<br><br>
 
 <a  href="files/figures/43.png" target=_blank><img src="files/figures/43.png" width=450></a><br><br>
 
-In the figure we have an object which is our system. It is lying on the ground, which is not part of our system. Notice that only a part of the ground is
+In the figure we have an object which is our system. It is lying on the ground, which is <b>not</b> part of our system. Notice that only a part of the ground is
 depicted, but we usually assume that grounds, external walls, roofs, have infinite mass (or very big), so they will remain static without us having
 to worry about it. Notice as well that we depict the reaction force that the
 ground produces on the object. You may ask: why don't we depict the forces that
@@ -79,17 +81,17 @@ the ground suffers? The answer is that we will never worry about the external sy
 depicted or calculated in our problems. So once you have all this clear, and 
 know what your system is, you should draw a picture without all other external
 systems. The drawing of just our system in which we depict all the forces
-suffered by it is called a solid diagram:<br><br>
+suffered by it is called a <i>free body diagram</i>, like this one:<br><br>
 
 <a  href="files/figures/44.png" target=_blank><img src="files/figures/44.png" width=450></a><br><br>
 
 Now, there are different ways in which our system will be supported by an
-external entity (roofs, ground, etc). We will call the union <i>point</i> of our system with
+external entity (roofs, ground, etc). We will call the union <i>points</i> of our system with
 the external world as <i>supports</i> and they can be classified depending on
-how they <i>limit</i> the motion of our system. For example, in the last figure
-the supports are infinite points of surface contact, so let's move to more simple cases.<br><br>
+how they <i>limit</i>, resist or <i>react against</i> the motion of our system (hence the name 'reaction'). For example, in the last figure
+the supports are infinite points of surface contact, but we can, for now, simplify it to a single contact point. Notice that the body has depicted in it the two forces that is suffering: a reaction from the ground and weight. Notice as well how both are suffered at different points. Weight can be considered to be suffered at the center of mass of the object.<br><br>
 
-What is important is that a support will either allow or block one of these three motions:<br><br>
+What is important is that a support will either allow (block, forbid, resist, react against) one of these three motions:<br><br>
 
 -linear motion along the perpendicular to the contact surface: perpendicular or normal motion.<br><br>
 -linear motion along the line (or plane) of the surface. In 3D, these are two motions, in fact. In 2D is just one. This is the tangent motion.<br><br>
@@ -101,14 +103,14 @@ For each of these motions that the support <i>forbids</i> there will be a reacti
 
 
 
-We begin by supports that only blocks the normal motion. They are called <b>movable supports</b>, which can be depicted as<br><br>
+We begin by supports that only block the normal motion. They are called <b>movable supports</b>, which can be depicted as<br><br>
 <a  href="files/figures/45.png" target=_blank><img src="files/figures/45.png" width=450></a><br><br>
 
 As you can see from the figure, the reaction of a movable support represents
 only <b>one unknown</b> to solve in the equation. Notice that we can have
-the same support at walls, roofs or whatever, but it always represent
+the same support at walls, roofs or whatever, but it always represents
 one quantity to solve. The following picture depicts this. Notice how this
-support does not let the system fall (wheels don't take off the surface). Notice as well that the reaction R will be a single unknown. For horizontal surfaces
+support does not let the system fall when it is upside down (wheels don't take off the surface). Notice as well that the reaction R will be a single unknown. For horizontal surfaces
 it will be a vertical unknown. For vertical surfaces, a horizontal unknown. And for tilted surfaces it is still a single unknown, but it has to be splitted in
 two components, although the angle will be usually known. <br><br>
 
@@ -131,7 +133,7 @@ by reflecting the choice 2 arrow on a vertical mirror. After all, the vertical
 component is the same and we just need to change the sign to the horizontal component. This is a good example to see how choice 2 is more visual and intuitive, but remember that choice 1 is safer for signs. <br><br>
 
 The most secure way of approaching this is to decompose the tilted force into 
-two force-components, and deal each component as an independent force. That
+two force-components, and deal with each component as an independent force. That
 way, it is easier to work with choice 1. You can see this in the figure:<br><br>
 
 <a  href="files/figures/48.png" target=_blank><img src="files/figures/48.png" width=450></a><br><br>
@@ -139,9 +141,9 @@ way, it is easier to work with choice 1. You can see this in the figure:<br><br>
 You can see in transparent red the original arrow and its decomposition in
 components. The vertical component is easy, but the horizontal, if you decide
 to use choice 1, will need to be put in positive, so we show the horizontal for choice 2 in transparent red. In any of the choices, remember that there is only one unknown, which is R, since the angle is known. So when your calculations give you one of the components, you can automatically give the other. In the
-case of the figure, you will need to check that the signs of the components are different, since the slope of the surface is such that the reaction can only be either a \((+,-)\) or a \((-,+)\) vector. With choice 2 you see these directions more clearly, while with choice 1 you will get the correct signs straight away. <br><br>
+case of the figure, you will need to check that the signs of the components are different, since the slope of the surface is such that the reaction can only be either a \((+,-)\) or a \((-,+)\) vector. With choice 2 you see these directions more clearly, which is an advantage, but with choice 1 you  get the correct signs straight away, which is also a practical thing. <br><br>
 
-Remember that, as we have only one unknown here, only one equation will be needed to solve it. The number of equations must equal the number of unknowns.<br><br>
+Remember that, as we have only one unknown here, only one equation will be needed to solve it. <b>The number of equations must equal the number of unknowns.</b><br><br>
 
 
 Now we can move to the second type of support, the <b>hinged support</b>. Remember that a hinge is like a fulcrum, a point that cannot be moved neither in x nor in y but it allows rotations about its position. We can see it in the figure:<br><br>
@@ -153,13 +155,17 @@ reaction) and \(R_{\parallel}\) (parallel or tangent reaction). We do this becau
 
 <a  href="files/figures/50.png" target=_blank><img src="files/figures/50.png" width=450></a><br><br>
 
-In the tilted case, we depict the details: how both reactions can be decomposed into x-y components. The parallel reaction is easy because choice 1 and choice 2 are the same, but for the normal reaction there has to be a choice. The intuitive choice (2) is depicted in blue while the x-component for choice 1 is shown in violet. In any case, remember that hinged supports represent two unknowns, so two equations will be needed to solve them. <br><br>
+We have depicted the hypothesis arrows as for choice 1. In the tilted case, we have painted the two reactions as for choice 2. But in this case, see how both reactions can be decomposed into x-y components. The parallel reaction is easy because choice 1 and choice 2 are the same, and we end up with a situation which is choice-1-friendly. But for the normal reaction there has to be a choice. When we decompose it into x-y components, the y-part is positive and choice-1-friendly, but the x part looks to the left, so it is not choice-1-friendly. The intuitive choice (2) is depicted in blue while the x-component for choice 1 is shown in violet. The safest method is: draw all components, leave those which are positive (choice-1-friendly) as they are, and change the sign of the negative arrows (those pointing to the left or down, which are choice-1-unfriendly). By reversing them, you turn them into choice-1-friendly and then you don't worry about signs.<br><br>
 
-Finally, we show the third typical support which is the <b>fixed support</b>. It will block not only tangent and normal motion but also rotations, so there will be \(R_{\parallel}\), \(R_{\perp}\) and also a reaction moment \(M_z\). We see this on the figure:<br><br>
+In any case, remember that hinged supports represent two unknowns, so two equations will be needed to solve them. <br><br>
+
+Finally, we show the third typical support which is the <b>fixed support</b>. It will block not only tangent and normal motions but also rotations about the support point. So there will be \(R_{\parallel}\), \(R_{\perp}\) and also a reaction moment \(M_z\). We see this on the figure:<br><br>
 
 <a  href="files/figures/51.png" target=_blank><img src="files/figures/51.png" width=450></a><br><br>
 
-In the figure we have for the first time an <i>unknown</i> moment, which means we need to make a choice. Again, choice 1 will be the easy-for-signs one, in which the unknown will be declared positive as hypothesis, while choice 2 will put the orientation (clock or counterclockwise) depending on intuition. In choice 1, the obtained sign when solving the equation will determine the sign of the unknown moment, while for choice 2 the sign will just tell whether the hypothesis was right (+) or wrong (-), so you need to put signs by hand later. What is important here is that for fixed supports there are three unknowns and three equations will be needed to solve them.<br><br>
+In the figure we have for the first time an <i>unknown</i> moment, which means we need to make a choice. Again, choice 1 will be the easy-for-signs one, in which the unknown will always be declared positive as hypothesis, while choice 2 will put the orientation (clockwise or counterclockwise) depending on intuition. In choice 1, the obtained sign when solving the equation will determine the sign of the unknown moment, while for choice 2 the sign will just tell you whether the hypothesis was right (+) or wrong (-), so you need to put signs by hand later. Use for moments the same choice that you use for forces.<br><br>
+
+What is very important here is that for fixed supports there are three unknowns and three equations will be needed to solve them.<br><br>
 
 
 </ul><!reactions>
@@ -169,61 +175,67 @@ In the figure we have for the first time an <i>unknown</i> moment, which means w
 
 A rigid body is one that cannot be deformed. Any distance between each two
 parts of it must be kept constant at all times. These bodies are very special
-because they allow to extend the scope of our laws of statics. As you will
-remember, those laws were valid just for single points. All forces must
-give zero, but they must be applied to the same suffering point. And all 
-moments must be calculated with respect the same reference point. <br><br>
+because they allow to extend the scope of our first law of statics. As you will
+remember, that law was valid just for single suffering points. All forces must give zero, but they must be applied to the same suffering point. (The second law is that all moments must be calculated with respect the same reference point, and this law will remain just like that.) <br><br>
 
-But in the real world, objects are not points, so if we want to make the
-laws of statics practical, we need to be able to sum forces and moments which
-are not based at the same point. Let's see a first scenario:<br><br>
+In the real world, objects are not points, so if we want to make the
+first law of statics practical, we need to be able to sum forces which
+are not suffered by the same point. Let's see a first scenario:<br><br>
 
 <a  href="files/figures/52.png" target=_blank><img src="files/figures/52.png" width=450></a><br><br>
 
 We have a vertical column with a fixed support, and an vertical external force pointing downwards. Notice that we have switched to a more clean depiction of the
-force, where the arrow now is displaced for a better visualization, but the little line will always show what is the true base of the vector, the point at which the force is suffered.<br><br>
+force, where the arrow now is displaced along its direction for a better visualization, but the little line will always show what is the true base of the vector, the point at which the force is suffered.<br><br>
 
-Here, it is clear that the tangent reaction and the moment at the support are both zero, so only the normal reaction will survive in order to have a static situation:<br><br>
+Here, it is clear that the tangent reaction and the moment at the support are both zero, so only the normal reaction will survive in order to have a static situation. Notice that the reaction arrow is painted with the usual method, since sliding the force will not make the picture cleaner. Only slide force vectors if the picture is going to be more clear!<br><br>
 
 <a  href="files/figures/53.png" target=_blank><img src="files/figures/53.png" width=450></a><br><br>
 
-But you should ask this question here: wasn't illegal to sum forces suffered at different points? The true static equation says that forces must be zero when suffered and added at the same point. However, here the external force is applied at one extreme of the rod while the reaction is suffered at the other extreme. Is this static? The answer is yes, but we need to digg deeper in order to understand what is happening here. Let's slice  part of the column in pieces:<br><br>
+You should ask the following question here: wasn't illegal to sum forces suffered at different points? How can we be happy saying that a force suffered at the top is counterbalanced by a reaction suffered at the bottom. These are different suffering points! The true static equation says that forces must be zero when suffered and added at the same point. However, as we said, here the external force is applied at one extreme of the rod while the reaction is suffered at the other extreme. Is this static? The answer is yes, but we need to digg deeper in order to understand what is happening here. Let's slice (only with our imagination) part of the column in imaginary free pieces:<br><br>
 
 <a  href="files/figures/54.png" target=_blank><img src="files/figures/54.png" width=450></a><br><br>
 
-Now let's focus on the upper slice. To be static, it should have the sum of its
-forces equal to zero. So there has to be an upwards force acting on the bottom of the upper slice:<br><br>
+Now let's focus on the upper or top slice. To be static, since it is now depicted as a free body diagram, it should have the sum of its
+forces equal to zero. So there has to be an upwards force acting on the bottom of the upper slice. We are forced to invent such a (green) force:<br><br>
 
 <a  href="files/figures/55.png" target=_blank><img src="files/figures/55.png" width=450></a><br><br>
 
-So now the first slice is at equilibrium. However, if the green force appears, a reaction must appear as well and will be suffered by the top of the second slice: <br><br>
+So now the first slice seems at equilibrium. However, if the green force appears, a reaction must appear as well and will be suffered by the top of the second slice: <br><br>
 
 <a  href="files/figures/56.png" target=_blank><img src="files/figures/56.png" width=150></a><br><br>
 
-Notice that in the second slice we had to add another force at its bottom in order to have the slice at equilibrium. This will trigger another reaction at the top of the third slice, and so on. The final and global picture will be this:<br><br>
+In fact, the bottom of the first slice and the top of the second slice are two versions of the same point, so when they become the same point again the total force on such point becomes zero, as expected.<br><br>
+
+But notice now that in the second slice we had to add another force at its bottom in order to have the whole slice at equilibrium. This will trigger another reaction at the top of the third slice, and so on. It is a chain reaction of reactions! The final and global picture will be something like this:<br><br>
 
 <a  href="files/figures/57.png" target=_blank><img src="files/figures/57.png" width=450></a><br><br>
 
-What happens here is that each slice of the column is at equilibrium. But the only forces acting on the column are not just the external and the reaction. Many (in fact, infinite) forces appear when we cut (with our imagination) the material. These forces are called <i>internal forces</i> and the produce an <b>axial stress</b>. Axial because it occurs along the axis of the column. And stress because the material is stressed, even if it does not seem it. But if the material would not be rigid, we would notice such stress. In fact, the material can break and this is because the internal stresses that appear as a consequence of the external force applied at the top. <br><br>
+What happens here is that each slice of the column is at equilibrium. But we see that the only forces acting on the column are not just the external at its top and the reaction at its bottom. Many (in fact, infinite) green forces appear when we cut (with our imagination) the material. These forces are called <i>internal forces</i> and they produce an <b>axial stress</b> usually called A or F. It is called axial because it occurs along the axis of the column. And we call it stress (we can also call it force) because the material is stressed under its action, even if it does not seem to be suffering. But if the material would not be rigid, we would notice such stress by observing deformation (microscopically, solid materials exhibit such deformations). In fact, if the stress is high enough, the material can break and this is because of the internal stresses that appear as a consequence of the external force applied at the top. <br><br>
 
-Conclusion: even if the laws of statics say that the forces to be added must be suffered at the same point, we now see that for <i>a rigid body</i> we can sum all the <i>external forces</i>, even suffered at different points, and equal them to zero. But remember, only external forces, and take into account that reactions are external as well. But the microscopic reality is that equilibrium occurs at each slice, producing an internal stress.<br><br>
+Conclusion: even if the first law of statics says that the forces to be added must be suffered at the same point, we now see that for <i>a rigid body</i> we can sum all the <i>external forces</i>, even suffered at different points, and equal them to zero. But remember, <i>only external forces</i>, (reactions, weight, applied forces). But the microscopic reality is that when a rigid body suffers forces at different points, internal stresses appear which will be important. And what is really happening, microscopically, is that equilibrium must occur at each point. The simple rules are:<br><br>
 
-Notice that when we join the slices again, the internal points at which the internal forces are suffered, which come in pairs, are joined and each pair becomes one again, so at each of these internal points there are two forces suffered, but they will be equal and opposed, so they cancel. So <i> internal forces always cancel</i> and when we analyze only external forces, they don't need to be depicted. They only appear in the drawing when we (imaginarily) break an object to analyze it internally.<br><br>
+-If you are not interested in internal stresses, just consider the external forces acting on (suffered by) the body, and you can sum them and set the result to zero. <br><br>
 
-There is a mathematical paradox that occurs here when the slice is reduced to a mathematical point (or line in this case). When the slice has no width at all, let's see what happens:<br><br>
+-If you, however, consider internal stresses, your law of statics becomes again the rigorous one, and then, for each point, you need to sum the forces suffered only by this point, and you need to sum both internal and external forces.<br><br>
+
+Notice again that when we put the slices back together, the internal points at which the internal forces are suffered, which were splitted in two versions for each cut, are joined again: they become a single version. In other words, each of these pairs becomes one single point. At each of these internal points there are two forces suffered, but they need to be equal in magnitude and opposed in sign, so they cancel and hold the first law of statics in its rigorous version. So <i> internal forces always cancel</i> and when we analyze only external forces, internal ones don't need to be depicted. They only appear in the drawing when we (imaginarily) break an object to analyze it internally.<br><br>
+
+The example we have seen is a case of <i>compression</i>, but the external force could have been upwards so we would have had a case of <i>traction</i>.
+
+There is a mathematical paradox that occurs when the slice height is reduced to a mathematical point (or line in this case, but consider each slice as having a very small width). When the slice has no height at all, let's see what happens:<br><br>
 
 <a  href="files/figures/58.png" target=_blank><img src="files/figures/58.png" width=450></a><br><br>
 
 
-The example we had before was a case of <i>compression</i>, but the external force could have been upwards so we would have had a case of <i>traction</i>.
-When the slices have width it is easy to distinguish the two cases, but notice that as the width becomes zero it becomes harder and harder, in such a way that in the limit of zero width the two bases of the vectors meet at the same point, so the upper and lower versions are the same physical situation depicted differently. The conclusion is that for a mathematical point there is no distinction between compression and traction. Only objects with a finite width can have such distinction. Conclusion: when analyzing a point-like object and considering whether it suffers compression or traction, draw the point with some volume. If you draw a small point, it will be impossible to distinguish the two cases. <br><br>
+When the slices have some height (left pictures) it is easy to distinguish the two cases, (compression and traction) but notice that as the height becomes zero (middle pictures) it becomes harder and harder, in such a way that in the limit of zero height (right pictures) the two bases of the vectors meet at the same point, so the upper and lower versions are the same physical situation (although depicted differently). The conclusion is that for a mathematical point there is no distinction between compression and traction. Only objects with a finite width can have such distinction. Practical tip: When analyzing a point-like object and considering whether it suffers compression or traction, draw the point with some volume. If you draw a small point, it will be impossible to distinguish the two cases, and distinguishing between compression and traction can be confusing. <i>The object suffering traction or compression must be painted with volume (or area in 2D) and the forces must be painted with a clear base to remark where
+the force is suffered.</i> <br><br>
 
 So far we have only analyzed the effect of axial forces, forces that go along the column. Now we will complete our analysis by developing a complementary example:<br><br>
 
 <a  href="files/figures/59.png" target=_blank><img src="files/figures/59.png" width=450></a><br><br>
 
 Now there will not be a normal reaction at the support. But there will be a 
-horizontal one, this is sure.<br><br>
+horizontal one, this is for sure.<br><br>
 
 <a  href="files/figures/60.png" target=_blank><img src="files/figures/60.png" width=450></a><br><br>
 
@@ -231,40 +243,107 @@ But notice that this column is not at equilibrium, because the forces want to ro
 
 <a  href="files/figures/61.png" target=_blank><img src="files/figures/61.png" width=450></a><br><br>
 
-Again, we see that we are adding forces and moments referred to different points,
-but we already know that we are allowed to do such a thing for rigid bodies. However, it is important to analyze what internal stresses will appear here. Again, we will cut into slices. Let's analyze only the first two upper slices:<br><br>
+We already knew that as the support was a fixed one (the support resists rotation), a reaction moment can appear. Again, we see that we are adding forces suffered by different points,
+but we already know that we are allowed to do such a thing for rigid bodies, as long as we only sum external forces. However, it is important to say here as well that the price to pay is the appearance of internal stresses. Again, we will cut into free slices that become free body diagrams. Let's analyze only the first two upper slices:<br><br>
 
 <a  href="files/figures/62.png" target=_blank><img src="files/figures/62.png" width=450></a><br><br>
 
-We see that for the upper slice, an interal force pointing to the left is necessary. This will trigger, like before, a chain of internal forces in
-other slices. But there is something missing: these slices want to rotate clockwise due to the forces, so there have to be some momentum vectors to
-compensate for this:<br><br>
+We see that for the upper slice, an internal force pointing to the left is necessary. The only way we can locate it is at an internal point, so we paint it at the bottom of the slice. This will trigger, like before, a chain of internal forces in other slices. The difference is that now the internal forces are perpendicular to the axis of the column. But there is something missing here that was not present at the axial case: these slices want to rotate clockwise due to the forces, so there have to be some momentum vectors to
+compensate for this!<br><br>
 
 <a  href="files/figures/63.png" target=_blank><img src="files/figures/63.png" width=450></a><br><br>
 
-Should we worry about where we should attach the moment symbol? Not at all. Why? Because the moment of the slice produced by the forces is a very special case of moment: a couple, and we already know that for couples the point of application does not matter, they become free vectors. So we draw the counterclockwise moment around the slice, freely. Now the slice is at equilibrium: the forces
-sum to zero and the moments sum to zero as well. Do you clearly see that moments sum to zero? We only depict one direct moment, but there is another one produced by the couple of forces! <br><br>
+But we cannot invent moments out of the blue! As with internal forces, they must come from internal points, where we have cut the column. For the upper slice we need an internal moment at the bottom-breaking point. So not only an internal green
+force appears at such bottom of this top slice, but also an internal green
+moment! We see then that the free body diagram of the upper slice is finally at equilibrium. But problems accumulate for the diagram of the second slice. As forces and moments must cancel at each breaking point, the internal moment that appeared at the bottom of the top slice must has a second version at the top of the second slice, equal in modulus but with opposite sign. The two versions of the internal point are, in fact, the same point. We are just separating
+the structure, breaking it, with our imagination. But in reality the
+slices are put back together, so at the breaking point the sum of all the
+forces and moments there must be always zero. Let's say it again: this implies that at the top
+of the second slice has to appear a clockwise moment as a reaction of the
+moment that appeared at the bottom of the top slice. But looking at
+the second slice, we have a problem. Both the forces and this moment
+at the top are willing to rotate the slice clockwise, so we need to compensate it by considering that at the bottom of the second slice,
+a new internal moment must appear to compensate and forbid such rotation. But notice something weird: this moment has to be greater than the
+other moment! Its role there is not just to compensate the forces, but
+the forces plus the little first moment. As you see, the chain reaction
+will produce internal moments bigger and bigger as we go down on the column. The global picture will be something like: <br><br>
 
-For the second slice, all forces and moments are internal (green), but the story is the same. Let's analyze the global picture:<br><br>
+
 
 <a  href="files/figures/64.png" target=_blank><img src="files/figures/64.png" width=450></a><br><br>
 
-We see that as a consequence of just a single external force, a complex chain reaction of forces and moments is produce to compensate it. The first thing to notice is that internal forces are known as <i>shear</i>, and they make the
-column suffer in such a way that two consecutive slices want to slide between
-each other. The second and related stress is the <i>bending moment</i>. This internal stress makes the column to be bent, and in fact, if the column breaks down, it will usually be at the point where bending moment is maximum. <br><br>
+We see that as a consequence of just a single external force, a complex chain reaction of forces and moments is produced to compensate it. The first thing to learn is that these internal forces, perpendicular to the direction of the column, are known as <i>shear</i> forces or shearing stresses, usually written as V, and they make the column suffer in such a way that two consecutive slices want to slide between
+each other. The second (and related) stress is the <i>bending moment</i>, usually written as just M. This internal stress wants the column to be bent, and in fact, if the column breaks down, it will usually be at the point where bending moment has a maximum magnitude. Notice how the magnitude of the bending moment grows as we
+approach the support. <br><br>
 
-Again there is a mathematical paradox here. If the slice becomes very thin the
-points at which the couple of forces produce the internal moment of the
-slice become too close, so there is a moment, when the slice has zero width, in which there is no shear stress and no bending moment at all. The conclusion, now in general, is that a single point cannot suffer axial stress, shear stress or bending moment. Such stresses are only valid for real objects, with some nonzero volume. So when you draw, for example, a truss or a frame in which there is a joint to be analyzed, draw it with some volume to avoid confussions and paradoxes. All structural objects have volume, so don't worry: all objects will suffer internal stresses.<br><br>
+Again there is a mathematical paradox here. Try to draw in a paper what is said in the following discussion. If the slices' height become very thin the
+points at which the pairs of forces produce the internal moment of the
+slice become too close, so there is a time, when the slice has zero height, in which there is no shearing stress and no bending moment at all. The conclusion, now in general, is that a single point cannot suffer axial stress, shearing stress or bending moment. Such stresses are only valid for real objects, with some nonzero volume. They appear as a consequence of applying the first law of static to volume objects instead of points. But if we go back to the kingdom of points, these phenomena have no meaning. So let's repeat a tip: when you draw, for example, a truss or a frame in which there is a joint to be analyzed, don't consider it a point and draw it with some volume to avoid confussions and paradoxes. All structural objects have volume, so don't worry: all objects will suffer internal stresses.<br><br>
 
 
-If we have the following case<br><br>
+If we would have the following case<br><br>
 
 <a  href="files/figures/65.png" target=_blank><img src="files/figures/65.png" width=450></a><br><br>
 
-then you know by eye inspection that this is a sum of the two previous cases, and we will have axial and shear forces and also bending moments. What you need to notice is that while axial stress is independent, shear forces and bending moments are dependent on each other. For now, you will not use these internal stresses, but later in the course you will, so better to understand them now.<br><br>
+then you should recognize, by eye inspection, that this is a sum of the two previous cases, so we will have axial and shearing forces and also bending moments. What you need to notice is that while axial stress is independent, shearing forces and bending moments are dependent on each other. Moreover, bending moments have a tendency to accumulate magnitude, like a snowball rolling downhill. For now, you will not use these internal stresses, but later in the course you will, so better to understand them now. Let's summarize what we know about statics:<br><br>
 
-Conclusions: the laws of statics can be applied to rigid bodies without worrying if we sum forces suffered by different points. In this case, we can only consider external forces. Moments can also be added without worrying the mixture of reference points. <br><br>
+-The base of a force vector must be placed at the point where this force is suffered. Temporarily you can
+slide it along its direction in order to have an easier calculation of a moment, but it is just a mind
+trick. Always draw a force with the tail pinned at the suffering point.<br><br>
+
+-A point <i>does not suffer a moment</i>. Don't get confused with this. A point suffer forces, not moments.
+The concept of moment involves, as we know, two points: the fulcrum (real or not) and the point of application
+of the force. The latter point is the suffering point of the force, while the former is the place where we should
+draw the moment vector. But don't consider that a point is suffering the moment: it is the body, in general, who
+suffers it. This is a bit confusing and you must make an effort to understand it well. Think that body consisting on a single point
+could never suffer a lever, since it does not have two different points in which to apply leverage. Then, the concept of moment appears for 
+bigger, real objects with some volume. It is true that a force acting on a single point object can do a moment
+with respect a point located on the air, but this is just a mathematical calculation. The object itself could never suffer leverage. <br><br>
+
+-For rigorous statics, the sum of all forces (external and internal) must be equal to zero when summed for a same suffering point. However, for rigid bodies 
+we can also sum all forces suffered at different parts of the body. But beware, in this case all these forces must be external,
+never internal. However, when we calculate only forces suffered by a single point, all forces (external and internal) must
+be considered and added and set to zero, if we want this point to be static. This is what happens when we consider internal points, that we want all forces and moments to cancel at such point. This issue is quite a source of confussion, but don't mistake it: for rigid bodies, sum only all external forces (suffered at any point) and set the sum equal to zero; for points, usually internal, sum all forces, external and internal, suffered only by this point, and set the sum equal to zero. <br><br>
+
+-Notice that reactions and weight will always be external quantities. Why? Because external means that the force (or moment) is <i>produced</i>
+by something external to the rigid body. For reactions, supports (or its walls) are the external producers, and supports do not belong to
+the system. For weight, it is the Earth who produces the force, and the planet is not included in the system either. This could be
+a point of confussion as well: a force like the weight is felt very internally, so it seems an internal force. But no: what makes a force
+(or a moment) external is the source of its manufacturer, not the subject or object that 'feels' it. Weight is produced externally, and this is what counts. Internal forces and moments are suffered internally, it is true, but they are also <i>produced internally</i>, and this last fact is what defines
+them as internal. <br><br>
+
+-For statics, the moments must be equal to zero when summed for a same reference point. There is no distinction here between a rigorous version of the law and a version for big objects. This law must hold always.
+However, when we have a couple, which is <b>the sum of</b> moments produced by a set of forces with zero sum, we can place that moment vector
+wherever we like. For such special moments, simply add them to the total moment of the rigid body without worrying about their reference points. Worry
+about the reference point when a moment is not a couple and don't worry about the reference point when a moment is a couple. The method is:
+first, sum all the moments (not-couple) which all must be calculated with respect to the same point of reference. Finally, happily add the rest of the
+(couple) moments and set all the sum equal to zero. The practical thing here is that not-couple moments will be produced by forces that appear in the drawing, while a couple will be given to you directly, without saying the forces responsible for it. It will be given with a turn or screw vector. The practical thing to do is to leave such couples painted at the point of their application. Even if you can locate them elsewhere and you would obtain the same results, try to stick to its physical meaning and draw them where they are physically applied. When we say that couple vectors can be painted anywhere it just means that the mathematical result will be the same. But we insist: try to depict them at the place where they are physically applied. For example, a joint at which we apply the turn of a screwdriver. <br><br>
+
+-Wherever you break (with your imagination) a point in the structure, the structure becomes two pieces (or more if you break it at more points). But let's focus on a single breaking point. At the point of (imaginary) rupture,
+two versions of the breaking point (which are to be same when
+the structure is not broken) will emerge. If, instead of two, three rods meet at a single point and you break there, three versions of the same point appear! But let's stick to a breaking point that just gives two pieces for now. One version of the breaking point will be at one end of one piece and the other version of the breaking
+point will be at an extreme of the other piece. At the breaking point, if it is a joint (articulation, joint), only internal forces will emerge, and 
+internal moments will be zero. (At these points the bending moment will always be zero! )
+If it is not a joint, and rotation about such point is forbidden, internal forces <i>and</i> internal moments will emerge. If you know one force or moment at one version of the point, you already know
+it as well at the other version:
+just use the same modulus and change the sign. This is valid for forces and also for moments. At each of the two versions of the breaking point, draw the corresponding internal forces and moment pinned at the very point. This is for clarity, so when you have the two versions of the breaking point depicted one next to the other,
+you can check that all forces and moments sum to zero at this exact point (when you imaginarily put the pieces back together). It is true that in this case we are breaking the rule of drawing the moment
+at the reference point, but the picture will be more clear. In fact, there is something practical to be said about drawing moments: <br><br>
+
+-Notice that if you have a lot of forces acting on a system and we need to calculate the moments produced by them, when we depict the moment
+arrows it will quite a mess, since all should be painted at the same reference point. One simple choice is just <i>not painting them on the picture</i>! Let's be practical: <br><br>
+
+1) Paint internal moments arising at
+breaking points, for clarity.<br><br>
+
+2) Also depict those moments given to you directly, without saying which force is producing it. Most often,
+whenever the problem gives you a direct moment, it will be a couple and then you can draw it wherever you like (but it is better if you keep it
+at the point in which you are told it is applied, not to mess things up).<br><br>
+
+3) Also depict the unknown reaction moment at fixed supports. <br><br>
+
+4) <b>Don't</b> paint the moment vectors produced by forces already depicted in the figure, it only makes the picture a mess. <br><br>
+
 
 </ul><!rigid>
 
@@ -273,25 +352,30 @@ Conclusions: the laws of statics can be applied to rigid bodies without worrying
 
 There is a special case that is worth to be analyzed in detail. Many times,
 your structures will be composed of just rigid rods and articulated joints. 
-An articulated joint is like a hinge support: they forbid x and y displacement
-but they allow rotations:<br><br>
+An articulated joint is like a hinge support: they forbid x and y displacements 
+but allow rotations about their articulation point:<br><br>
 
 <a  href="files/figures/66.png" target=_blank><img src="files/figures/66.png" width=450></a><br><br>
 
-It is of the uttermost importance that you notice that joints, or articulated points, cannot resist rotation, so they cannot exhibit a moment reaction. This
+It is of the uttermost importance that you notice that joints, or articulated points, cannot resist, or don't react against rotation, so they cannot exhibit a moment reaction. This
 has a very important consequence when we separate the rods for analysis:<br><br>
 
 <a  href="files/figures/67.png" target=_blank><img src="files/figures/67.png" width=450></a><br><br>
 
-We have depicted the two unknown internal reactions at each extreme of each rod,
-without worrying about whether these hypothesis are intuitive or not (we are just folling choice 1). But here comes the important point: if the joints cannot provide moment and if the structure is to be static, no moments can be produced by the forces! And the only way in which this can be true is this:<br><br>
+We have depicted the two unknown internal reactions at each extreme of each rod. As we don't know the signs of the forces, hypotheses must be made.
+Here we don't worry about whether these hypothesis are intuitive or not (we are just folling choice 1). Notice that there are two points at which two versions of the same point appear and two points at which three versions of the same point appear. <br><br>
+
+And here comes the important point: <i>if the joints cannot provide internal moment</i> and if the structure is to be static, no moments can be produced by the red forces! And the only way in which this can be true is this:<br><br>
 
 <a  href="files/figures/68.png" target=_blank><img src="files/figures/68.png" width=450></a><br><br>
 
-In other words: rods can only experience <i>axial</i> stresses, and they can be
-under traction or compression. In the picture our hypothesis are all depicted as tractions, but it does not matter which one you pick. What is crucial here is that, even if the joint gives a reaction with two unknowns, you need to see that the absence of reaction moment reduces the number of unknowns to one, because <i>the direction of the force will be the same as the direction of the rod</i>, so there will be just one unknown! <br><br>
+In other words: <b>rods connecting two extremes that don't resist rotation can only experience <i>axial</i> stresses, so such rods can only be 
+under traction or compression.</b> Or under null force, of course. In the picture our hypotheses are all depicted as tractions, but it does not matter which one you pick. What is crucial here is that, even if the joint gives a reaction with two unknowns, you need to see that the absence of reaction moment reduces the number of unknowns to one, because <i>the direction of the force will be the same as the direction of the rod</i>, so there will be just one unknown, solvable with just one equation! <br><br>
 
-Don't analyze too much this picture because it is not supported anywhere, so if you try to sum all the forces at each joint and equal them to zero you will soon arrive to the conclusion that all the rods suffer zero force. That is why this structure is floating in the air, without weight or supports! What happens if we really put this structure on a pair of supports? Think about it: if the supports are of movable or hinge type, both allow rotations, so they will act like joints in this sense, and all the rods will be either under traction or compression (or null force). However, if there is a fixed support, the rods that are touching this support will suffer a moment in their supported extremes, so at the other extremes they will need to suffer moments as well, which will be chain-propagated to many, if not all, the rest of the rods. So watch out: the rule that rods have their internal forces along the direction of their own bodies is only valid when the rods don't suffer moments! <br><br>
+You may think that in this case, choice 2 for signs is mandatory, since choice 1 would be extremely counterintuitive, and even missleading. The answer is more subtle: in fact, when calculating the internal forces of rods,
+you either calculate it at one end or at the other: never at both, since once you know the result at one extreme, you know the result at the other by just changing the signs. And, focusing on a single extreme, you can happily use choice 1, just by first drawing the intuitive arrow and then changing the sign to those components looking leftwards or downwards.<br><br>
+
+Don't analyze too much this picture because it is not supported on any surface, and it is not experiencing weight! So if you try to sum all the forces at each joint and equal them to zero you will soon arrive to the conclusion that all the rods suffer zero force. This is because this structure is now floating in zero-gravity conditions, without weight or supports! What happens if we really put this structure on a pair of supports and under gravity? Think about it: if all the supports are of movable or hinge type (both allow rotations) they will act like articulated joints in this sense, and all the rods will be experience no moments at any extreme. so they are all either under traction or compression (or null force). However, if there is a fixed support somewhere, the rods that are touching this support (they can be more than one) will suffer a moment in their supported extremes, so at the other extremes they will need to suffer moments as well to compensate for that, which then will be chain-propagated to many, if not all, the rest of the rods. So watch out: <i>the rule that rods have their internal forces along the direction of their own bodies is only valid when the rods don't suffer moments at any extreme.</i> <br><br>
 
 </ul><!rods>
 

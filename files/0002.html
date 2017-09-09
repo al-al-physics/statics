@@ -22,18 +22,18 @@ $$\sum_{i=1}^3 i^2=1^2+2^2+3^2=1+4+9=14$$  <br><br>
 
 $$\sum_{i=1}^4 i(i-1)=0+2+6+12=20$$ <br><br>
 
-$$\sum_{i=2}^7 -i= -2-3-4-5-6-7=-27$$ <br><br>
+$$\sum_{i=2}^7 (-i)= -2-3-4-5-6-7=-27$$ <br><br>
 
 Now it is your turn practising this: <br><br>
 
 1.
 $$ \sum_{i=1}^4 (1-i)$$
 2.
-$$ \sum_{i=1}^3 1/i^2$$
+$$ \sum_{i=1}^3 \frac{1}{i^2}$$
 3.
 $$ \sum_{i=1}^3 (-1)^ii$$
 4.
-$$ \sum_{i=0}^4 i+i^2$$
+$$ \sum_{i=0}^4 (i+i^2)$$
 
 We will use the Sum symbol essentially to sum forces, as we will see later. Usually, you will encounter just
 a \(\Sigma\) without sub or superscripts. In this case, it means that you just need to sum over all the forces
@@ -45,14 +45,14 @@ you have.
     <ul id="partsvec" style="display:none"><!partsvec>
 
 
-Graphically, a vector is just an arrow. As an arrow, it will have a length or <i>modulus</i> or <i>magnitude</i>. It will also have a
+Graphically, a vector is just an arrow. As an arrow, it will have a length or <i>modulus</i>, also called <i>magnitude</i>. It will also have a
 <i>direction</i>, which is the inclination or slope of the straight line to which it belongs (or to which is parallel), and the orientation
-of the tip of the arrow. In other languages, such Spanish, direction (dirección) is referred just to the slope, while orientation (sentido) is 
+of the tip of the arrow. Direction=slope+orientation. In other languages, such Spanish, direction (dirección) is referred just to the slope, while orientation (sentido) is 
 where the tip of the arrow points. Let's see all this in a figure:<br><br>
 
 <a  href="files/figures/08.png" target=_blank><img src="files/figures/08.png" width=400></a><br><br>
 
-In the figure we have a vector with a horizontal direction (dirección), right orientation (sentido) and with some magnitude or length marked on it.
+In the figure we have a vector with a horizontal direction (dirección), right orientation (sentido) and with some magnitude, modulus or just length marked on it.
 We have also marked the tip, which gives the vector its orientation and the base (or tail) of the vector, an important part about which we will talk 
 later. 
 
@@ -68,29 +68,31 @@ Notice that components are separated by commas and that all the components are e
 why we had 3 components. In 4D we would have four components, and in 2D just two. What would a vector be with just one component? This would be just a
 single number, also called a <i>scalar</i>. In the example above, \(a_x\) is the x-component of the vector \(\vec{a}\), while \(a_y\) and \(a_z\) are 
 the y and z components, respectively. We know that in space we have three axis, x, y and z, so each component is the <i>projection</i> of the vector
-into its corresponding axis. In this course, we will mainly work in 2D, so let's give an example:<br><br>
+into its corresponding axis. In this course, we will mainly work in 2D, so let's give a 2D example:<br><br>
 
 <a  href="files/figures/10.png" target=_blank><img src="files/figures/10.png" width=400></a><br><br>
 
 Let's analyze this figure in depth because it is very important. We have an inclined vector in a x-y plane. We depict red light to make a projection
 into the x axis. Such light will give a shadow of the whole vector into the x axis. This is the definition of a projection: a shadow done by a light
-that shines perpendicularly to the axis where we project. The blue light gives the other shadow, which is the y-component of the vector. A final, and a
+that shines perpendicularly to the direction (here given by an axis) where we project. The blue light gives the other shadow, which is the y-component of the vector. A final, and a
 very important thing to notice here is that <i>the vector plus the two components always form a right-angled triangle!</i> in which the vector will give
-the hypotenuse and the two components will be the two other sides. We will use this result all the time in this course. 
+the hypotenuse and the two components will be the two other sides. We will use this result all the time in this course. Invert some time trying to
+extract all the information you can from the picture.<br><br>
 
 </ul><!partsvec>
 
 <h2><a href="#last" onclick="toggle('unit')">Magnitude and unit vectors</a></h2>
     <ul id="unit" style="display:none"><!unit>
 
-We define the magnitude or the modulus \(|\vec{a}|\) of a vector \(\vec{a}\) in a very simple way: it is simply the length of the hypotenuse! So we apply Pythagoras' theorem to 
+We define the magnitude or the modulus \(|\vec{a}|\) of a vector \(\vec{a}\) in a very simple way: it is simply the length of the hypotenuse! So we apply Pythagoras' theorem (generalized to many dimensions) to 
 write<br><br>
 
 \(|\vec{a}|\equiv a\equiv \sqrt{a_x^2+a_y^2+a_z^2+\ldots}\)<br><br>
 
-where \(\equiv\) means 'definition', and the \ldots indicate that we could add more components if we are in higher dimensional spaces. Notice as well that we write the
-modulus as the vector with two vertical bars or simply the letter without the arrow above. And, as we have built a right-angled rectangle, notice that we can relate
-the different sides with the triangle's angles by means of the basic trigonometric functions. For example, the angle \(\theta\) can be used to notice that<br><br>
+where \(\equiv\) means 'definition', and the three dots indicate that we could add more components if we were in higher dimensional spaces. Notice as well that we write the
+modulus as the vector with two vertical bars or simply the letter without the arrow above. And, as we can build a right-angled rectangle from the vector and the components, notice that we can relate
+the different sides with the triangle's angles by means of the basic trigonometric functions. For example, the angle \(\theta\) (which also appears in the
+last figure) can be used for<br><br>
 
 \(\sin{\theta}=\frac{a_y}{a}\qquad\cos{\theta}=\frac{a_x}{|\vec{a}|}\qquad \tan{\theta}=\frac{a_y}{a_x} \) <br><br>
 
@@ -119,11 +121,12 @@ written either with components and also as <i> sums</i> of \(\hat{i},\hat{j},\ha
 
 \((3,4,2)=3(1,0,0)+4(0,1,0)+2(0,0,1) \)  <br><br>
 
-where we need to learn that a scalar (a simple number) multiplied by a vector penetrates into all the components and multiplies all of them:<br><br>
+where we need to learn that a scalar (a simple number) multiplied by a vector penetrates into all the components and multiplies all of them. For
+example:<br><br>
 
-\( 3(a_x,a_y,a_z)=(3a_x,3a_y,3a_z)\) <br><br>
+\( 7(a_x,a_y,a_z)=(7a_x,7a_y,7a_z)\) <br><br>
 
-Consequently, in the previous example, we can notice that we can simply write<br><br>
+Consequently, in the previous example, we notice that we can simply write<br><br>
 
 \((3,4,2)=3\hat{i}+4\hat{j}+2\hat{k}\)<br><br>
 
@@ -200,7 +203,7 @@ where, if we convert this into a sum, we perform the trick in the second and fif
 
 \(\vec{a}=\vec{a}_1+(-\vec{a}_2)+\vec{a}_3+\vec{a}_4+(-\vec{a}_5)  \) <br><br>
 
-Graphically, we have the following:<br><br>
+Graphically, for the same vector as in the previous example, we have the following:<br><br>
 
 <a  href="files/figures/12.png" target=_blank><img src="files/figures/12.png" width=400></a><br><br>
 
@@ -225,7 +228,7 @@ The first way is by using components:<br><br>
 
 \(\vec{a}\cdot\vec{b}=a_xb_x+a_yb_y+a_zb_z+...   \)<br><br>
 
-where the ... are for more dimensions. The rule is very simple: take the first coordinates of the two vectors and multiply them, then do
+where the ellipsis (the three dots) are for more dimensions. The rule is very simple: take the first coordinates of the two vectors and multiply them, then do
 the same with second coordinates, with third coordinates... and finally sum all these results to give a final number. Practice this method, by hand:<br><br>
 
 32. \( (3,4)\cdot(4,-2) \)<br><br>
@@ -320,6 +323,10 @@ projection vector along the straight line. Use grid paper and count one square a
 59. \( (7,7), (-2,-4) \)<br><br>
 60. \( (5,2), (2,-3) \)<br><br>
 
+Once you have learned this, you don't necessarily need a very acute vision of angles in a structure. Just convert the lines you want to understand into 
+vectors, and apply the scalar product to find the angles. It is the safest and most powerful method when the situation is not intuitive at all, yet 
+scalar products will give you the correct results in no time.<br><br>
+
 </ul><!projections>
 
 
@@ -333,7 +340,7 @@ anchored at the origin (0,0,0), while the tip of the arrow will be pinned at the
 <a  href="files/figures/14.png" target=_blank><img src="files/figures/14.png" width=400></a><br><br>
 
 Can we have a vector which is not attached to the origin, but going from point A to point B instead? Yes, but that would not be a position vector
-but a <i>displacement</i> vector, and we will write with a capital Greek letter Delta \(\Delta\). Then, <br><br>
+but a <i>displacement</i> vector, and we will write it with a capital Greek letter Delta \(\Delta\). Then, <br><br>
 
 \(\Delta\vec{r}=\vec{r}_{final}-\vec{r}_{initial}\)  <br><br>
 
@@ -390,13 +397,13 @@ In the first example we are given a (black) direction. Then we can see how only 
 <a  href="files/figures/17.png" target=_blank><img src="files/figures/17.png" width=400></a><br><br>
 
 If you are able to calculate the sign of one component, then you will know the sign of the other <i>automatically</i>.
-The other case is the following. We are given another direction and only the (-,+) and (+,-) choices are compatible.
+The other case is the following. We are given another direction and only the (-,+) and (+,-) choices are compatible with it.
 Again, if you get to know one sign, automatically you know the other.<br><br>
 
 <a  href="files/figures/18.png" target=_blank><img src="files/figures/18.png" width=400></a><br><br>
 
-This will be very important through the course. Let's put it into practice. You will have to rebuild a vector \(\vec{a}\) from the 
-following ingredients: you will know the sign of the slope, + is / and - is \, the modulus and one component. Give the whole vector:<br><br>
+This will be very important through the course. And it can be used for any type of vector. In fact, you will apply this reasoning a lot when calculating force vectors. Let's do some practice. You will have to rebuild a vector \(\vec{a}\) from the 
+following ingredients: you will know the sign of the slope, + is / and - is \, the modulus and one component. Give the whole vector (2D):<br><br>
 
 69. \(+ , 7, a_x=2\)<br><br>
 70. \(- , 5, a_y=-1\)<br><br>
@@ -451,7 +458,7 @@ Let's practice this a bit. You will be given a set of 3 forces and you need to c
 77. \( \vec{F}_1=(-75.1,12.5,-2.0),\)<br>\(\vec{F}_2=-(8.5,62.1,-21.3),\)<br>\(\vec{F}_3=(-4.3,5.2,17.6) \)<br><br>
 78. \( \vec{F}_1=(-72.0,32.5,7.4),\)<br>\( \vec{F}_2=(0.2,-31.4,-73.5),\)<br>\(\vec{F}_3=(-4.7,-53.2,-21.4) \)<br><br>
 
-Notice that each exercise is not an equation, but three equations, one for x, one for y and another for z.<br><br>
+Notice that each exercise involves not one equation but three: one for x, one for y and another for z.<br><br>
 
 When our object of interest touches another object, there will be forces at the touching interface. Specifically, the external
 object will make our object suffer a <i>reaction</i>. The typical example is the reaction produced by the ground against an object on it. 
@@ -459,8 +466,9 @@ Notice that we are not usually interested in what the ground suffers, so we don'
 
 <a  href="files/figures/20.png" target=_blank><img src="files/figures/20.png" width=400></a><br><br>
 
-We will have other types of supports that produce different kind of reactions. What is important here is that we will focus on what the supports do
-on the object, and almost never what the supports suffer themselves. 
+We will have other types of supports that produce different kind of reactions. What is important here is that we will focus on what the supports or
+other external entities (like Earth to produce gravity ---> weight) do
+on the object, and almost never what the supports or Earth suffer themselves. 
 
 </ul><!forces>
 
@@ -468,7 +476,7 @@ on the object, and almost never what the supports suffer themselves.
     <ul id="trouble" style="display:none"><!trouble>
 
 
-The most common cause of exam failing is sign mistakes, specially when dealing with force vectors. Let's consider an example to illustrate
+The most common cause of exam failing is sign mistakes, especially when dealing with force vectors. Let's consider an example to illustrate
 the problem here. <br><br>
 
 <a  href="files/figures/21.png" target=_blank><img src="files/figures/21.png" width=400></a><br><br>
@@ -484,10 +492,12 @@ you solve these two equations that can also be written as<br><br>
 \( 0+0-3+6+2+Fx=0\) <br><br>
 \( 10-10+2+3+4+Fy=0\) <br><br>
 
-and find the values of \(F_x\) and \(F_y\). If these components are positive, they are positive. If some of them is negative,
-it is negative, as simple as this. In the equation we just have to <b>SUM</b> so we sum, but then the <i>hypothesis</i> for the unknown force is that it is positive
-in both components (choice 1 in the picture). If you are not so mathematically minded but more intuitive, you see the other forces in action and say 'OK, I see that
-the unknown force is going to point SW (SouthWest, or left-down), so I prefer to draw the force pointing there'. You can do this as well, and we call it choice 2. 
+and find the values of \(F_x\) and \(F_y\). If these components are positive, they are positive. If some of them are negative,
+they are negative, as simple as this. In the equation we just have to <i>SUM</i> over all forces, so we sum. This is the <b>choice 1</b> approach, and
+it needs that the <i>hypothesis</i> vector for the unknown force has all components with positive sign.
+ If you are not so mathematically rigorous but more intuitive minded, you analyze the other forces in action for a minute and say 'OK, I see that
+the unknown force is going to point SW (SouthWest, or left-down), so I prefer to draw the force pointing there'. You can do this as well, and we call it <b>choice 2</b>. <br><br>
+
 But beware, because now your static equation will look like this:<br><br>
 
 \( (0,10)+(0,-10)+(-3,2)+(6,3)+\)<br>\(+(2,4)-(F_x,F_y)=(0,0)  \)<br><br>
@@ -498,23 +508,23 @@ Or if you prefer, we break it into two separate equations:<br><br>
 \( 10-10+2+3+4-Fy=0\) <br><br>
 
 The problem is that now you are not doing a <b>SUM</b> but a <b>SUBSTRACTION</b> of forces!! It is not incorrect, but then you have to keep in mind the following:
-if you get a positive sign in a component it does not mean that the component is positive, but it means that your hypothesis in the picture was true! A negative sign,
-as you can guess, will not mean that the component is negative, but that your hypothesis in the picture was wrong, so you need to reverse it.<br><br>
+<i>if you get a positive sign in a component it does not mean that the component is positive, but it means that your hypothesis in the picture was true!</i> A negative sign,
+as you can guess, will not mean that the component is negative, but that <i>your hypothesis in the picture was wrong, so you need to reverse it</i>.<br><br>
 
 Both choices have pro's and con's. In choice 1, the con is that you draw a hypothesis that may not be intuitive, but then you just sum forces and all the numbers will
 be correct, with each component with its proper sign. In choice 2, the drawing can be more intuitive (if your intuition is good), but when you obtain the results, the signs are not those of the components, but simply indicate that the hypothesis was correct or wrong, and then you need to put by hand the correct signs. <br><br>
 
-Let's solve the example with choice 1. We obtain that \(F_x=-5\) and \(F_y=-9\). Of course, the hypothesis in the picture was badly depicted, but now we know that our force is just \(\vec{F}=(-5,-9)\) and we can correct the arrow in the picture.<br><br>
+Let's solve the example with choice 1. We obtain that \(F_x=-5\) and \(F_y=-9\). Of course, the hypothesis in the picture was badly depicted, but now we know that our force is just \(\vec{F}=(-5,-9)\) with further make up. If we want, can correct the arrow in the picture or simply draw a second picture with all the results.<br><br>
 
-Now let's solve it with choice 2. We obtain that \(F_x=5\) and that \(F_y=9\). The positive signs indicate that the hypothesis was correct in both cases (it could be correct in one component and wrong in the other!) so now we need to put the signs by hand and set our force as \(\vec{F}=(-5,-9)\). You make the choice, as long as you
+Now let's solve it with choice 2. We obtain that \(F_x=5\) and that \(F_y=9\). The positive signs indicate that the hypothesis was correct in both cases (in other examples, it could be correct in one component and wrong in the other!) so now we need to put the signs by hand and set our force as \(\vec{F}=(-5,-9)\). You make the choice, as long as you
 don't make mistakes!<br><br>
 
 It is time to practice all these concepts with some problems:<br><br>
 
-79. Find the forces made by the cables on the object if it is in equilibrium. Draw all the forces suffered by the object, and only these forces. In all these problems, take \(g=9.8m/s^2\) (positive) and m=2kg. In all following problems, \(\vec{P}\) and \(\vec{T}\) are the weight and tension vectors, respectively.<br><br>
+79. Find the forces made by the cables on the object if the object is in equilibrium. Draw all the forces suffered by the object, and only these forces. In all these problems, take \(g=9.8m/s^2\) (positive) and m=2kg. In all problems, \(\vec{P}\) and \(\vec{T}\) are the weight and tension vectors, respectively.<br><br>
 <a  href="files/figures/22.png" target=_blank><img src="files/figures/22.png" width=400></a><br><br>
 
-80. In the previous case, now draw all the forces experienced by the support points A and B. Notice that cables always do forces along its own direction.<br><br>
+80. In the previous case, now draw all the forces experienced by the support points A and B. Notice that a cables always does a force along its own direction.<br><br>
 
 81. Do as in 79 for the following picture.  <br><br>
 
@@ -523,7 +533,7 @@ It is time to practice all these concepts with some problems:<br><br>
 82. Do as in 80.<br><br>
 
 83. Do the same as in 81 for the following picture. Notice that there is one green rod that connects 
-the two masses. This rod is necessarily aligned with the cable that connects the
+the two masses. This rod is aligned with the cable that connects the
 upper mass with B, and must suffer some tension. Maybe it is useful to use the sines theorem here!<br><br>
 
 <a  href="files/figures/24.png" target=_blank><img src="files/figures/24.png" width=400></a><br><br>
@@ -534,7 +544,7 @@ on the tilted plane. You need to know that the blue cable connects points B and 
 
 <a  href="files/figures/26.png" target=_blank><img src="files/figures/26.png" width=400></a><br><br>
 
-If this problem seems too difficult for you and you surrender, you can get a hint on which results we give and in which order. 
+If this problem seems too difficult for you and you surrender, you can get a hint on which results we give and in which order are given. 
 
 </ul><!trouble>
 
@@ -558,7 +568,7 @@ If this problem seems too difficult for you and you surrender, you can get a hin
 
 5. (4/5, 3/5) <br><br>
 
-6. \((-(1/\sqrt{14}]), \sqrt{2/7}, -(3/\sqrt{14}))\) <br><br>
+6. \((-(1/\sqrt{14}), \sqrt{2/7}, -(3/\sqrt{14}))\) <br><br>
 
 7. \( (2 \sqrt{2/15}, \sqrt{3/10}, \sqrt{2/15}, 1/\sqrt{30})\)  <br><br>
 
@@ -717,13 +727,13 @@ If this problem seems too difficult for you and you surrender, you can get a hin
 
 <h3>Forces</h3> <br><br>
 
-75. \( F4_x = -2, F4_y = -8, F4_z = -12 \) <br><br>
+75. \( F_{4x} = -2, F_{4y} = -8, F_{4z} = -12 \) <br><br>
 
-76. \( F4_x = 8, F4_y = 2, F4_z = 1 \) <br><br>
+76. \( F_{4x} = 8, F_{4y} = 2, F_{4z} = 1 \) <br><br>
 
-77. \( F4_x = 87.9, F4_y = 44.4, F4_z = -36.9\)  <br><br>
+77. \( F_{4x} = 87.9, F_{4y} = 44.4, F_{4z} = -36.9\)  <br><br>
 
-78. \( F4_x = 76.5, F4_y = 52.1, F4_z = 87.5\)  <br><br>
+78. \( F_{4x} = 76.5, F_{4y} = 52.1, F_{4z} = 87.5\)  <br><br>
 
 <h3>The trouble with forces and signs</h3> <br><br>
 

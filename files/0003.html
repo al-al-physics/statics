@@ -57,6 +57,9 @@ Time to practice the cross product. Calculate it for each two given vectors:<br>
 At this point, have you noticed what happens when you invert the order of the input vectors? Yes, you get an extra minus sign. While we had<br><br>
 
 \( \vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}\) <br><br>
+
+we now have <br><br>
+
 \( \vec{a}\times\vec{b}=-\vec{b}\times\vec{a}\) <br><br>
 
 This implies that the scalar product is commutative while the cross product is not. Practice some more:<br><br>
@@ -78,7 +81,7 @@ in the product</i>.<br><br>
 Now let's move to a situation that is of great importance in this course. You will have to calculate the cross products of vectors that only have
 nonzero x and y components, like (2,3,0) or (-1,4,0). It could seem that they are in 2 dimensions and we could write (2,3) and (-1,4) but remember,
 cross products only exist in 3 (and 7) dimensions, so we need to keep the third dimension there, even though we set it to zero. Why is this so
-important? Because in this course, almost all the problems will be in two dimensions, x and y. But even if the z-dimensions will seem to be missing,
+important? Because in this course, almost all the problems will be in two dimensions, x and y. But even if the z-dimension will seem to be missing,
 it will be there, hidden and subtle, so it is better to understand how and why. As you know, understanding always come with practice, so calculate
 the following cross products:<br><br>
 
@@ -117,13 +120,16 @@ notation, that<br><br>
 This means that if the two input vectors are parallel or antiparallel (forming 180 degrees), the result will be zero. Keep all this in mind with some practice.
 Calculate the modulus (forget about signs here) of the cross product for the following pairs of input vectors. Use the component method and the modulus method
 and calculate the angle between the vectors. Do the same using scalar products and compare the angles you obtain. They should be equal, and if not, here is a
-clue of what could be happening, but don't worry about this:<br><br>
-<a  href="files/figures/31.png" target=_blank><img src="files/figures/31.png" width=400></a><br><br>
-
+clue of what could be happening, but don't worry too much about signs here.<br><br>
 
 16. \((1,5,-2),(4,-3,2) \)  <br><br>
 17. \((-2,8,3),(2,7,1) \)  <br><br>
 18. \((4,2,0),(-1,4,0) \)  <br><br>
+
+The picture can help you to understand the results:<br><br>
+
+<a  href="files/figures/31.png" target=_blank><img src="files/figures/31.png" width=400></a><br><br>
+
 
 </ul><!cross>
 
@@ -149,9 +155,13 @@ to have equilibrium? Intuitively, we see that we need to multiply the length of 
 
 And if the fulcrum is beyond this position, the person will be able to lift the 10 tones stone! We see now why lever is clever.<br><br>
 
-Take a door knob. Why are they always locate at the other extreme of the rotation axis, where the hinges are located? Imagine a door in which
-the knob were located near the hinges. It would be quite difficult to push or to pull the door! Imagine a pair of scissors. Could you tell
-where the fulcrum is? Are they one or two levers in this case? Think of where you apply the force and where the cut is made. What about a trolley?
+Take a door knob. Why are they always located at the other extreme of the rotation axis, where the hinges are? Imagine a door in which
+the knob were located near the hinges. It would be quite difficult to push or to pull the door! <br><br>
+
+Imagine a pair of scissors. Could you tell
+where the fulcrum is? Are there one or two levers in this case? Think of where you apply the force and where the cut is made. Why some special scissors with very long arms can cut through iron so easily?<br><br>
+
+What about a trolley?
 What about your own arm? Think your limbs as levers and your joints as fulcrums. Levers are the clever way to apply forces. <br><br>
 
 But there is one missing ingredient. In all these examples we seem to be applying forces perpendicularly to the direction of the lever arm. Is this
@@ -159,10 +169,10 @@ necessary? Not at all. In general , we can have the following:<br><br>
 
 <a  href="files/figures/33.png" target=_blank><img src="files/figures/33.png" width=400></a><br><br>
 
-Notice that the weight is still perpendicular to the its lever arm, but now on the left we apply a generic force with an arbitrary direction modulated
+Notice that the weight is still perpendicular to its lever arm, but now on the left we apply a generic force with an arbitrary direction modulated
 by an angle. Think about it, if the angle is less than 90 degrees, or more, will the leverage will be more effective or less? Our intution with levers
 is always right, because we use them since we are born, and it tells us that for angles different from 90 degrees the leverage will be weaker, and in
-fact, for and angle equal to zero (or 180), we will apply no leverage at all! So our formula for the leverage cannot be just (lever arm)(force). It lacks
+fact, for an angle equal to zero (or 180), we will apply no leverage at all! So our formula for the leverage cannot be just (lever arm)(force). It lacks
 something related with the angle, and there you have it:<br><br>
 
 leverage=(lever arm)·(force)·sin(angle)   <br><br>
@@ -176,10 +186,10 @@ Is this expression familiar to you? <br><br>
 
 
 It is the cross product! In the last picture, notice that the lever arms are drawn a bit differently from the previous one,
-we are now depicted at vectors that <i>have their base at the fulcrum</i>. That's right: lever arms will be vectors from now on and they will have their base
-at the fulcrum and the tip at <i>the point of application of the force</i>, or where the force arrow has its base. We will call the lever arm \(\vec{r}_L\), and
+we have now depicted them as vectors that <i>have their base at the fulcrum</i>. That's right: lever arms will be vectors from now on and they will have their base
+at the fulcrum and the tip at <i>the point of suffering of the force</i>, or where the force arrow has its base. We will call the lever arm \(\vec{r}_L\), and
 the force \(\vec{F}\) as usual. Then, the leverage will be the cross product of these two vectors, in this order. But the word leverage is not used in physics.
-We will call this vector <i>torque, moment of force or just moment</i>. In physics we usually use torque and depict it by \(\vec{\tau}\), but in this course
+We will call this vector <i>torque</i>, moment of force or just <i>moment</i>. In physics we usually use torque and depict it by \(\vec{\tau}\), but in this course
 for architecture we will call it just moment and will depict it by \(\vec{M}\). Then, you have the rigorous expression that will be true always given a lever
 arm and a force:<br><br>
 
@@ -203,30 +213,31 @@ that we are considering. Then, we will write moment as <br><br>
 \(\vec{M}(P,\vec{F})=\) Moment done <b>by</b> \(\vec{F}\) <b>with respect to</b> the point P<br><br>
 
 You will have noticed that the expression <b>with respect to</b> is marked in bold. Why? Because students frequently say 'the moment of the
-point P...' and this is incorrect, and this language reveals a poor understanding of the concept of moment. Give importance to how you say it and learn
+point P...' and this is incorrect, since such use of language reveals a poor understanding of the concept of moment. Give importance to how you say it and learn
 to say it well. Since the moment depends on the choice of P and you can choose the point P you like, you always need to emphasize such point. And since
 the moment is usually produced <b>by</b> a force you need to mention it as well. <br><br>
 
-It can be the case that a moment is given to you without mentionin which force or forces produced it. In that case, just write \(\vec{M}(P)\). What is
-important is that you have clear what is the meaning of each point:<br><br>
+It can be the case that a moment is given to you without mentioning which force or forces produced it. In that case, just write \(\vec{M}(P)\). What is
+important is that you have a clear understanding of what is the meaning of each point:<br><br>
 
 -The base of the force vector is the point at which the force is suffered. <br><br>
 
 -The base of the lever arm vector is a point P which can be the fulcrum or not, but then the moment will be calculated with respect to P.<br><br>
 
--The point P is as well the point at which you have to put <i>the base of the moment vector \(\vec{M}\).</i> <br><br>
+-The point P is as well the point at which you have to draw <i>the base of the moment vector \(\vec{M}\).</i> <br><br>
 
-Since we are dealing a lot with vectors here, let's learn another trick that will render our pictures more clear sometimes. Consider the situation
+Let's learn another trick that will render our pictures more clear sometimes. Consider the situation
 in the figure where we have a fixed column where two points suffer a force:<br><br>
 
 <a  href="files/figures/34.png" target=_blank><img src="files/figures/34.png" width=400></a><br><br>
 
-The situation is clear: sometimes placing the birth of the vector at the suffering point makes the arrow to penetrate into some object in the drawing,
-and all becomes messy and dirty. You are then allowed to shift the vector along its direction line, but in order to remember where the force is
+The situation is as follows: sometimes placing the birth of the arrow at the suffering point makes the arrow to penetrate into some object in the drawing,
+and it can become messy and dirty sometimes. You are then allowed to slide the vector along its direction line, but in order to remember where the force is
 suffered, keep the base (the little line) where it corresponds. This is very important, because a force always <i>pulls</i> from the suffering
 point, never pushes towards it. And in the clean and green depiction on the right we achieve a clearer representation, yes, but the forces
 seem to be pushing the suffering points. Then, the little line will remind us where the base of the vector is, so we keep the notion that
-forces pull from suffering points, never push them.<br><br>
+forces pull from suffering points, never push them. Only use this trick
+when the picture cannot be cleanly depicted with the usual method.<br><br>
 
 It is time to practice moments of force. You will be given the position of the fulcrum (P) and the point of the application of a force (Q), so you need to calculate
 the moment in each case. Consider that all distances are given in meters and all forces in Newtons:<br><br>
@@ -235,7 +246,7 @@ the moment in each case. Consider that all distances are given in meters and all
 21. \( \vec{r}_Q=(-9,0,-5), \vec{r}_P=(1,3,-2),\)<br>\( \vec{F}=(-2,-7,9) \)  <br><br>
 22. \( \vec{r}_P=(3,-1,-8), \vec{r}_Q=(4,8,3),\)<br>\( \vec{F}=(-7,4,-7) \)  <br><br>
 
-And now calculate the <b><i>moment vector</i></b> examples for two-dimensional cases:<br><br>
+And now calculate the moment <b><i>vector</i></b> examples for two-dimensional cases (yes, the word vector is in bold, can you tell why?):<br><br>
 23. \( \vec{r}_P=(3,-2), \vec{r}_Q=(4,1),\)<br>\( \vec{F}=(8,-3) \)  <br><br>
 24. \( \vec{r}_P=(0,3), \vec{r}_Q=(-7,3), \)<br>\(\vec{F}=(10,4) \)  <br><br>
 25. \( \vec{r}_P=(-8,9), \vec{r}_Q=(-1,-2),\)<br>\( \vec{F}=(-4,-8) \)  <br><br>
@@ -243,7 +254,7 @@ And now calculate the <b><i>moment vector</i></b> examples for two-dimensional c
 
 At this point, you are surely starting to notice that in this course, since all forces and distances are going to be in the xy plane, all moments
 are going to be in the z direction, either pointing at you or at the paper. Why not dropping \(M_x\) and \(M_y\), which will be always 0, and just
-keep \(M_z\). This is what we are going to do from now: only \(M_z\). You are free to write just \(M\) if you want, as long as you remember that the
+keep \(M_z\)? This is what we are going to do from now: only \(M_z\). You are free to write just \(M\) if you want, as long as you remember that the
 moment is not a scalar, but a vector that in this course is either pointing at you or inside the paper, always perpendicular to it. And as long
 as you remember that what you are really calculating is \(M_z\) and not the whole moment. Here we will always write \(M_z\). Why? Because M is the
 modulus of \(\vec{M}\), and a modulus must be positive by definition, while \(M_z\) can be either positive or negative.<br><br>
@@ -251,9 +262,13 @@ modulus of \(\vec{M}\), and a modulus must be positive by definition, while \(M_
 
 So if you don't like 3D vectors and determinants you can just use the following:<br><br>
 
-\(M_z=rF\sin\alpha\)
+\(M_z=r_xF_y-r_yFx\)<br><br>
 
-but this comes at a price: <b>signs danger</b>.<br><br>
+where signs will always be correct. But it is more common to use<br><br>
+
+\(M_z=rF\sin\alpha\)<br><br>
+
+and this comes at a price: <b>sign danger</b>.<br><br>
 
 Let's do a trick to simplify the last expression. Consider the figure:<br><br>
 
@@ -269,7 +284,7 @@ have extended the force line as well. What if we make the force vector run along
 <a  href="files/figures/36.png" target=_blank><img src="files/figures/36.png" width=400></a><br><br>
 
 We have shifted the force vector until a point at which its perpendicular crosses P. Why would we want to do
-such a weird thing? If the force would be there, what would <i>the new lever arm</i>? Look at it:<br><br>
+such a weird thing? If the force would be there, what would <i>the new lever arm</i> be? Look at it:<br><br>
 
 
 <a  href="files/figures/37.png" target=_blank><img src="files/figures/37.png" width=400></a><br><br>
@@ -279,8 +294,7 @@ the sine of 90 degrees is 1, so if we do this we can forget about the sine, and 
 
 \(M_z=r'F\)<br><br>
 
-But wait a minute. Is this legal? We have spent a big deal of time saying that it is important that vectors, and
-specially forces, must be pinned at the suffering points. Can we really slide and shift forces along their directions?
+But wait a minute. Is this legal? We have spent a big deal of time saying that it is important that forces, must be pinned at the suffering points. Can we really slide forces along their directions?
 The answer is <b>no</b>. What we have done here is just a trick, an imaginary voyage to get rid of the sine, but the situation
 is not real. However, it gives the correct result. The reason is simply that \(r'=r\sin{\alpha}\), as you can see from the pictures.
 The false lever arm r' is just the opposite cathetus of the real lever arm, which is the hypotenuse. Conclusion: this trick does
@@ -295,24 +309,25 @@ it comes from.<br><br>
 
 Are you familiar with screws and screwdrivers? If not, grab some and get some intuition on them before resuming the work here. When we turn
 a screw in a clockwise direction (like the hands of a clock), we tighten it, or in other words, we make it penetrate the wall or whatever the
-object. Its direction of motion will be towards the surface. On the other hand, if we turn the screwdriver in a counterclockwise direction (against
+surface. Its direction of motion will be towards that surface. On the other hand, if we turn the screwdriver in a counterclockwise direction (against
 the hands of a clock), the screw is loosened and its motion is towards us. Remember now the vectors perpendicular to the paper and relate them
 with screwing directions, as we can see in the figure:<br><br>
 
 <a  href="files/figures/38.png" target=_blank><img src="files/figures/38.png" width=400></a><br><br>
 
 In blue, we have the vector going towards us (which matches the orientation of the z axis, this is important) and it can be depicted with a circle
-with a dot in the middle or just with a clockwise turn. This implies a positive moment. On the other hand, the vector pointint towards the paper,
-has a negative moment, and it can be depicted either with the crossed-circle or with a counterclockwise turn. Let's insist on the fact that the
+with a dot in the middle or just with a counterclockwise turn. This implies a positive moment. On the other hand, the vector pointing towards the paper
+has a negative moment, and it can be depicted either with the crossed-circle or with clockwise turn. Let's insist on the fact that the
 sign of the moment has to be the consistent with the orientation of the z axis, so always draw in your problems the xyz frame, and always in the
 same form. Be careful because other books may use different conventions for the signs!<br><br>
 
 Now, consider a point P of our choice and a force vector applied to the suffering point Q. We need you to imagine that we have a pin, a pencil and 
 a piece of cotton thread. We do a lace on the pencil and another at the pin, so now the pin and the pencil are connected by the thread. Then we attach
 the pin to the point P so it remains there, fixed. But we can move the pencil. The idea is that we put the pencil at the suffering point and then start
-to draw following the arrow of the force. Every time you calculate a moment you should picture this scenario in your mind, and then ask: what kind of 
-circumference will the pencil draw on the paper? Clockwise or counterclockwise? If it is clockwise, the moment will be negative, and if it is counterclockwise,
-the moment will be positive. Always do this mental exercise and check the sign of the moment, and correct it by hand if necessary. In the following
+to draw following the arrow of the force. Every time you calculate a moment you should picture this little imaginary movie in your mind, and then ask: what kind of 
+curve will the pencil draw on the paper? Clockwise or counterclockwise? Don't lose sight of the point of reference P. If we pass near P in a clockwise manner, the moment will be negative, and if we pass it counterclockwise,
+the moment will be positive. Imagine the thread is the hand of an
+analog clock and the pin is the fixed point at which the hand pivots. Is the hand turning like a clock or not? This is what you need to see in order to understand the rotational nature of a moment. Always do this mental exercise and check the sign of the moment, and correct it by hand if necessary. In the following
 picture we see this phenomena for a positive moment case:<br><br>
 
 <a  href="files/figures/39.png" target=_blank><img src="files/figures/39.png" width=400></a><br><br>
@@ -325,7 +340,7 @@ And now for a negative moment case:<br><br>
 Again, if we are not using strict 3D vectors, signs are troubling, and we need to make a choice. When there is a force that we already know,
 we do what we showed in the two pictures above, and we are done: we will know the sign of the moment. But but happens when we don't know the
 force yet? Many times, we have an unknown force and we need to calculate <b><i>the moment that this unknown force does!</i></b> That can be
-troubling. As we did with forces, we have to make a hypothesis vector and draw it, and we need to play the pin/thread/pencil movies <b><i>as if
+troubling. As we did with forces, we have to make a hypothesis vector and draw it, and we need to play the pin/thread/pencil movie <b><i>as if
 the hypothesized force were true.</i></b> We have two choices, the sames as with forces: the first choice is to depict the unknown force as 
 positive in all components (looking towards the NorthEast, or up-right) and then we will get all the signs correctly. The second choice is,
 again, to draw the force in a direction that looks intuitive to us, but the price is that the sign of the force that we obtain will not
@@ -340,22 +355,28 @@ but now you need to add the second law,<br><br>
 
 \( \sum_i\vec{M}=\vec{0}\)<br><br>
 
-In the first equation, we read that the sum of all forces <b>acting on a
-same suffering point</b> is zero for a static situation. Similarly,
-in the last equation,
-<b>all moments must be calculated with respect to the same point!</b> If you
-calculate moments with mixed reference points, you cannot sum them and equaling them to zero. Conclusion: all forces are referred to the same suffering point and all moments are referred to the same reference point. These two equations are for single mathematical points, not for extended objects. For a more
-realistic situation we will have to wait to the next chapter.<br><br>
+In the first equation, we knew from the last section that the sum of all forces suffered by an object is zero for a static situation. Well, now you
+can learn that the word 'object' is not quite correct. The rigorous way to
+interpret this law is the following: the sum of all forces suffered
+by the same <b>point</b> is zero for a static situation. We have not discussed this before because we have considered all objects as if they were just points. But real objects are not points: they have volume. However, the strict law is just for points. It says that when we sum the forces, all must be suffered by the same point, so in principle, we cannot sum forces for mixed suffering points. Fortunately, in the next section you will learn that we can relax this condition, but it comes with some subtleties, so for now
+learn the true and rigorous meaning of the first law of statics, which is applied only to a single point.<br><br>
 
-You may wonder what we would have instead of 0 in the second equation for
+Similarly, in the moment equation,
+<b>all moments must be calculated with respect to the same point of reference (P)!</b> If you
+calculate moments with mixed reference points, you cannot sum them and equaling them to zero. This conditions will not relax on the next chapter,
+so never mix different reference points when adding moments!<br><br>
+
+You may wonder what we would have instead of \(\vec{0}\) in the second equation for
 a non-static situation. In the first equation, all forces sum up to give \(m\vec{a}\) where m is the mass and \(\vec{a}\) the (linear) acceleration. Since we want a static situation, we set \(\vec{a}=\vec{0}\). What is mass? It is a scalar (number) that measures the <i>reluctance</i> to change velocity, or to
 be accelerated. The second equation encapsulates the same ideas but for a
 rotational world. Instead of forces we have moments. Instead of linear acceleration we have angular acceleration \(\vec{\alpha}\) and instead of mass
 we have <i>moment of inertia</i> \(I\) which measures the reluctance to change angular velocity. For simple objects, \(I \) is a scalar, but for more realistic 
-ones, it is a tensor, represented by a matrix. Not for the level of this course. But keep in mind the idea of \(I\) as a kind of rotational mass, as resistance to change the rotational state. This quantity will appear further in the course.<br><br>
+ones, it is a tensor, represented by a matrix. Not for the level of this course. But keep in mind the idea of \(I\) as a kind of rotational mass, as resistance to change the rotational state. For example, think of a fitness ball, which has a low mass but a relatively high moment of inertia. Once 
+it is in motion, notice how it almost never stops moving! The moment of inertia can also be seen, qualitatively, as how far the mass of an object is
+located from its center. The more concentrated mass near the center, the less moment of inertia. The more spread the mass, the greater its I. This quantity will appear further in the course.<br><br>
 
 
-Summarizing: all forces in a point must add up to nothing, and the same must be true for moments. With this knowledge you are ready to solve some exercises.<br><br>
+Summarizing: all forces for a single suffering point must add up to nothing, and all moments calculated with respect to the same reference point must be also zero. With this knowledge you are ready to solve some exercises.<br><br>
 
 27. In the following figure you have a static frame. Don't worry about its staticity now: the reactions at the ground will take of that. You have a force
 applied to each of the marked points. In blue you can read the modulus of each. What you need to do is to calculate:<br><br>
@@ -364,14 +385,14 @@ applied to each of the marked points. In blue you can read the modulus of each. 
 - the moment made <b>by</b> each force
 <b>with respect to</b> each point. There are 9 points and 9 forces, so you need to calculate 81 moments. It is very important that in each moment you
 specify between ( ) the force that produces it and the point of reference. Otherwise it will be a mess. You should calculate each moment by using two techniques: 1) As you have the position and force coordinates and you know that only the z-component of the moment will be not-zero, simply apply the expression 
-\(M_z=r_xF_y-r_yF_z \) to obtain the moment. And 2) once you have calculates all
+\(M_z=r_xF_y-r_yF_z \) to obtain the moment. And 2) once you have calculated all
 81 moments with this technique, now repeat the process just by looking at the
 figure and use the method of displacing the force vector until the lever arm
 is perpendicular to the force. In this method you need to carry the signs by hand. Good luck!<br><br>
 
 <a  href="files/figures/41.png" target=_blank><img src="files/figures/41.png" width=400></a><br><br>
 
-Congratulations! Now you are ready to begin the official list of problems. <br><br>
+Congratulations! Now you are ready to begin the official list of problems. But you should read and study the next section first, which has no exercises to do. <br><br>
 
 </ul><!screw>
 <h2><a href="#last" onclick="toggle('solu3')">Solutions</a></h2>
