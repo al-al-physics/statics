@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../css.css" media="screen" title="aleix" />
+</head>
+<body>
+<ul><!root>
+<h2><a href="#last" onclick="toggle('basics')">The basics</a></h2>
+    <ul id="basics" style="display:none"><!basics>
+
+In this course we will consider three types of structure: <i>frames</i> and <i>trusses</i>. They will usually consist in group
+of members or rods connected to each other by their extremes. <br><br>
+
+-A frame (esp: armazón, cat: carcassa) is a structure in which the connection between parts can be rigid, not allowing rotation. This
+implies that there will be internal momentum (bending moment) to be considered. As a consequence, internal forces will not have, in general, the
+direction of the individual members. A member with internal forces not parallel to the member is called a <i>multiforce</i> member. Then, a frame
+must have at least one multiforce member. 
+<br><br>
+
+-A truss (esp: armadura o celosía, cat: armadura o gelosia) is a structure in which all parts are connected by articulated joints that
+allow rotation, so all internal forces must have the direction of the individual members. This means that there cannot be multiforce members
+at all. All members have their internal forces aligned with them: these members are called <i>two-force</i> members. If a truss happens to
+have at least one multiforce member, then it is a truss. <br><br>
+
+-A machine is a frame or a truss in which some parts are movable, but we won't deal with them in this course.<br><br>
+
+Throughout this chapter, we are just going to calculate external reactions. No internal forces will be considered. And we will work with
+frames. <br><br>
+
+The first thing to do is identifying the reactions and counting how many unknowns we have in total. If we have three unknowns, then the system
+is called statically determinate or just <i>static</i>. However, if there are four or more unknowns, the system is called statically indeterminate
+or just <i>hyperstatic</i>. <br><br>
+
+Why this distinction? Because each rigid body only has <i>three</i> independent equations to be assigned, so only three unknowns can be calculated from
+it. If the system is static, there are 3 equations for 3 unkowns, so we can solve all the reactions. However, if the system is hyperstatic, the three
+equations will not be enough to solve the reactions. What can we do in those cases? The answer is to break (with our imagination) the structure in two
+or more parts, so each individual part can have three additional equations to be assigned. For example, if a structure has 4 unknowns, we have 3 equations,
+so we split it in two, and each part will bring us 3 additional equations. That is a total of 3+3+3=9 equations, which should be enough to calculate
+4 unknowns! However, when we break the structure, internal forces and moments will appear, so for each break, new unkowns appear! So in order to learn
+this well, it is better to begin with simple static frames that have 3 unkowns to begin with. Hyperstatic situations will be learned later. <br><br>
+
+Remember that when calculating a moment:<br><br>
+
+-If forces are pinned at the reference point P, then the moment of these forces with respect to P is zero. Reason: a zero length lever arm.<br><br>
+
+-If a force can be slid along its direction in such a way that crosses the reference point P, the moment of this force with respect to P is zero
+as well. Reason: the false lever arm becomes zero. Deep reason: the sine between the lever arm and the force is zero, because both are either
+parallel or antiparallel.<br><br>
+
+</ul><!basics>
+
+<h2><a href="#last" onclick="toggle('method')">The method</a></h2>
+    <ul id="method" style="display:none"><!method>
+
+Let's detail our problem resolution method into steps. Always follow these steps when solving a problem of this type.<br><br>
+
+<b>STEP 0:</b> Draw the coordinate axis x and y with an arrow tip indicating the positive side. Draw as well a counterclockwise arrow to indicate
+the positive orientation for momenta (notice that 'momenta' is the plural of 'momentum'). 
+
+<b>STEP 1:</b> Put labels on the important points, usually with capital letters (A, B, C...). Use the original figure for this. Then, identify reactions, count the number of unkowns and decide whether the problem is static or hyperstatic. As this is a method for
+static cases, you will always be in the first case, so you don't need to break the structure. But make a list of the unkowns. <br><br>
+
+<b>STEP 2:</b> Draw the system without external supports and draw in it all the forces and momenta, given or unknown. For unknown forces or momenta you need to draw
+'hypothesis vectors', which will always be positive (choice 1) or following your intuition (choice 2). If your intutition matches a positive direction, then
+choice 1 and 2 meet. They are only different when your intuition tells you to make a negative hypothesis. The drawing will be called a free body diagram.<br><br>
+
+
+<b>STEP 3:</b> Write down, explicitly, the <i>strategy</i> you are going to use to calculate these unkowns. You must do this <i>before calculating anything!</i>
+Why? Because the human brain cannot manage to successfully manage two simultaneous tasks (parallel threads). Instead, the brain is much more efficient doing
+consecutive tasks (serial threads). In this type of problems, there are two main tasks to be done: 1) to think a good strategy and 2) to calculate without
+mistakes. If you try to perform both in parallel, the probability of going through a bad strategy or to make a mistake in the calculations is very high. You 
+will improve your performance a lot by serializing the processes: thinking the strategy first and calculate the results later. Don't underestimate the
+importance of this. So, in order to force you to think first, step 3 consists in explicitly writing the strategy without calculating anything. <br><br>
+
+You will consider the whole structure as a single rigid body. In order to be a static body, the sum of all forces (in x and y) must be zero, which are
+two equations. And the sum of moments (all calculated with respect to the same point of reference) must be zero as well. Let's call \(\Sigma F_x\) and
+\(\Sigma F_y\) the equations for x and y forces, respectively, and \(\Sigma M(P)\) the equation for all the momenta with respect to P. This can make
+you think that the three equations to be applied for the whole system are these. Sometimes, it will be true, but sometimes, it will not. Why? Because
+we could also calculate the sum of moments with respect another point, Q, and have \(\Sigma M(Q)\). This is a fourth equation! And we can choose yet another
+reference point, R, and sum the moments with respect R, producing a fifth equation \(Sigma M(R)\). In fact, we can choose infinite points and produce
+infinite equations! What is happening here? The answer is that no matter how many equations we produce, only three of them will be independent, and
+thus useful. But the good news is that we can choose whatever set of equations we want. We have many choices:<br><br>
+
+-\(\Sigma F_x, \Sigma F_y, \Sigma M(P)\)<br><br>
+-\(\Sigma F_x, \Sigma F_y, \Sigma M(Q)\)<br><br>
+-\(\Sigma F_x, \Sigma F_y, \Sigma M(R)\)<br><br>
+-\(\Sigma F_x, \Sigma M(P), \Sigma M(Q)\)<br><br>
+-\(\Sigma F_y, \Sigma M(P), \Sigma M(Q)\)<br><br>
+-\(\Sigma M(P), \Sigma M(Q), \Sigma M(R)\)<br><br>
+
+and other combinations, also using other points of reference. It is usual to think that the equations for forces are easier to do, but many times
+they don't give you the best strategy. There are, however, restrictions when using more than one equation for momenta. Let's go case by case:<br><br>
+
+-\(\Sigma F_x, \Sigma M(P), \Sigma M(Q)\). In this case, the line PQ cannot be parallel to the \(y\) axis. <br><br>
+-\(\Sigma F_y, \Sigma M(P), \Sigma M(Q)\). In this case, the line PQ cannot be parallel to the \(x\) axis. <br><br>
+-\(\Sigma M(P), \Sigma M(Q), \Sigma M(R)\). In this case, the points PQR cannot be aligned.<br><br>
+
+So, essentially, for step 3 you must look at the free body diagram and think which equation you will use first and what you will obtain from it. Then,
+you write which equation you will use second, and what you will obtain with it, and the same for the third equation. Try to come out with strategies
+that give you direct results, without having to use system of two equations with two unkowns. Sometimes this is impossible and you need to use these
+systems, but be sure there is not an easier way before! In short, do a table of this sort for an invented example in which we have to solve the
+three unkowns \(A_x,A_y,B_x\):<br><br>
+
+<table border="2">
+<tr><td>step number </td><td>system considered</td><td> equation to use</td><td> <br> unkown to solve</td>
+<tr><td>1           </td><td>full system      </td><td> \(\Sigma F_x\) </td><td> B_x              </td>
+<tr><td>2           </td><td>full system      </td><td> \(\Sigma M(C)\)</td><td> A_x              </td>
+<tr><td>3           </td><td>full system      </td><td> \(\Sigma F_y\) </td><td> A_y              </td>
+</table>
+<br><br>
+
+The second row has 'full system' in it because later, in more advanced problems, when we will split the structures, we will have to consider
+parts of it, and it will be useful to write it on the strategy table. <br><br>
+
+Notice that many times there are different strategies that are good. Other times, there a clear winner one. You need to practice this.<br><br>
+
+<b>STEP 4:</b> Here you need to do another table, a much bigger one, in which you have to actually calculate the steps from the last table.
+It will be the 'calculation table'. Here you focus just on calculating without mistakes, once you know your strategy is optimal. 
+
+<b>STEP 5:</b> Draw again the free body diagram, but now with all the vectors being known. Explicitly write all the vectors with their values
+and with their correct orientations and check that the figure makes sense. Also check that the numbers really add up to zero, at least for 
+the forces. <br><br>
+
+<br><br>
+</ul><!method>
+
+
+<h2><a href="#last" onclick="toggle('example1')">An example</a></h2>
+    <ul id="example1" style="display:none"><!example1>
+
+Let's take the first problem of the official collection of problems as an example.<br><br>
+
+<a  href="files/problems/official_3.1.png" target=_blank><img src="files/problems/official_3.1.png" width=400></a><br><br>
+
+<b>STEP 0:</b> Coordinate axes:<br><br>
+<a  href="files/figures/69.png" target=_blank><img src="files/figures/69.png" width=200></a><br><br>
+
+<b>STEP 1:</b> Point labels and list of unknowns:<br><br>
+<a  href="files/figures/70.png" target=_blank><img src="files/figures/70.png" width=400></a><br><br>
+
+<b>STEP 2:</b> Free body diagram:<br><br>
+<a  href="files/figures/71.png" target=_blank><img src="files/figures/71.png" width=400></a><br><br>
+
+Notice how the reaction forces take the name from the label name. Notice as well how the applied force at point E
+is written with its proper negative sign, because it is preferable to consider the quantity P greater than zero. 
+Notice that P is not an unknown here! They put this letter because they want the results as a function of this letter
+P. So let P be positive and the applied force be negative as -P. Take signs very carefully!
+You can also notice that in this picture choice 1 has been taken for reactions. <br><br>	
+
+<b>STEP 3:</b> Strategy table:<br><br>
+
+<table border="2">
+<tr><td>step number </td><td>system considered</td><td> equation to use</td><td> <br> unkown to solve</td>
+<tr><td>1           </td><td>full system      </td><td> \(\Sigma F_y\) </td><td> A_y              </td>
+<tr><td>2           </td><td>full system      </td><td> \(\Sigma M(A)\)</td><td> B_x              </td>
+<tr><td>3           </td><td>full system      </td><td> \(\Sigma F_x\) </td><td> A_x              </td>
+</table>
+<br><br>
+Notice how the strategy works. First, we use the sum of y forces because it easily yields \(A_y\) as a result.
+The second equation is of moments. Why? Because if you here apply the sum of x forces, the equation will contain
+two unkowns. So it is better to sum moments with respect to A, so neither \(A_y\) (already known) nor \(A_x\) (still unknown)
+will produce moment. Only \(P_y\) (known) and \(B_x\) (unknown) will produce some moment, so we can isolate the latter.
+Finally, the sum over x forces will yield the last result, \(A_x\). <br><br>
+
+<b>STEP 4:</b> Calculations table:<br><br>
+
+<table border="2">
+<tr><td>step number </td><td> <br> calculations</td>
+<tr><td>     1      </td><td> <br> \( A_y-P=0\implies A_y=P \) </td>
+<tr><td>     2      </td><td> <br> \( -2.2B_x-1.5P=0\implies B_x=-0,681818182P\simeq -0.68P \) </td>
+<tr><td>     3      </td><td> <br> \( A_x-0,681818182P=0\implies A_x=0,681818182P\simeq 0.68P \) </td>
+</table>
+<br><br>
+
+Notice here several things. First, and most important, the calculation of momenta. For the moment produced by \(B_x\),
+as we don't know its value, we need to assume value of the hypothesis, which is positive. For \(P_y\), however, we
+know the value, even if it is a generic one, and we know its sign. For the first moment we get \(-2.2B_x\), which is
+negative because, <i>if the hypothesis is correct</i>, then the rotation is clockwise and the moment must be negative. We always need to mentally
+say 'if the hypothesis is correct' to check that the sign is well written. For the second moment we get -1.5P, and here,
+<i>as we know that P is positive</i> then the rotation is clockwise so the moment must be negative.<br><br>
+
+The second thing to notice is that we get a negative value for \(B_x\). It does not matter. Since we are working with
+choice 1, it simply means that the force is negative, so it points to the left. In the next step, we draw the final
+figure and correct all mistaken hypotheses.<br><br>
+
+<b>STEP 5:</b> Final diagram and checking:<br><br>
+
+
+<a  href="files/figures/72.png" target=_blank><img src="files/figures/72.png" width=400></a><br><br>
+
+Now all the arrows are green (known) and we check that on x and on y all the forces clearly compensate. Problem finished! Now it is your
+turn to do the rest of the collection.<br><br>
+
+<br><br>
+</ul><!example1>
+
+<h2><a href="#last" onclick="toggle('problems3')">Problems</a></h2>
+    <ul id="problems3" style="display:none"><!problems3>
+
+Problem 2:<br><br>
+<a  href="files/problems/official_3.2.png" target=_blank><img src="files/problems/official_3.2.png" width=400></a><br><br>
+Problem 3:<br><br>
+<a  href="files/problems/official_3.3.png" target=_blank><img src="files/problems/official_3.3.png" width=400></a><br><br>
+Problem 4:<br><br>
+<a  href="files/problems/official_3.4.png" target=_blank><img src="files/problems/official_3.4.png" width=400></a><br><br>
+Problem 5:<br><br>
+<a  href="files/problems/official_3.5.png" target=_blank><img src="files/problems/official_3.5.png" width=400></a><br><br>
+Problem 6:<br><br>
+<a  href="files/problems/official_3.6.png" target=_blank><img src="files/problems/official_3.6.png" width=400></a><br><br>
+Problem 7:<br><br>
+<a  href="files/problems/official_3.7.png" target=_blank><img src="files/problems/official_3.7.png" width=400></a><br><br>
+
+<h2><a href="#last" onclick="toggle('problems3_sol')">Solutions</a></h2>
+    <ul id="problems3_sol" style="display:none"><!problems3_sol>
+
+P2. \( B_x=-3P/4, A_x=3P/4, Ay=2.3P  \)  <br><br>
+P3. \( A_y=P, A_x=0, M_A=1.5P  \)  <br><br>
+P4. \( A_x=1t, A_y=1/2t, B_y=1/2t  \)  <br><br>
+P5. \( A_y=1t, Ax=0t, M_A=2t  \)  <br><br>
+P6. \( A_x=0t, A_y=3t, B_y=3t  \)  <br><br>
+P7. \( A_x=-4t, A_y=-4.5t, B_y=10.5t  \)  <br><br>
+
+</ul><!problems3_sol>
+
+
+<br><br>
+</ul><!problems3>
+</ul><!root>
+<!Code to expand/collapse branches>
+<script type="text/javascript">
+function toggle(id) {
+  var e = document.getElementById(id);
+  if (e.style.display == '')
+    e.style.display = 'none';
+  else
+    e.style.display = '';}
+function toggle2(id, link) {
+  var e = document.getElementById(id);
+  if (e.style.display == '') {
+    e.style.display = 'none';
+    link.innerHTML = 'Expand';
+  } else {
+    e.style.display = '';
+    link.innerHTML = 'Collapse';  }}
+</script>
+</body>
+</html>
