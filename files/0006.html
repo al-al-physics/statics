@@ -6,11 +6,16 @@
 </head>
 <body>
 <ul><!root>
-<h2><a href="#last" onclick="toggle('basics')">The basics</a></h2>
+<h2><a href="#last" onclick="toggle('basics_off')">The basics</a></h2>
     <ul id="basics" style="display:none"><!basics>
 
 In this course we will consider two main types of structure: <i>frames</i> and <i>trusses</i>. They will usually consist in group
 of members or rods connected to each other by their extremes. <br><br>
+
+-A truss (esp: armadura o celosía, cat: armadura o gelosia) is a structure in which all parts are connected by articulated joints that
+allow rotation, so all internal forces must have the direction of the individual members. This means that there cannot be multiforce members
+at all. All members have their internal forces aligned with them: these members are called <i>two-force</i> members. If a truss happens to
+have at least one multiforce member, then it is a truss. <br><br>
 
 -A frame (esp: armazón, cat: carcassa) is a structure in which the connection between parts can be rigid, not allowing rotation. This
 implies that there will be internal momentum (bending moment) to be considered. As a consequence, internal forces will not have, in general, the
@@ -18,10 +23,7 @@ direction of the individual members. A member with internal forces not parallel 
 must have at least one multiforce member. 
 <br><br>
 
--A truss (esp: armadura o celosía, cat: armadura o gelosia) is a structure in which all parts are connected by articulated joints that
-allow rotation, so all internal forces must have the direction of the individual members. This means that there cannot be multiforce members
-at all. All members have their internal forces aligned with them: these members are called <i>two-force</i> members. If a truss happens to
-have at least one multiforce member, then it is a truss. <br><br>
+
 
 -A machine is a frame or a truss in which some parts are movable, but we won't deal with them in this course.<br><br>
 
