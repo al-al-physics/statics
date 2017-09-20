@@ -358,38 +358,6 @@ at the point in which you are told it is applied, not to mess things up).<br><br
 
 </ul><!rigid>
 
-<h2><a href="#last" onclick="toggle('rods')">Rods</a></h2>
-    <ul id="rods" style="display:none"><!rods>
-
-There is a special case that is worth to be analyzed in detail. Many times,
-your structures will be composed of just rigid rods and articulated joints. 
-An articulated joint is like a hinge support: they forbid x and y displacements 
-but allow rotations about their articulation point:<br><br>
-
-<a  href="files/figures/66.png" target=_blank><img src="files/figures/66.png" width=450></a><br><br>
-
-It is of the uttermost importance that you notice that joints, or articulated points, cannot resist, or don't react against rotation, so they cannot exhibit a moment reaction. This
-has a very important consequence when we separate the rods for analysis:<br><br>
-
-<a  href="files/figures/67.png" target=_blank><img src="files/figures/67.png" width=450></a><br><br>
-
-We have depicted the two unknown internal reactions at each extreme of each rod. As we don't know the signs of the forces, hypotheses must be made.
-Here we don't worry about whether these hypothesis are intuitive or not (we are just folling choice 1). Notice that there are two points at which two versions of the same point appear and two points at which three versions of the same point appear. <br><br>
-
-And here comes the important point: <i>if the joints cannot provide internal moment</i> and if the structure is to be static, no moments can be produced by the red forces! And the only way in which this can be true is this:<br><br>
-
-<a  href="files/figures/68.png" target=_blank><img src="files/figures/68.png" width=450></a><br><br>
-
-In other words: <b>rods connecting two extremes that don't resist rotation can only experience <i>axial</i> stresses, so such rods can only be 
-under traction or compression.</b> Or under null force, of course. In the picture our hypotheses are all depicted as tractions, but it does not matter which one you pick. What is crucial here is that, even if the joint gives a reaction with two unknowns, you need to see that the absence of reaction moment reduces the number of unknowns to one, because <i>the direction of the force will be the same as the direction of the rod</i>, so there will be just one unknown, solvable with just one equation! <br><br>
-
-You may think that in this case, choice 2 for signs is mandatory, since choice 1 would be extremely counterintuitive, and even missleading. The answer is more subtle: in fact, when calculating the internal forces of rods,
-you either calculate it at one end or at the other: never at both, since once you know the result at one extreme, you know the result at the other by just changing the signs. And, focusing on a single extreme, you can happily use choice 1, just by first drawing the intuitive arrow and then changing the sign to those components looking leftwards or downwards.<br><br>
-
-Don't analyze too much this picture because it is not supported on any surface, and it is not experiencing weight! So if you try to sum all the forces at each joint and equal them to zero you will soon arrive to the conclusion that all the rods suffer zero force. This is because this structure is now floating in zero-gravity conditions, without weight or supports! What happens if we really put this structure on a pair of supports and under gravity? Think about it: if all the supports are of movable or hinge type (both allow rotations) they will act like articulated joints in this sense, and all the rods will be experience no moments at any extreme. so they are all either under traction or compression (or null force). However, if there is a fixed support somewhere, the rods that are touching this support (they can be more than one) will suffer a moment in their supported extremes, so at the other extremes they will need to suffer moments as well to compensate for that, which then will be chain-propagated to many, if not all, the rest of the rods. So watch out: <i>the rule that rods have their internal forces along the direction of their own bodies is only valid when the rods don't suffer moments at any extreme.</i> <br><br>
-
-</ul><!rods>
-
 <br><br>
 
 
