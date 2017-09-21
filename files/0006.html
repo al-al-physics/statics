@@ -6,27 +6,78 @@
 </head>
 <body>
 <ul><!root>
-<h2><a href="#last" onclick="toggle('basics_off')">The basics</a></h2>
-    <ul id="basics" style="display:none"><!basics>
+<h2><a href="#last" onclick="toggle('members')">Members</a></h2>
+    <ul id="members" style="display:none"><!basics>
 
 In this course we will consider two main types of structure: <i>frames</i> and <i>trusses</i>. They will usually consist in group
 of members or rods connected to each other by their extremes. <br><br>
 
--A truss (esp: armadura o celosía, cat: armadura o gelosia) is a structure in which all parts are connected by articulated joints that
-allow rotation, so all internal forces must have the direction of the individual members. This means that there cannot be multiforce members
-at all. All members have their internal forces aligned with them: these members are called <i>two-force</i> members. If a truss happens to
-have at least one multiforce member, then it is a truss. <br><br>
-
--A frame (esp: armazón, cat: carcassa) is a structure in which the connection between parts can be rigid, not allowing rotation. This
-implies that there will be internal momentum (bending moment) to be considered. As a consequence, internal forces will not have, in general, the
-direction of the individual members. A member with internal forces not parallel to the member is called a <i>multiforce</i> member. Then, a frame
-must have at least one multiforce member. 
-<br><br>
+-A truss (esp: armadura o celosía, cat: armadura o gelosia) is a structure in which all members are <b>two-force members</b>.
 
 
+-A frame (esp: armazón, cat: carcassa) is a structure in which there is at least one <b>multi-force</b> member. 
 
 -A machine is a frame or a truss in which some parts are movable, but we won't deal with them in this course.<br><br>
 
+Then, what we need is to learn what two-force and multi-force members are. And before that, we need to learn what are members!<br><br>
+
+Let's have a structure:<br><br>
+
+<a  href="files/figures/73.png" target=_blank><img src="files/figures/73.png" width=400></a><br><br>
+
+Now we need to identify the members. We see that there are 3 members:<br><br>
+
+-member ACFB or just AB<br><br>
+-member FDE or just FE<br><br>
+-member CD<br><br>
+Let's see how the separate members look like:<br><br>
+<a  href="files/figures/74.png" target=_blank><img src="files/figures/74.png" width=400></a><br><br>
+
+Now let's redraw the whole structure but with supports and external forces:<br><br>
+
+<a  href="files/figures/75.png" target=_blank><img src="files/figures/75.png" width=400></a><br><br>
+
+The goal is to learn to identify which members are two-force and which members are multi-force. A two-force member
+is a member that only suffers forces at <i>two different points</i>. A multi-force member is a member which suffers forces <i>at three or more
+places</i>. Note of caution: 'two-force' does not mean 'two forces' but 'forces at two different points'. And 'multi-force' does not mean
+'three or more forces' but 'forces at three or more different locations'.<br><br>
+
+
+Let's
+analyze the members from the example one by one. The member CD only suffers forces at its extremes (at C and at D). These
+forces are internal, of course, by there are felt by the member CD. Then, CD is a two-force member. What about member AB?
+We see that this member suffers reactions (forces) at A and at B. But at C and F there are connections to other members,
+and this implies that internal forces will be suffered there. As a conclusion, we say that member AB is a multi-force member 
+(suffered forces at 4 different places). Only because there is at least one multi-force member we conclude that this structure is a frame (trusses
+have not a single multi-force one). Finally, member FE is multi-force as well because it suffers forces at F, D and E. <br><br>
+
+Let's see another example:<br><br>
+
+<a  href="files/figures/76.png" target=_blank><img src="files/figures/76.png" width=400></a><br><br>
+
+There are three members here: AB, BC and AC. Let's analyze the AB: it suffers more than two forces, because the reactions at A and the internal forces
+at A are more than one force, but this <i>does not matter</i>. What is important is that the member suffers forces (don't care about how many) at
+only two different points (A and B). Then, it is a two-force member because it suffers forces (many of them) at only two different points. The same
+happens for members BC and AC. All of them suffer forces only at two different points. Conclusion: all members are two-force, so this structure
+is a truss.<br><br>
+
+Let's ask a question now: in order to have a two-force member, is it necessary that the two suffering points are located at the ends of the
+member? The answer is no. As long as there are two suffering points, it does not matter where they are.<br><br>
+
+
+Finally, let's ask another question: what about the following piece? Is it a member or a collection of two members?<br><br>
+
+<a  href="files/figures/77.png" target=_blank><img src="files/figures/77.png" width=200></a><br><br>
+
+The answer is that this is a <i>single</i> member, called ABC or just AC. Why not two members AB and BC? Because the point B is not
+a joint or an articulation point. We, in general, will separate members only through joints. In these non-straight members, the same rules 
+to distinguish between two-force and multi-force apply. <br><br>
+
+
+</ul><!members>
+
+<h2><a href="#last" onclick="toggle('basics')">The basics</a></h2>
+    <ul id="basics" style="display:none"><!basics>
 Throughout this chapter, we are just going to calculate external reactions. No internal forces will be considered. And we will work with
 frames. <br><br>
 
@@ -63,7 +114,8 @@ Let's detail our problem resolution method into steps. Always follow these steps
 the positive orientation for momenta (notice that 'momenta' is the plural of 'momentum'). <br><br>
 
 <b>STEP 1:</b> Put labels on the important points, usually with capital letters (A, B, C...). Use the original figure for this. Then, identify reactions, count the number of unkowns and decide whether the problem is static or hyperstatic. As this is a method for
-static cases, you will always be in the first case, so you don't need to break the structure. But make a list of the unkowns. <br><br>
+static cases, you will always be in the first case, so you don't need to break the structure. At this step make also  a <b>list of the unkowns</b> and see for
+each member whether is a two-force or a multi-force member. <br><br>
 
 <b>STEP 2:</b> Draw the system without external supports and draw in it all the forces and momenta, given or unknown. For unknown forces or momenta you need to draw
 'hypothesis vectors', which will always be positive (choice 1) or following your intuition (choice 2). If your intutition matches a positive direction, then

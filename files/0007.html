@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../css.css" media="screen" title="aleix" />
+</head>
+<body>
+<ul><!root>
+<h2><a href="#last" onclick="toggle('internal')">Internal forces at joints</a></h2>
+    <ul id="internal" style="display:none"><!internal>
+
+In a frame or a truss, members are separated by joints, also called articulation points. At these points, rotation
+is not forbidden or resisted, so no internal moments will appear. However, these joints resist motion along both
+spatial directions, so internal forces will appear if we separate two members. Let's see a case:<br><br>
+
+<a  href="files/figures/78.png" target=_blank><img src="files/figures/78.png" width=400></a><br><br>
+
+We see that there are three joints in this structure: C, D and F. This means we must break the structure at all
+these points and analyze the internal forces that will appear in all of them.<br><br>
+
+In order to do this, we need to draw the complete system <b>and</b> all the members separately.<br><br>
+
+<a  href="files/figures/79.png" target=_blank><img src="files/figures/79.png" width=400></a><br><br>
+
+This makes a total of 4 different rigid bodies. <i>Each rigid body must be depicted with all their forces
+in a free body diagram.</i>
+
+<a  href="files/figures/80.png" target=_blank><img src="files/figures/80.png" width=400></a><br><br>
+
+Notice how in green we depict the forces we already know. In red, the reactions that we don't know and
+in violet the internal forces at the joing, which we don't know either. These are the four free body
+diagrams that you need to make in each problem. However, there are more things to be learned before
+we can solve full problems. <br><br>
+
+The first thing to notice here is that the articulation points (or joints) split into two versions
+each. C becomes C and C'. D becomes D and D'. F becomes F and F'. However, at each internal point, 
+the sum of all forces (internal plus external) must be zero. This implies that once you know, for example,
+\(F_x\) then you automatically know \(F_x'\). Or, if during your strategy you arrive at \(F_y'\), then
+the next step in the strategy is to automatically know \(F_y\). If no external forces act at this
+joint, then, as \(F_y+F_y'=0\) we get \(F_y=-F_y'\) and you just simply change sign. However, be careful
+if at this joint acts an external force, like in the example. Then, the sum of forces for y at the point
+F is \(F_y+F_y'+2=0\) and then the rule \(F_y'=-F_y\) does not apply.<br><br>
+
+Another thing to notice is that the vertical external force of 2N, suffered at F, is located at a joint.
+Then, when we separate the members, we have the dilemma of whether we should place this force at only
+one member (and in this case, which one) or whether we should put it in both members. The answer is that
+you can place it at the member you want, the result must be the same. Or, if you like, you could put
+1N at each member, or 0.5N at one and 1.5 at the other. The important thing is that when you rejoin
+the members and evaluate all the forces suffered by the internal point, the external force adds to 2N
+again.<br><br>
+
+Notice as well that for all the unknowns we have followed choice 1 and we have placed all the hypotheses
+as positive. If you prefer to use choice 2 you can do it, of course. In fact, your intuition may tell
+you that if \((C_x,Cy)\) are positive in C, then you should draw \((C_x',C_y')\) negative at C' in order
+to have zero-net internal force there. In fact, both approaches are correct! <br><br>
+
+We arrive at one of the most important things to learn in this chapter. In the last chapter we learned to
+distinguish between two-force members and multi-force members. Here we already know that only member CD
+is two-force, while the others are multi-force. The important thing to know is that <b>two-force</b>
+members suffer their total forces at each point aligned with the direction of the member, in either
+traction or compression. Visually, the only three things that can happen for CD are:<br><br>
+
+<a  href="files/figures/81.png" target=_blank><img src="files/figures/81.png" width=400></a><br><br>
+
+In other words, the internal points C and D have only one unknown each, not two. It is true that these
+forces are tilted and should be decomposed into two components, but once we arrive at one of them in
+the strategy, we automatically know the other by trigonometry.<br><br>
+
+This is why is so important to identify the two-force members, because then, when drawing the free body
+diagrams, we will not place an incorrect list of unknowns. This means that our previous free body
+diagrams were wrong, so now we correct them:<br><br>
+
+<a  href="files/figures/82.png" target=_blank><img src="files/figures/82.png" width=400></a><br><br>
+
+We see how the angle \(\alpha\) must be known from the start. Then, the two force member CD suffers
+forces that point in the direction of the CD member! In the picture we have depicted the tilted
+vectors \(\vec{C}, \vec{C}',\vec{D},\vec{D}'\) but all of them have the same slope. It is desirable
+that you, in fact, decompose each of them into x and y components, but without forgetting that they
+only represent one unknown, not two:<br><br> 
+
+<a  href="files/figures/83.png" target=_blank><img src="files/figures/83.png" width=400></a><br><br>
+
+If we would have a two-force non-straight member, the same principle applies. The forces at the two points
+would either make compression or traction. And the line of action would be common for the forces at the
+two points. What is different here is that, as it is a non-straight member, the line of compression or traction
+does not follow the body of the member, but instead the line connecting the two suffering points. In fact, the
+more generic law is that two-force members experience only traction or compression (or null) along the
+line given by the two suffering points. For straight, members, this line is the same as the line of the
+member. Here we see an example for traction:<br><br>
+
+
+<a  href="files/figures/84.png" target=_blank><img src="files/figures/84.png" width=400></a><br><br>
+
+<br><br>
+</ul><!internal>
+
+<h2><a href="#last" onclick="toggle('fullexample')">A full example</a></h2>
+    <ul id="fullexample" style="display:none"><!fullexample>
+
+We are going to solve the previous example, so let's detail each step of the method, which is almost the same
+method of the previous example. <br><br>
+
+<b>STEP 0:</b> Coordinate axes:<br><br>
+<a  href="files/figures/69.png" target=_blank><img src="files/figures/69.png" width=200></a><br><br>
+
+<b>STEP 1:</b> Point labels, draw reactions and identify two force members:<br><br>
+
+<a  href="files/figures/85.png" target=_blank><img src="files/figures/85.png" width=400></a><br><br>
+
+The list of unknowns must wait for the next step. Notice there are two external forces, painted in green. The
+reactions are painted in red. For internal forces we will use a third color: violet. We identify the
+system as static. <br><br>
+
+<b>STEP 2:</b> Free body diagram<b>s</b> and a list of unknowns:<br><br>
+
+We have already done that before, but we repeat the figure here. Notice how important is the 
+identification of two-force members.<br><br>
+
+
+<a  href="files/figures/83.png" target=_blank><img src="files/figures/83.png" width=400></a><br><br>
+
+The list of unknowns is:<br><br>
+
+\(A_x\)<br>
+\(A_y\)<br>
+\(B_x\)<br>
+\(C_x\)<br>
+\(C_x'\)<br>
+\(C_y\)<br>
+\(C_y'\)<br>
+\(D_x\)<br>
+\(D_x'\)<br>
+\(D_y\)<br>
+\(D_y'\)<br>
+\(F_x\)<br>
+\(F_x'\)<br>
+\(F_y\)<br>
+\(F_y'\)<br><br>
+
+There are 15 unknowns!<br><br>
+
+<b>STEP 3:</b> Strategy table:<br><br>
+
+Here you will see the importance of a good strategy table. Remember that every time you arrive to a new result,
+you need to exploit this result all you can. For example, if you, for example, arrive to \(C_x'\), your immediate next
+step must always be to get \(C_x\). <br><br>
+
+Remember this well: if the system is static, <b>always do an strategy for external reactions first, and later continue
+with internal forces</b>. This means that the full system diagram will be enough to solve the reactions. However,
+<b>if the system is hyperstatic, you will need to have a mixed strategy for reactions and internal forces, involving
+more than one free body diagram</b>. For now, we have an easy static case, but in your exam you will probably be
+facing a hyperstatic one!<br><br>
+
+Important note: when following a strategy, could you consider the diagram of more members combined, but
+not being the full system? For example, taking AB and FE as one single member. The answer is yes. 
+Sometimes this becomes very useful when thinking the strategy. Stay creative!<br><br>
+
+<table border="2">
+<tr><td>step number </td><td>system considered</td><td> equation to use</td><td> <br> unkown to solve</td>
+<tr><td>1           </td><td>full system      </td><td> \(\Sigma F_y\)  </td><td> A_y              </td>
+<tr><td>2           </td><td>full system      </td><td> \(\Sigma M(A)\) </td><td> B_x              </td>
+<tr><td>3           </td><td>full system      </td><td> \(\Sigma F_x\)  </td><td> A_x              </td>
+<tr><td>4           </td><td>AB member        </td><td> \(\Sigma M(C)\) </td><td> F_x'             </td>
+<tr><td>5           </td><td>(F,F') point     </td><td> \(\Sigma F_x\)  </td><td> F_x              </td>
+<tr><td>6           </td><td>AB member        </td><td> \(\Sigma F_x\)  </td><td> C_x'             </td>
+<tr><td>7           </td><td>(C,C') point     </td><td> \(\Sigma F_x\)  </td><td> C_x              </td>
+<tr><td>8           </td><td>AB               </td><td> trigonometry    </td><td> C_y'             </td>
+<tr><td>9           </td><td>(C,C') point     </td><td> \(\Sigma F_y\)  </td><td> C_y              </td>
+<tr><td>10          </td><td>CD member        </td><td> \(\Sigma F_x\)  </td><td> D_x              </td>
+<tr><td>11          </td><td>(D,D') point     </td><td> \(\Sigma F_x\)  </td><td> D_x'             </td>
+<tr><td>12          </td><td>CD member        </td><td> \(\Sigma F_y\)  </td><td> D_y              </td>
+<tr><td>13          </td><td>(D,D') point     </td><td> \(\Sigma F_y\)  </td><td> D_y'             </td>
+<tr><td>14          </td><td>AB member        </td><td> \(\Sigma F_y\)  </td><td> F_y'             </td>
+<tr><td>15          </td><td>(F,F') point     </td><td> \(\Sigma F_y\)  </td><td> F_y              </td>
+</table>
+<br><br>
+
+Notice there are many different strategies that can be good. Just pic a good enough one!<br><br>
+Check as well that the number of steps at the table matches the number of unknowns in the previous list.<br><br>
+
+
+<b>STEP 4:</b> Calculations table:<br><br>
+
+(All pure numbers are in Newtons)<br><br>
+
+
+<table border="2">
+<tr><td>step number </td><td> <br> calculations</td>
+<tr><td>     1      </td><td> <br> \( A_y+2-3=0\)\(\implies A_y=1 \) </td>
+<tr><td>     2      </td><td> <br> \( -2.2B_x-1.5\cdot 3=0 \)\(\implies B_x=-2.04545 \) </td>
+<tr><td>     3      </td><td> <br> \(A_x+B_x=0\)\(\implies A_x=2.04545 \) </td>
+<tr><td>     4      </td><td> <br> \(1.25A_x-0.75F_x'-0.95B_x=0\)\(\implies F_x'=6 \) </td>
+<tr><td>     5      </td><td> <br> \(F_x'+F_x=0\)\(\implies F_x=-6 \) </td>
+<tr><td>     6      </td><td> <br> \(A_x+C_x'+F_x'+B_x=0 \)\(\implies C_x'=-6 \) </td>
+<tr><td>     7      </td><td> <br> \(C_x'+C_x=0\)\(\implies C_x=6 \) </td>
+<tr><td>     8      </td><td> <br> \(C_y'=C_x'\tan{45} \)\(\implies C_y'=-6 \) </td>
+<tr><td>     9      </td><td> <br> \( C_y'+C_y=0\)\(\implies C_y=6 \) </td>
+<tr><td>     10      </td><td> <br> \(C_x+D_x=0\)\(\implies D_x=-6 \) </td>
+<tr><td>     11      </td><td> <br> \(D_x+D_x'=0\)\(\implies D_x'=6 \) </td>
+<tr><td>     12      </td><td> <br> \(C_y+D_y=0\)\(\implies D_y=-6 \) </td>
+<tr><td>     13      </td><td> <br> \(D_y'+D_y=0\)\(\implies D_y'=6 \) </td>
+<tr><td>     14      </td><td> <br> \(A_y+C_y'+F_y'=0\)\(\implies F_y'=5 \) </td>
+<tr><td>     15      </td><td> <br> \(F_y'+F_y=0\)\(\implies F_y=-5 \) </td>
+</table>
+<br><br>
+
+At step 8, be aware of the signs. In this case, member CD is pointing either NE (+,+) or SW (-,-), so
+<i>the sign of both components must be the same</i>. If the CD member would have had the direction 
+of SE (+,-) or NW(-,+), then the equation would have been \(C_y'=-C_x'\tan{45}\).<br><br>
+
+<b>STEP 5:</b> Final diagram and checking:<br><br>
+
+<a  href="files/figures/86.png" target=_blank><img src="files/figures/86.png" width=400></a><br><br>
+
+Checking method:<br><br>
+
+-Look at the full system diagram. Check that x forces sum to zero. The same for y forces. <br><br>
+
+-Check each separate member. Check that x forces sum to zero and the same for y forces. <br><br>
+
+-Check each joint. Check that all the <i><b>internal </b></i> forces suffered by the joint are zero.
+If you sum all forces instead, including external ones, then the sum must give the external force value! (Spend some minutes trying to understand this point, which is crucial.)<br><br>
+
+
+<br><br>
+</ul><!fullexample>
+
+<h2><a href="#last" onclick="toggle('problems4')">Problems</a></h2>
+    <ul id="problems4" style="display:none"><!problems4>
+
+<h2><a href="#last" onclick="toggle('solutions4')">Solutions</a></h2>
+    <ul id="solutions4" style="display:none"><!solutions4>
+
+</ul><!solutions4>
+</ul><!problems4>
+</ul><!root>
+<!Code to expand/collapse branches>
+<script type="text/javascript">
+function toggle(id) {
+  var e = document.getElementById(id);
+  if (e.style.display == '')
+    e.style.display = 'none';
+  else
+    e.style.display = '';}
+function toggle2(id, link) {
+  var e = document.getElementById(id);
+  if (e.style.display == '') {
+    e.style.display = 'none';
+    link.innerHTML = 'Expand';
+  } else {
+    e.style.display = '';
+    link.innerHTML = 'Collapse';  }}
+</script>
+</body>
+</html>
