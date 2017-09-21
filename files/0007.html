@@ -36,10 +36,11 @@ The first thing to notice here is that the articulation points (or joints) split
 each. C becomes C and C'. D becomes D and D'. F becomes F and F'. However, at each internal point, 
 the sum of all forces (internal plus external) must be zero. This implies that once you know, for example,
 \(F_x\) then you automatically know \(F_x'\). Or, if during your strategy you arrive at \(F_y'\), then
-the next step in the strategy is to automatically know \(F_y\). If no external forces act at this
-joint, then, as \(F_y+F_y'=0\) we get \(F_y=-F_y'\) and you just simply change sign. However, be careful
-if at this joint acts an external force, like in the example. Then, the sum of forces for y at the point
-F is \(F_y+F_y'+2=0\) and then the rule \(F_y'=-F_y\) does not apply.<br><br>
+the next step in the strategy is to automatically know \(F_y\). You just change signs, 
+so, as \(F_y+F_y'=0\) we get \(F_y=-F_y'\). Moreover, as \(F_y+F_y'=0\) then the rule \(F_y'=-F_y\) applies again.<br><br>
+
+If a joint is a confluence of 3 members, then our join point J, instead of splitting into J and J', 
+it would split into J, J' and J", so the rule of just swapping the signs is no longer valid.<br><br>
 
 Another thing to notice is that the vertical external force of 2N, suffered at F, is located at a joint.
 Then, when we separate the members, we have the dilemma of whether we should place this force at only
@@ -88,8 +89,30 @@ more generic law is that two-force members experience only traction or compressi
 line given by the two suffering points. For straight, members, this line is the same as the line of the
 member. Here we see an example for traction:<br><br>
 
-
 <a  href="files/figures/84.png" target=_blank><img src="files/figures/84.png" width=400></a><br><br>
+
+We must also say that, if a member suffers a reaction moment or an applied moment, then the member
+automatically cannot be a two-force member.<br><br>
+
+
+Finally, let's talk about cables, wires, ropes, etc... They are usually not part of the system, so the 
+forces, usually called tensions, provided by them are considered as external reactions. However, it is
+crucial to see that they are elements that act like two-force members, so the reactions that they
+give only contain one unknown, which is a force that acts along the line of the cable (or wire, rope,...)
+Notice as well that they can only experience traction, so when considering the point of the system at
+which the cable is attached, the tension suffered by this point will always have the direction of the
+cable and the orientation will be towards the cable, away from the system (pulling). <br><br>
+
+If we have a frame which cables attached:<br><br>
+
+<a  href="files/figures/87.png" target=_blank><img src="files/figures/87.png" width=400></a><br><br>
+
+We automatically know the directions and orientation of the reaction they provide. We show the free
+body diagram of the system and notice how the cables are not usually considered part of the system.
+Of course, these reactions are to be decomposed into x and y components, but once we know one, the
+geometry of the system, usually trigonometry, must suffice to know the other.<br><br>
+
+<a  href="files/figures/88.png" target=_blank><img src="files/figures/88.png" width=400></a><br><br>
 
 <br><br>
 </ul><!internal>
@@ -228,8 +251,59 @@ If you sum all forces instead, including external ones, then the sum must give t
 <h2><a href="#last" onclick="toggle('problems4')">Problems</a></h2>
     <ul id="problems4" style="display:none"><!problems4>
 
+Here are the official problems of the UPC collection. Try to solve them without looking at the solutions.<br><br>
+
+P1.<br><br>
+<a  href="files/problems/official_4.2.1.png" target=_blank><img src="files/problems/official_4.2.1.png" width=400></a><br><br>
+P2.<br><br>
+<a  href="files/problems/official_4.2.2.png" target=_blank><img src="files/problems/official_4.2.2.png" width=400></a><br><br>
+P3.<br><br>
+<a  href="files/problems/official_4.2.3.png" target=_blank><img src="files/problems/official_4.2.3.png" width=400></a><br><br>
+P4.<br><br>
+<a  href="files/problems/official_4.2.4.png" target=_blank><img src="files/problems/official_4.2.4.png" width=400></a><br><br>
+P5.<br><br>
+<a  href="files/problems/official_4.2.5.png" target=_blank><img src="files/problems/official_4.2.5.png" width=400></a><br><br>
+P6.<br><br>
+<a  href="files/problems/official_4.2.6.png" target=_blank><img src="files/problems/official_4.2.6.png" width=400></a><br><br>
+P7.<br><br>
+<a  href="files/problems/official_4.2.7.png" target=_blank><img src="files/problems/official_4.2.7.png" width=400></a><br><br>
+P8.<br><br>
+<a  href="files/problems/official_4.2.8.png" target=_blank><img src="files/problems/official_4.2.8.png" width=400></a><br><br>
+P9.<br><br>
+<a  href="files/problems/official_4.2.9.png" target=_blank><img src="files/problems/official_4.2.9.png" width=400></a><br><br>
+P10.<br><br>
+<a  href="files/problems/official_4.2.10.png" target=_blank><img src="files/problems/official_4.2.10.png" width=400></a><br><br>
+P11.<br><br>
+<a  href="files/problems/official_4.2.11.png" target=_blank><img src="files/problems/official_4.2.11.png" width=400></a><br><br>
+P12.<br><br>
+<a  href="files/problems/official_4.2.12.png" target=_blank><img src="files/problems/official_4.2.12.png" width=400></a><br><br>
+P13.<br><br>
+<a  href="files/problems/official_4.2.13.png" target=_blank><img src="files/problems/official_4.2.13.png" width=400></a><br><br>
+P14.<br><br>
+<a  href="files/problems/official_4.2.14.png" target=_blank><img src="files/problems/official_4.2.14.png" width=400></a><br><br>
+P15.<br><br>
+<a  href="files/problems/official_4.2.15.png" target=_blank><img src="files/problems/official_4.2.15.png" width=400></a><br><br>
+
+
+
 <h2><a href="#last" onclick="toggle('solutions4')">Solutions</a></h2>
     <ul id="solutions4" style="display:none"><!solutions4>
+
+<b>P1.</b>  \( A_x=2t, A_y=2t,\)  \(C_x=-2t, C_y=2t,\) \(B_x=2t, B_y=-2t\) for BC, \(B_x'=-2t, B_y'=2t\) for AB.    <br><br>
+<b>P2.</b>  \( A_x=0N, A_y=1N,\) \(B_y=2N,\)  \(E_x=-1N, E_y=2N\) for AE, \(E_x'=1N, E_y'=-2N\) for EB, \(C_x'=-1N, D_x'=1N\) for CD, \(C_x=1N\) for AE, \(D_x=-1N\) for EB. <br><br>
+<b>P3.</b>  \( A_x=3.\overline{5}kN, A_y=-2.\overline{6}kN,\) \(B_x=-3.\overline{5}kN, B_y=1.\overline{6}kN,\) \( C_x=3.\overline{5}kN, C_y=-2.\overline{6}kN\) for BD, \(C_x'=-3.\overline{5}kN, C_y'=2.\overline{6}kN\) for AC. \)   <br><br>
+<b>P4.</b>  \(D_x=0kN, D_y=1kN, \) \(E_y=3kN,\) \(A_x=4kN, A_y=-1kN\) for AE, \(A_x'=-4kN, A_y'=1kN\) for AB, \( B_x=-4kN, B_y=-3kN\) for DB, \(B_x'=4kN, B_y'=3kN\) for AB, \(C_x=-4kN, C_y=-2kN\) for AE, \(C_x'=4kN, C_y'=2kN\) for DB.   <br><br>
+<b>P5.</b>  \( A_x=0P, A_y=0.75P,\) \(C_y=1.25P,\) \(E_x=0.5P, E_y=0.75P\) for BE, \( E_x'=-0.5P, E_y'=-0.75P\) for DC, \( B_x=-0.5P, B_y=0.25P\) for BE, \(B_x'=0.5P, B_y=-0.25P\) for AD, \(D_x=0.5P, D_y=-0.5P\) for DC, \(D_x'=-0.5P, D_y'=0.5P\) for AD.   <br><br>
+<b>P6.</b>  \(     \)   <br><br>
+<b>P7.</b>  \( A_x=-2P, A_y=-0.375,\) \( G_y=1.375P,\) \(C_x=3.75P, C_y=-0.375P\) for EG, \(C_x'=-3.75P, C_y'=0.375P\) for AD, \(B_x=-3.75P,F_x=3.75P\) for BF, \(B_x'=3.75P\) for AD, \(F_x'=-3.75P\) for EG.   <br><br>
+<b>P8.</b>  \(  A_x=0t, A_y=-1t,\) \(B_x=0t, B_y=-1t,\) \(C_x=0t, C_y=-1t\) for AC, \(C_x'=0t, C_y'=1t\) for DB.   <br><br>
+<b>P9.</b>  \( A_x=1t, A_y=1t,\) \(B_x=-1t, B_y=1t,\) \(C_x=-1t, C_y=-1t\) for AC, \(C_x'=1t, C_y'=1t\) for DB.   <br><br>
+<b>P10.</b>  \( A_x=1t, A_y=0t,\) \(B_x=-1t, B_y=0t,\) \(C_x=-1t, C_y=-2t\) for AC, \(C_x'=1t, C_y'=2t\) for DB.   <br><br>
+<b>P11.</b>  \( A_x=0P, A_y=0.5P,\) \(C_y=0.5P,\) \(B_x=0P, B_y=-0.5P\) for AB, \(B_x'=0P, B_y'=0.5P\) for BC, \(M_A=P\).   <br><br>
+<b>P12.</b>  \( E_x=-3.2kN, E_y=9.6kN,\) \(D_x=3.2kN, D_y=-5.6kN,\) \(M_D=-1kN\cdot m,\) \(B_x=3.2kN, B_y=-5.6kN\) for AE, \(B_x'=-3.2kN, By'=5.6kN\) for BD.<br><br>
+<b>P13.</b>  \( A_x=-0.\overline{6}t, A_y=4t,\) \(F_x=-3.\overline{3}t, F_y=5t,\) \(D_x=3.\overline{3}t, D_y=-5t\) for DF, \(D_x'=-3.\overline{3}t, D_y'=5t\) for AD.<br><br>
+<b>P14.</b>  \( A_x=5t, A_y=5t,\) \(E_x=-6t, E_y=-2t,\) \(C_x=6t, C_y=5t\) for CE, \(C_x'=-6t, C_y'=-5t\) for AC.   <br><br>
+<b>P15.</b>  \( A_x=-2t, A_y=5.\overline{3}t,\) \(M_A=8t\cdot m,\) \(F_y=0.\overline{6}t,\) \(B_x=2t, B_y=-5.\overline{3}t\) for AB, \(B_x'=-2t, B_y'=5.\overline{3}t\) for GF.   <br><br>
 
 </ul><!solutions4>
 </ul><!problems4>
