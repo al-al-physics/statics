@@ -200,11 +200,35 @@ Sometimes this becomes very useful when thinking the strategy. Stay creative!<br
 
 Notice there are many different strategies that can be good. Just pic a good enough one!<br><br>
 Check as well that the number of steps at the table matches the number of unknowns in the previous list.<br><br>
+It is always a good idea to start considering sum of forces instead of moments, but very often they will not
+be useful. Another good idea is to calculate the sum of moments with respect to a point in which there is a lot
+of 'information' suffered there: many forces, unknowns, etc. If you do this, all the forces at this point will be
+immediately zero. However, you need to be <b>very careful</b>: if you calculate the sum of moments with respect to, 
+let's say, P, then all the forces suffered at P will not contribute to that moment. <b>However</b>, if at the point
+P we have a moment (for example, due to a fixed reaction, or simply an applied external moment), then, <b>the moment
+\(M_P\) must be included in the equation \(\Sigma M(P)\) </b>. Notice our notation: the parentheses in M indicates
+'with respect to', so \(M(F,P)\ is the moment produced by F with respect to P. Then, \(\Sigma M(P)\) is the sum
+of all moments with respect to P. And \(M_P\) is, if it exists, a moment applied at the point P. Imagine we have
+2 forces, \(\vec{F}_1\) and \(\vec{F}_2\) that make some moments with respect to P, but we also have an external 
+moment applied to P, that we call \(M_P\). In this case, notice how the sum of moments with respect to P is:<br><br>
 
+\(\Sigma M(P)=M(\vec{F}_1,P)+M(\vec{F}_2},P)+M_P=0\)<br><br>
+
+Look very carefully at the notation of the previous equation!<br><br>
 
 <b>STEP 4:</b> Calculations table:<br><br>
 
-(All pure numbers are in Newtons)<br><br>
+
+Before developing the calculations, an important tip: as you go through the calculation steps, the 
+unknowns become knowns. Sometimes the hypothesis will be correct and other times it won't. What is
+important is that, after each step, you update and correct if necessary the pictures of the free
+body diagrams. By 'update' we mean to correct the orientation of the arrows if necessary and also
+to write the numerical value. The free body diagrams will become quite dirt and messy as you
+perform the calculations and you update everything, but don't worry, because at the end of the
+problem we will redraw everything from scratch. The update process after each step is important because
+at the next equation it is crucial to distinguish what is known and what is unknown. For what is already
+known, use its numerical value and its correct sign! Never use 'hypothesis' values or signs if you
+already know the true value and the true sign!<br><br>
 
 
 <table border="2">
@@ -226,6 +250,8 @@ Check as well that the number of steps at the table matches the number of unknow
 <tr><td>     15      </td><td> <br> \(F_y'+F_y=0\)\(\implies F_y=-5 \) </td>
 </table>
 <br><br>
+(All pure numbers are in Newtons)<br><br>
+
 
 At step 8, be aware of the signs. In this case, member CD is pointing either NE (+,+) or SW (-,-), so
 <i>the sign of both components must be the same</i>. If the CD member would have had the direction 
