@@ -235,10 +235,13 @@ But if we join the points F and F' again, it is the sum of internal forces what 
 sum we cannot include the external force! Now you have two choices: believe this and apply it correctly or
 question what is happening here and read the following optional section, only for brave minds.<br><br>
 
-<a href="#last" onclick="toggle('brave')">Click here only if you are brave and you like to
-really understand things. Students willing to just apply recipes may skip this section.</a>
-    <ul id="brave" style="display:none"><!brave>
 
+Click here only if you are brave and you like to
+really understand things. Students willing to just apply recipes may skip this section.<br><br>
+
+<a href="#last" onclick="toggle('brave')"><img src="files/figures/unchi.png" width=70></a>
+    <ul id="brave" style="display:none"><!brave>
+<br>
 A difficult question: look carefully at point F again. If the strict law of statics is true, the
 sum of all forces (internal and external) must be zero at every point, and the point F does not seem to
 hold this relation, because the diagrams seem to imply that the sum of all forces at this point is not
@@ -250,17 +253,17 @@ law of statics wrong after all? The answer is no: this strict law is perfectly t
 in fact, at points F or E, or in fact, at every point, the sum of all forces is exactly zero if the
 structure is to be static. But then, you may say, where are the missing forces? Aren't the free body
 diagrams showing all the forces suffered by those points? The answer is no again! Let's analyze point
-F first. If we don't break it, we draw the external force \((0,2)N\) and if we break it, the internal
+F first. If we don't break the structure there, we draw the external force \((0,2)N\) and if we break it, the internal
 forces appear. But the internal forces cancel to each other, so in fact they are not very relevant here.
 In order for the point F to remain static and have zero acceleration, there has to be a \((0,-2N)\) acting
 there, suffered by F, and pointing downwards. However, such mysterious force seems to be missing!<br><br>
 
 The key to understand this paradox is that the strict law of statics, which talks about points, needs
 such points to be <b>free</b> as in a <i>free</i> body diagram. In our example, neither F or E are free
-points or free bodies: they belong to a larger community of points that form the members. When considering
+points or free bodies: they belong to larger communities of points that we call members. When considering
 a whole member, it is the sum of all external forces in the member what has to be zero, and here notice
 that when you break and separate a member, the internal forces at the breaking point become external! Then
-what would happen if we consider point F as a single body, a free body? For this, I need to break and
+what would happen if we consider point F as a single body, a free body? For this, we need to break and
 separate this point from the rest, to make it free:<br><br>
 
 <a  href="files/figures/89.png" target=_blank><img src="files/figures/89.png" width=400></a><br><br>
@@ -279,12 +282,14 @@ larger body, then the sum of <i>internal</i> forces depicted on it must be zero.
 
 This has been a little more difficult than this course requires, but it was necessary in order to understand
 that our first free body diagrams were not including all the forces acting on F. The same would apply for point
-E, where it seems that only a downwards forces is suffered. If we isolate E as a single free body, then a vertical
+E, where it seems that only a downwards forces is suffered, and yet it does not accelerate downwards. If we isolate E as a single free body, then a vertical
 upwards force of value 3N would appear. <br><br>
 
 
 
 </ul><!brave>
+
+<br><br>
 
 <b>STEP 4:</b> Calculations table:<br><br>
 
@@ -327,6 +332,9 @@ At step 8, be aware of the signs. In this case, member CD is pointing either NE 
 <i>the sign of both components must be the same</i>. If the CD member would have had the direction 
 of SE (+,-) or NW(-,+), then the equation would have been \(C_y'=-C_x'\tan{45}\).<br><br>
 
+Pay attention at step 15: when summing for a non-free point (a point belonging to a bigger member than the point itself)
+it is the sum of internal forces what has to be zero, not the sum of all forces. That is why we don't include the green
+force at this equation.<br><br>
 
 
 <b>STEP 5:</b> Final diagram and checking:<br><br>
