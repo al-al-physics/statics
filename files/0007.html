@@ -206,15 +206,85 @@ of 'information' suffered there: many forces, unknowns, etc. If you do this, all
 immediately zero. However, you need to be <b>very careful</b>: if you calculate the sum of moments with respect to, 
 let's say, P, then all the forces suffered at P will not contribute to that moment. <b>However</b>, if at the point
 P we have a moment (for example, due to a fixed reaction, or simply an applied external moment), then, <b>the moment
-\(M_P\) must be included in the equation \(\Sigma M(P)\) </b>. Notice our notation: the parentheses in M indicates
-'with respect to', so \(M(F,P)\ is the moment produced by F with respect to P. Then, \(\Sigma M(P)\) is the sum
+\(M_P)\) must be included in the equation \(\Sigma M(P)\) </b>. Notice our notation: the parentheses in M indicates
+'with respect to', so \(M(F,P\) is the moment produced by F with respect to P. Then, \(\Sigma M(P)\) is the sum
 of all moments with respect to P. And \(M_P\) is, if it exists, a moment applied at the point P. Imagine we have
 2 forces, \(\vec{F}_1\) and \(\vec{F}_2\) that make some moments with respect to P, but we also have an external 
 moment applied to P, that we call \(M_P\). In this case, notice how the sum of moments with respect to P is:<br><br>
 
-\(\Sigma M(P)=M(\vec{F}_1,P)+M(\vec{F}_2},P)+M_P=0\)<br><br>
+\( \Sigma M(P) = M(\vec{F}_1,P) + M(\vec{F}_2,P)+M_P=0 \)<br><br>
 
 Look very carefully at the notation of the previous equation!<br><br>
+
+A final discussion for this step that is of paramount importance. Notice the second row of the table, the one
+called "system considered". From what we see, we can use the full or whole system, or just a given member. But
+to jump from a prime to a non-prime or to a non-prime to a prime quantity we use the sum of forces at a <b>point</b>.
+You may remember the discussion at early chapters where we discussed that strict statics need that the sum of
+all forces, internal and external, must be zero for a single point. We also saw later that we can sum forces
+suffered at different points for a rigid body, but then we can only sum external forces. Well, now there is a
+third version that you need to know: <b>if a rigid body has some volume and we consider the sum of forces
+of a single point of it, the equation to establish is that the sum of all <i>internal</i> forces is equal to
+zero.</b> Keep this result in mind because you are going to use it all the time. Now let's discuss it a bit further. <br><br>
+
+Look at the points C in the free body diagrams before. When the structure is not broken, the point C does not
+have any force. When we break it in two parts, internal forces appear in such a way that all the violet
+forces, when we join again the two versions of C (C and C') must cancel out each other. The law is that
+for these points, the sum of all <i>internal</i> forces must give zero. Now let's look at point F. There,
+before breaking the structure, there is an external applied force. When we break, internal forces appear.
+But if we join the points F and F' again, it is the sum of internal forces what must cancel, and in the
+sum we cannot include the external force! Now you have two choices: believe this and apply it correctly or
+question what is happening here and read the following optional section, only for brave minds.<br><br>
+
+<a href="#last" onclick="toggle('brave')">Click here only if you are brave and you like to
+really understand things. Students willing to just apply recipes may skip this section.</a>
+    <ul id="brave" style="display:none"><!brave>
+
+A difficult question: look carefully at point F again. If the strict law of statics is true, the
+sum of all forces (internal and external) must be zero at every point, and the point F does not seem to
+hold this relation, because the diagrams seem to imply that the sum of all forces at this point is not
+zero but \((0,2)N\). The internal forces (violet) cancel out and the net force is just 2N on the vertical
+axis. How can this be? Shouldn't this point F undergo a vertical acceleration? If you look at point E
+now, there is something weird again: the only force in the diagrams is \((0,-3)N\), and yet this
+point does not seem to be accelerating downward! Can you explain what is happening? Is the strict
+law of statics wrong after all? The answer is no: this strict law is perfectly true, which means that
+in fact, at points F or E, or in fact, at every point, the sum of all forces is exactly zero if the
+structure is to be static. But then, you may say, where are the missing forces? Aren't the free body
+diagrams showing all the forces suffered by those points? The answer is no again! Let's analyze point
+F first. If we don't break it, we draw the external force \((0,2)N\) and if we break it, the internal
+forces appear. But the internal forces cancel to each other, so in fact they are not very relevant here.
+In order for the point F to remain static and have zero acceleration, there has to be a \((0,-2N)\) acting
+there, suffered by F, and pointing downwards. However, such mysterious force seems to be missing!<br><br>
+
+The key to understand this paradox is that the strict law of statics, which talks about points, needs
+such points to be <b>free</b> as in a <i>free</i> body diagram. In our example, neither F or E are free
+points or free bodies: they belong to a larger community of points that form the members. When considering
+a whole member, it is the sum of all external forces in the member what has to be zero, and here notice
+that when you break and separate a member, the internal forces at the breaking point become external! Then
+what would happen if we consider point F as a single body, a free body? For this, I need to break and
+separate this point from the rest, to make it free:<br><br>
+
+<a  href="files/figures/89.png" target=_blank><img src="files/figures/89.png" width=400></a><br><br>
+
+It is clear that now point F must be kept appart from the rest, so the vertical green force must
+be suffered exclusively by the point little free diagram. But as we are breaking and isolating a point,
+there are three big pieces that are still touching it, so they will have a version of this point
+at one of their extremes. Instead of splitting \(F\) into \(F\) and \(F'\), now we split \(F\) into \(F\) (the original) 
+and \(F',F'',F'''\) (the extremes of the three big members). Again, the weird rule that the sum of all internal
+forces for that point must be zero applies, so \(R_y+R_y'+R_y''+R_y'''=0\) but now at least we see very clearly
+that the original point F, now depicted as a free body point, is at equilibrium, with the sum of all forces
+(internal and external) suffered by it adding up to zero. So this is our conclusion: the strict law of
+statics is valid when the point is free, and it is painted as a free body diagram. Then, we can sum
+all its suffering forces (ext and int) and we get zero. If the point is not free, and belongs to a
+larger body, then the sum of <i>internal</i> forces depicted on it must be zero. <br><br>
+
+This has been a little more difficult than this course requires, but it was necessary in order to understand
+that our first free body diagrams were not including all the forces acting on F. The same would apply for point
+E, where it seems that only a downwards forces is suffered. If we isolate E as a single free body, then a vertical
+upwards force of value 3N would appear. <br><br>
+
+
+
+</ul><!brave>
 
 <b>STEP 4:</b> Calculations table:<br><br>
 
@@ -256,6 +326,8 @@ already know the true value and the true sign!<br><br>
 At step 8, be aware of the signs. In this case, member CD is pointing either NE (+,+) or SW (-,-), so
 <i>the sign of both components must be the same</i>. If the CD member would have had the direction 
 of SE (+,-) or NW(-,+), then the equation would have been \(C_y'=-C_x'\tan{45}\).<br><br>
+
+
 
 <b>STEP 5:</b> Final diagram and checking:<br><br>
 
