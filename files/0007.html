@@ -34,13 +34,15 @@ we can solve full problems. <br><br>
 
 The first thing to notice here is that the articulation points (or joints) split into two versions
 each. C becomes C and C'. D becomes D and D'. F becomes F and F'. However, at each internal point, 
-the sum of all forces (internal plus external) must be zero. This implies that once you know, for example,
+the sum of all <b>internal</b> forces must be zero. This implies that once you know, for example,
 \(F_x\) then you automatically know \(F_x'\). Or, if during your strategy you arrive at \(F_y'\), then
 the next step in the strategy is to automatically know \(F_y\). You just change signs, 
-so, as \(F_y+F_y'=0\) we get \(F_y=-F_y'\). Moreover, as \(F_y+F_y'=0\) then the rule \(F_y'=-F_y\) applies again.<br><br>
+so, as \(F_y+F_y'=0\) we get \(F_y=-F_y'\). Moreover, as \(F_y+F_y'=0\) then the rule \(F_y'=-F_y\) applies again.
+<br><br>
 
 If a joint is a confluence of 3 members, then our join point J, instead of splitting into J and J', 
-it would split into J, J' and J", so the rule of just swapping the signs is no longer valid.<br><br>
+it would split into J, J' and J", so the rule of just swapping the signs is no longer valid, but you
+still have the equation of sum the internal forces and set the sum to zero.<br><br>
 
 Another thing to notice is that the vertical external force of 2N, suffered at F, is located at a joint.
 Then, when we separate the members, we have the dilemma of whether we should place this force at only
@@ -48,7 +50,10 @@ one member (and in this case, which one) or whether we should put it in both mem
 you can place it at the member you want, the result must be the same. Or, if you like, you could put
 1N at each member, or 0.5N at one and 1.5 at the other. The important thing is that when you rejoin
 the members and evaluate all the forces suffered by the internal point, the external force adds to 2N
-again.<br><br>
+again. Notice an important thing: at the point F, you can choose to place the 2N force as part of the
+AB member or as part of the FE member. In each case, the result for the internal forces \(F_y\) and 
+\(F_y'\) will be different, but once you add all vertical forces suffered by F at each member, the
+global result is the same.<br><br>
 
 Notice as well that for all the unknowns we have followed choice 1 and we have placed all the hypotheses
 as positive. If you prefer to use choice 2 you can do it, of course. In fact, your intuition may tell
@@ -354,6 +359,7 @@ force at this equation.<br><br>
 
 <a  href="files/figures/86.png" target=_blank><img src="files/figures/86.png" width=400></a><br><br>
 
+
 Checking method:<br><br>
 
 -Look at the full system diagram. Check that x forces sum to zero. The same for y forces. <br><br>
@@ -363,6 +369,29 @@ Checking method:<br><br>
 -Check each joint. Check that all the <i><b>internal </b></i> forces suffered by the joint are zero.
 If you sum all forces instead, including external ones, then the sum must give the external force value! (Spend some minutes trying to understand this point, which is crucial.)<br><br>
 
+
+You may prefer to depict the vertical force at F as the total result from the external force plus
+\(F_y\), and then just drawing (orange arrow):<br><br>
+
+<a  href="files/figures/90.png" target=_blank><img src="files/figures/90.png" width=400></a><br><br>
+
+The reason for this is that what really matters at F is what is suffered in total. To illustrate this,
+considering the following: what would have happened if, instead of considering the applied vertical 
+force of 2N as being part of member FE, we would had considered it as part of member AB instead? You
+would arrive to the following final diagram:<br><br>
+
+<a  href="files/figures/91.png" target=_blank><img src="files/figures/91.png" width=400></a><br><br>
+
+But, as what matters is the total force experienced by each point, we can turn the two vertical arrows
+at F' as one single (orange) arrow, as we did before, and get<br><br>
+
+<a  href="files/figures/92.png" target=_blank><img src="files/figures/92.png" width=400></a><br><br>
+
+Notice the vertical forces in F and F'. They are the same as in our previous calculations. Remember:
+when there is an external force applied to a point where we break the structure for analysis, we can
+decide whether to assign the external for to one or to the other member. The results for the internal
+forces will be different in each case, but when considering the total force at each point, the result
+must be the same.<br><br>
 
 <br><br>
 </ul><!fullexample>
@@ -412,7 +441,7 @@ P15.<br><br>
 <b>P2.</b>  \( A_x=0N, A_y=1N,\) \(B_y=2N,\)  \(E_x=-1N, E_y=2N\) for AE, \(E_x'=1N, E_y'=-2N\) for EB, \(C_x'=-1N, D_x'=1N\) for CD, \(C_x=1N\) for AE, \(D_x=-1N\) for EB. <br><br>
 <b>P3.</b>  \( A_x=3.\overline{5}kN, A_y=-2.\overline{6}kN,\) \(B_x=-3.\overline{5}kN, B_y=1.\overline{6}kN,\) \( C_x=3.\overline{5}kN, C_y=-2.\overline{6}kN\) for BD, \(C_x'=-3.\overline{5}kN, C_y'=2.\overline{6}kN\) for AC. \)   <br><br>
 <b>P4.</b>  \(D_x=0kN, D_y=1kN, \) \(E_y=3kN,\) \(A_x=4kN, A_y=-1kN\) for AE, \(A_x'=-4kN, A_y'=1kN\) for AB, \( B_x=-4kN, B_y=-3kN\) for DB, \(B_x'=4kN, B_y'=3kN\) for AB, \(C_x=-4kN, C_y=-2kN\) for AE, \(C_x'=4kN, C_y'=2kN\) for DB.   <br><br>
-<b>P5.</b>  \( A_x=0P, A_y=0.75P,\) \(C_y=1.25P,\) \(E_x=0.5P, E_y=0.75P\) for BE, \( E_x'=-0.5P, E_y'=-0.75P\) for DC, \( B_x=-0.5P, B_y=0.25P\) for BE, \(B_x'=0.5P, B_y=-0.25P\) for AD, \(D_x=0.5P, D_y=-0.5P\) for DC, \(D_x'=-0.5P, D_y'=0.5P\) for AD.   <br><br>
+<b>P5.</b> Taking the applied -P applied to D as part of AD: \( A_x=0P, A_y=0.75P,\) \(C_y=1.25P,\) \(E_x=0.5P, E_y=0.75P\) for BE, \( E_x'=-0.5P, E_y'=-0.75P\) for DC, \( B_x=-0.5P, B_y=0.25P\) for BE, \(B_x'=0.5P, B_y=-0.25P\) for AD, \(D_x=0.5P, D_y=-0.5P\) for DC, \(D_x'=-0.5P, D_y'=0.5P\) for AD.   <br><br>
 <b>P6.</b>  \(     \)   <br><br>
 <b>P7.</b>  \( A_x=-2P, A_y=-0.375,\) \( G_y=1.375P,\) \(C_x=3.75P, C_y=-0.375P\) for EG, \(C_x'=-3.75P, C_y'=0.375P\) for AD, \(B_x=-3.75P,F_x=3.75P\) for BF, \(B_x'=3.75P\) for AD, \(F_x'=-3.75P\) for EG.   <br><br>
 <b>P8.</b>  \(  A_x=0t, A_y=-1t,\) \(B_x=0t, B_y=-1t,\) \(C_x=0t, C_y=-1t\) for AC, \(C_x'=0t, C_y'=1t\) for DB.   <br><br>
@@ -426,6 +455,28 @@ P15.<br><br>
 
 </ul><!solutions4>
 </ul><!problems4>
+
+<h2><a href="#last" onclick="toggle('biforce2')">Playing with biforce members</a></h2>
+    <ul id="biforce2" style="display:none"><!biforce2>
+
+Here you will find some extra problems in which you can practice your knowledge of biforce
+members. The structures are, in fact, trusses, but you need to solve them as if they were frames.<br><br>
+
+<b>P16.</b> <a  href="files/figures/93.png" target=_blank><img src="files/figures/93.png" width=400></a><br><br>
+<b>P17.</b> <a  href="files/figures/94.png" target=_blank><img src="files/figures/94.png" width=400></a><br><br>
+<b>P18.</b> <a  href="files/figures/95.png" target=_blank><img src="files/figures/95.png" width=400></a><br><br>
+<b>P19.</b> <a  href="files/figures/96.png" target=_blank><img src="files/figures/96.png" width=400></a><br><br>
+<b>P20.</b> <a  href="files/figures/97.png" target=_blank><img src="files/figures/97.png" width=400></a><br><br>
+<h2><a href="#last" onclick="toggle('biforce2_sol')">Solutions</a></h2>
+    <ul id="biforce2_sol" style="display:none"><!biforce2_sol>
+<b>P16.</b> AB null, BC 2N (compression). <br><br>
+<b>P17.</b> AB \(4/\sqrt{3}\)N (compression), BC \(2/\sqrt{3}\)N (compression). <br><br>
+<b>P18.</b> AB 2N (traction), BC null. <br><br>
+<b>P19.</b> AB \(2\sqrt{6-3\sqrt{3}}\simeq 1.79315\)N (traction), BC \(4-2\sqrt{3}\simeq 0.535898\)N  (compression). <br><br>
+<b>P20.</b> AB \(\simeq 2.12927\)N (compression), BC \(\simeq 0.725603\)N (compression). <br><br>
+
+</ul><!biforce2_sol>
+</ul><!biforce2>
 </ul><!root>
 <!Code to expand/collapse branches>
 <script type="text/javascript">
