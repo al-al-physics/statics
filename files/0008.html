@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../css.css" media="screen" title="aleix" />
+</head>
+<body>
+<ul><!root>
+<h2><a href="#last" onclick="toggle('trussbasics')">Basics</a></h2>
+    <ul id="trussbasics" style="display:none"><!trussbasics>
+
+Remember that a truss is a structure in which all the members are biforce. Consequently, the goal in these
+problems is to give, for each member, the magnitude of the force that it suffers and the sign of such force. 
+In this case, the sign will only indicate whether the member suffers traction (positive) or compression (negative). 
+Let's look at some examples of members with their results:<br><br>
+
+
+<a  href="files/figures/98.png" target=_blank><img src="files/figures/98.png" width=450></a><br><br>
+
+Notice the red dots as the suffering points. As all must be biforce members there can be only two per member, but
+the member does not need to be a straight rod. What matters is that the line of action, the line connecting the
+two suffering points, is what matches the direction of the forces. Notice as well how the sign of the force only
+means whether the member is under compression (-) or traction (+). Also pay attention to the nomenclature: there is no 
+need to write \(F_{AB}\) for the force suffered by the AB member. Just call it \(AB\), and when you decompose it into
+components call them \((AB_x,AB_y)\).<br><br>
+
+The final results of these problems, giving only the force of 'the whole member' with a single sign, are somewhat anomalous.
+When you see these numbers, interpret the sign only as a guide for compression/traction. The true signs of the forces
+will, in fact, be different at each of the suffering points, so the sum of forces can be zero. This issue can be missleading but
+don't get confused:<br><br>
+
+<a  href="files/figures/99.png" target=_blank><img src="files/figures/99.png" width=450></a><br><br>
+
+In these problems, we are not going to consider only members a rigid bodies but also the joints. Let's consider the
+following structure:<br><br>
+
+<a  href="files/figures/100.png" target=_blank><img src="files/figures/100.png" width=450></a><br><br>
+
+Now let's depict the members and the joints as free members:<br><br>
+
+<a  href="files/figures/101.png" target=_blank><img src="files/figures/101.png" width=450></a><br><br>
+
+One question: if a member AB is suffering compression, what are the joints A and B suffering due to the member AB? 
+We could think: 'due to the action-reaction principle, the joints suffer traction', but that is wrong! Think about
+it again: you are a member and a wall is a joint next to you. If you suffer compression against the wall is because the
+wall is compressing you, but you are compressing the wall as well, so when you compress it, it compresses you. On the
+other hand, imagine you are pulling from a rope. The rope is tractioning you, and you are doing the same to the rope.
+Don't confuse, ever, producing with suffering. Always think in terms of suffering! If you mix these concepts you can
+easily get confused. The message here is that we can approach what the truss is suffering through two perspectives:
+1) what the members suffer and 2) what the joints suffer. Luckily, the result of both approaches must be the same!
+With the example in the next section you will understand this much better. For now, just recall that if a member
+AB suffers compression, the joints A and B are suffering compression due to this member. If AB suffers traction,
+joints A and B suffer traction from this member.<br><br>
+
+What we are going to do is to focus our attention just on the joints. We will follow what is called the method of
+joints, and it consists in deleting all the members, even though we need to keep in mind their directions!<br><br>
+
+<a  href="files/figures/102.png" target=_blank><img src="files/figures/102.png" width=450></a><br><br>
+
+With this in mind, you are ready for our full example development. Pay attention to all the details before
+attempting to solve problems on your own.<br><br>
+
+</ul><!trussbasics>
+
+<h2><a href="#last" onclick="toggle('fullexample2')">A full example</a></h2>
+    <ul id="fullexample2" style="display:none"><!fullexample2>
+
+
+We are going to solve with detail the following truss:<br><br>
+
+<a  href="files/problems/official_4.1.1.png" target=_blank><img src="files/problems/official_4.1.1.png" width=450></a><br><br>
+
+The target is to give, for each member, the force it suffers, along with its sign indicating compression (-) or traction (+).<br><br>
+
+<b>STEP 1: reactions</b> Step 0 should be drawing the axis of coordinates, so please do it. Now, step 1 consists in considering the whole system
+as a static rigid body and solve the external reactions. So identify the reactions in one color and draw the applied external forces
+in another color:<br><br>
+
+<a  href="files/figures/103.png" target=_blank><img src="files/figures/103.png" width=450></a><br><br>
+
+Notice that, since all forces are in tones (t) and distances in meters (m), we don't care anymore about physical units until the
+final results. <br><br>
+
+Applying sum of forces along x, we clearly see that \(A_x=0\). In order to calculate the y reactions, it is not a good idea to begin
+with sum of y forces. Instead, we calculate the sum of moments with respect to A:<br><br>
+\(\sum M(A)=16B_y-8\cdot 15-12\cdot 10=0\)<br><br>
+which gives \(B_y=15\). Then, applying now the sum of vertical forces, we clearly arrive to \(A_y=10\). Now it is time to update the
+previous drawing and substituting letters by numbers. In this case, all hypothesis were correct, so there's no need to change
+the orientation of the arrows. <br><br>
+
+<a  href="files/figures/104.png" target=_blank><img src="files/figures/104.png" width=450></a><br><br>
+
+<b>STEP 2: draw the joints</b> Here we need to draw the structure, but only portraying the joints. Draw all known forces in one
+color. Join the joints with dashed or dotted lines. Add more lines in order to see the truss as a collection of right-angled
+triangles.<br><br>
+
+<a  href="files/figures/105.png" target=_blank><img src="files/figures/105.png" width=450></a><br><br>
+
+<b>STEP 3: Trigonometry</b> In the problems you can have the mutual angles between the members or just the relevant distances, 
+which is the case here. The goal of this step is to calculate the not the angles but the tangents, sines and cosines of the angles
+for each possible right-angled triangle.
+
+<a  href="files/figures/106.png" target=_blank><img src="files/figures/106.png" width=450></a><br><br>
+
+<b>STEP 4: strategy</b> Once again, we need to come up with a good strategy to solve the whole truss in an easy way. This time it is
+easier than with frames. The only thing to do here is just establishing <i>the order of the joints</i> in which we are going to attack
+the problem. <br><br>
+
+Focus on node F for example. Could we begin by this node? Certainly not the best choice, because there will be one suffered and unkown force pointing
+towards C and another unknown pointing towards E, plus the known and vertical -15. Are we done? No! There is also an unknown and vertical force towards D.
+Never think that the external applied force is already this force! OK, we have three unknowns, and since <i>there is no moment suffered by any joint</i>,
+<b>we only have two equations per node: \(\sum F_x=0\) and \(\sum F_y=0\).</b> Conclusion: we cannot begin by this joint. We should look for joints with only
+two unknowns, or even better (if possible) joints with just one unknown! Is there any joint with just one unknown here? No, bad luck. OK, then we should
+look for nodes with two unknowns. We have just A, B. How can we choose between them? We look at the difficulty of the members attached to them. If a member
+is just horizontal or vertical, it is a low-difficulty one. If it is tilted, it has x and y components, so it is a high-difficulty member. In this case,
+both A and B have attached one easy and one difficult member. Then, any choice will be good. We decide to begin by A, then. <br><br>
+
+Who is next? Once we solve joint A, members AC and AD will count as known. The strategy consists in exploring neighbor joints to the last we have
+solved. So the two neighbors are C and D. C will have two difficult unknowns, and D will have 4 unknowns, so we need to choose C. It is useful to
+mark the unknowns in order to keep track of what is already known at each step. Our next step is to look at the neighbors of C, which are D and F. F
+has two unknowns, one easy and one difficult, while D has 3 unknowns. We clearly choose F. Next we choose D, since E has two difficult unknowns while
+D has one easy and one difficult. Finally, we choose E and then we choose B. Summarizing:<br><br>
+
+Strategy: \(A, C, F, D, E, B\)<br><br>
+
+<b>STEP 5: solve each joint</b> Here we need to use the strategy table. We first need to draw a picture of joint A, with all known forces
+in one color and all unknown forces in another color. All tilted forces must be depicted into x and y components. Think that we are going to
+use sum of x and y forces, so we don't want tilted forces to mix things up. Then, let's begin by joint A.<br><br>
+
+<a  href="files/figures/107.png" target=_blank><img src="files/figures/107.png" width=450></a><br><br>
+
+<b>Notice where we pin the bases of the vector!</b> The suffering points must be the places at which the member would attach. So, the external
+applied force (green) can be considered to be suffered at the center, but the AD force must be place at the east of the joint, while the
+forces AC must be suffered at the North-East part of the joint. <br><br>
+
+Now we solve the joint. Should we begin by adding x or y forces? Clearly, we may begin by summing y forces in this case because there is only
+one unknown! So we have<br><br>
+
+\(\sum F_x=0\implies 10+AC_y=0\)\(\implies AC_y=-10\)
+
+Update the result in the picture. The next step is to do trigometry. As all members are biforce, if we known one component of it, we must know the other. What we have to do
+is to draw a little right-angled triangle in which the small sides are put without signs:<br><br>
+
+<a  href="files/figures/108.png" target=_blank><img src="files/figures/108.png" width=450></a><br><br>
+
+As we know te tangent \(\tan{\alpha}=\frac{3}{4}\) we deduce that \(\frac{10}{|AC_x|}{3}{4}\) so we find that \(|AC_x|=\frac{40}{3}\).
+
+Finally, we need to put, by hand, the sign of \(AC_x\). We look at member AC and we see that it is either a \((+,+)\) or a \((-,-)\). As
+we already know that \(AC_y\) is negative, we discard the \((+,+)\) option and select the correct one: \((-,-)\), so we guess that
+\(AC_x=\frac{-40}{3}\). Update the result in the picture.<br><br>
+
+Time to sum x forces: we get \(\sum F_x=0\implies AD-\frac{40}{3}=0\)\(\implies AD=\frac{40}{3}\). Update the picture. Now it is complete.<br><br>
+
+The final substep for the A joint is to draw again the whole picture but with all the results.<br><br>
+
+<a  href="files/figures/109.png" target=_blank><img src="files/figures/109.png" width=450></a><br><br>
+
+The last thing to do for a joint resolution is to calculat, by using Pythagoras' theorem, the hypothenuse of those
+forces in which we have x and y components. In this case, we arrive to \(\sqrt{10^2+\frac{40^2}{3^2}}=\frac{50}{3}\) so we can write
+that \(AC=\frac{50}{3}\). 
+
+Now we simply need to repeat the whole process for all the remaining joints, according to the order of the strategy list. Next is joint C.<br><br>
+
+It is important to notice now the following detail. If we write a force called AC suffered by the joint, it means that the force is suffered 
+by A (the first letter). The second letter indicates the neighbor joint according to the corresponding member. So, in
+the previous joint (A) we solved forces AC. Now we will have forces CA, which means that they are suffered by joint C. And here comes the
+important part: if you switch the order of the letters, you add a minus sign. Then \(CA_x=-AC_x=\frac{40}{3}\) and \(CA_y=-AC_y=10\).<br><br>
+
+<a  href="files/figures/110.png" target=_blank><img src="files/figures/110.png" width=450></a><br><br>
+
+Notice that we have written that CD=0. Why is so? One of the main difficulties in trusses is simply to look for null members by eye inspection. 
+In fact, you don't need to see it. If you calculate the sum of forces and solve the system, you will arrive to the correct result. However, it
+is important to learn to see these null members in order to speed up the solving process.ETC<br><br>
+
+The resolution of this node is clear. We can begin by whatever direction we prefer, and trigonometry will not be necessary. By simple
+eye inspection it becomes clear that \( CF_x=\frac{-40}{3}\) and \(CF_y=-10\). Then, we can draw the final version of the joint as <br><br>
+
+<a  href="files/figures/111.png" target=_blank><img src="files/figures/111.png" width=450></a><br><br>
+
+Before finishing this node, use Pythagoras' theorem to arrive to \(CF=\frac{50}{3}\) (we already knew this one) and \(CA=\frac{50}{3}\).<br><br>
+
+Now it is time to go to joint F. First, we set the first drawing:<br><br>
+
+<a  href="files/figures/112.png" target=_blank><img src="files/figures/112.png" width=450></a><br><br>
+
+We see how in x we have only one unknown, so we proceed to do \(\sum F_x=0\implies \)\(FE_x+\frac{40}{3}=0\implies\)\(FE_x=\frac{-40}{3}\). We 
+correct the figure. Now we do trigonometry to know \(|FE_y|\):<br><br>
+
+<a  href="files/figures/113.png" target=_blank><img src="files/figures/113.png" width=450></a><br><br>
+
+Since \(\tan{\alpha}=\frac{|FE_y|}{40/3}=\frac{3}{4}\) we find that \(|FE_y|=10\). Now we need to evaluate the sign. The hypothenuse
+has a slope that is either \((-,+)\) or \((+,-)\). Since the x-component is known to be negative, the y part has to be positive: \((-,+)\). 
+Then, we conclude that \(FE_y=10\). This is necessary to now perform the sum over y forces, \(-15+10+10+FD=0\implies FD=-5\). We can
+now complete the final version of the joint:<br><br>
+
+<a  href="files/figures/114.png" target=_blank><img src="files/figures/114.png" width=450></a><br><br>
+
+Notice how we portray the tilted forces in a vector form, to get a clearer picture. Once we know the components, it is more useful to
+depict the whole vector. Remember to apply Pythagoras' theorem to get the magnitudes of the vectors. In this case, FC and FE have
+magnitude 50/3. <br><br>
+
+Time to solve the D joint:<br><br>
+
+<a  href="files/figures/115.png" target=_blank><img src="files/figures/115.png" width=450></a><br><br>
+
+Clearly, we begin with y-forces, and getting \(DE_y=-5\). By trigonometry we find that \(|DE_x=\frac{20}{3}\). As the DE
+member is \((-,-)\) (since \(DE_y\) is negative, \(DE_x\) must be negative as well), we arrive at \(DE_x=\frac{-20}{3}\). 
+Finally, using the x-forces, we conclude that DB=20. We draw the joint again with the results:<br><br>
+
+<a  href="files/figures/116.png" target=_blank><img src="files/figures/116.png" width=450></a><br><br>
+
+Notice how it is not necessary to put the names of the forces all the time. Once we have the numbers, they are the
+really relevant things to put into the final picture. <br><br>
+
+Node E is the last to be calculated. We draw the initial picture:<br><br>
+
+<a  href="files/figures/117.png" target=_blank><img src="files/figures/117.png" width=450></a><br><br>
+
+We can begin by x or y forces, since there is only one unknown along each direction. Beginning by x-forces we 
+easily find \(EB_x=-20). Now, we can either do trigonometry or simply sum over y-forces, and in both cases
+we will obtain \(EB_y=15\). We complete the final picture of the joint:<br><br>
+
+<a  href="files/figures/118.png" target=_blank><img src="files/figures/118.png" width=450></a><br><br>
+
+Notice that BE=25, while the other magnitudes have been already calculated before.<br><br>
+
+Th final node, B, is not to be calculated, since we know all the forces suffered by it. However, we draw it just
+to check that we get a static joint, as it should be:<br><br>
+
+<a  href="files/figures/119.png" target=_blank><img src="files/figures/119.png" width=450></a><br><br>
+
+<b>STEP 6: final diagrams</b>
+
+Finally, we draw all the joints again, and we need to depict the final forces suffered by the joints along the members. In this
+diagram there is no need to draw the external forces (reactions or applied). Just the forces along the directions of the members.
+<br><br>
+
+<a  href="files/figures/120.png" target=_blank><img src="files/figures/120.png" width=450></a><br><br>
+
+We need to pay attention to <i>what the joint suffers due to each member</i>. And, as we discussed at the beginning, what
+the joint suffers is the same as what the member suffers. As a final result, we draw a very simple picture of the truss
+adding the minus sign for members suffering compression, and leaving a positive sign for members suffering traction.<br><br>
+
+
+<a  href="files/figures/121.png" target=_blank><img src="files/figures/121.png" width=450></a><br><br>
+
+
+This is the final result! Now you can practice with the problems of next section.<br><br>
+
+
+<br><br>
+</ul><!fullexample>
+
+<h2><a href="#last" onclick="toggle('problems8')">Problems</a></h2>
+    <ul id="problems8" style="display:none"><!problems8>
+
+Here are the official problems of the UPC collection. <br><br>
+
+
+P2.<br><br>
+<a  href="files/problems/official_4.1.2.png" target=_blank><img src="files/problems/official_4.1.2.png" width=450></a><br><br>
+P3.<br><br>
+<a  href="files/problems/official_4.1.3.png" target=_blank><img src="files/problems/official_4.1.3.png" width=450></a><br><br>
+P4.<br><br>
+<a  href="files/problems/official_4.1.4.png" target=_blank><img src="files/problems/official_4.1.4.png" width=450></a><br><br>
+P5.<br><br>
+<a  href="files/problems/official_4.1.5.png" target=_blank><img src="files/problems/official_4.1.5.png" width=450></a><br><br>
+P6.<br><br>
+<a  href="files/problems/official_4.1.6.png" target=_blank><img src="files/problems/official_4.1.6.png" width=450></a><br><br>
+P7.<br><br>
+<a  href="files/problems/official_4.1.7.png" target=_blank><img src="files/problems/official_4.1.7.png" width=450></a><br><br>
+
+
+
+<h2><a href="#last" onclick="toggle('solutions8')">Solutions</a></h2>
+    <ul id="solutions8" style="display:none"><!solutions8>
+
+<b>P2.</b> \(AC=2\sqrt{2}N, AB=-1N, CB=-1N, CD=1N,\)\( BD=-\sqrt{2}N, CE=\sqrt{2}N, ED=-1N\)     <br><br>
+<b>P3.</b> \(AB=4t, AF=-5t, BF=-2t, BC=8t,\)\( BE=-5t, FE=-5t, EC=-5t, EG=-5t,\)\( CG=-2t, CD=4t, GD=-5t\)     <br><br>
+<b>P4.</b> \(AB=-3t, BD=0t, AC=4t, AD=-5t,\)\( DC=0t, DF=-4t, DE=0t, CE=4t,\)\( FE=-3t, FH=-4t, EG=0t, EH=5t,\)\( HG=-3t\)     <br><br>
+<b>P5.</b> \(AB=-1t, AF=-1t, AD=\sqrt{2}t, FD=\sqrt{2}t,\)\( DB=\sqrt{2}t, DG=\sqrt{2}t, FG=-1t, BC=-1t,\)\( BE=-\sqrt{2}t, GE=-\sqrt{2}t, EC=-\sqrt{2}t, \)\(EH=-\sqrt{2}t, GH=1t, \)     <br><br>
+<b>P6.</b> \(AB=2.4t, AD=-2.6t, BD=-4.8t, DE=-3.4t,\)\( BC=0t, EF=0t, CF=-2t, BF=5.4t,\)\( DF=-3.4t \)     <br><br>
+<b>P7.</b> \(AB=4t, AH\simeq-5.7t, HB=2t, HG=-6t,\)\( HC\simeq 2.8t, BC=4t, GC=0t, GF=-6t,\)\( CF\simeq 1.4t CD=5t, FD=4t,\)\( FE\simeq-7.1t, DE=5t \)     <br><br>
+</ul><!solutions8>
+</ul><!problems8>
+
+</ul><!root>
+<!Code to expand/collapse branches>
+<script type="text/javascript">
+function toggle(id) {
+  var e = document.getElementById(id);
+  if (e.style.display == '')
+    e.style.display = 'none';
+  else
+    e.style.display = '';}
+function toggle2(id, link) {
+  var e = document.getElementById(id);
+  if (e.style.display == '') {
+    e.style.display = 'none';
+    link.innerHTML = 'Expand';
+  } else {
+    e.style.display = '';
+    link.innerHTML = 'Collapse';  }}
+</script>
+</body>
+</html>
