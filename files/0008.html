@@ -57,6 +57,9 @@ joints, and it consists in deleting all the members, even though we need to keep
 
 <a  href="files/figures/102.png" target=_blank><img src="files/figures/102.png" width=450></a><br><br>
 
+A final advice: if you find a truss that is made of two perfectly symmetrical parts (including the suffered forces),
+you can solve just one half and write the other half by reflecting all the forces over the line of symmetry.<br><br>
+
 With this in mind, you are ready for our full example development. Pay attention to all the details before
 attempting to solve problems on your own.<br><br>
 
@@ -170,7 +173,37 @@ important part: if you switch the order of the letters, you add a minus sign. Th
 
 Notice that we have written that CD=0. Why is so? One of the main difficulties in trusses is simply to look for null members by eye inspection. 
 In fact, you don't need to see it. If you calculate the sum of forces and solve the system, you will arrive to the correct result. However, it
-is important to learn to see these null members in order to speed up the solving process.ETC<br><br>
+is important to learn to see these null members in order to speed up the solving process. <br><br>
+
+A first step to learn detecting null members is to notice that, when a joint does not suffer external forces, two opposing and aligned
+members must suffer the same force. So, clearly the force suffered by members AC and CF must be the same. However, FE and EB cannot
+suffer the same force due to the applied external force in E. <br><br>
+
+Now, whenever we detect a joint (free from external forces) binding two aligned members plus a third non-aligned member, the third
+member lacks a fourth member aligned with it! But it should be suffering the same force as this non-existent member, so the
+only choice is that the third member suffers zero force. Notice that joint C has a third member exactly under these conditions, 
+so CD member is null. However, the external force suffered by E forbids to say that ED is null as well. 	<br><br>
+
+Another interesting case is when a joint only connects two non-aligned members. If such joint does not suffer any external force
+at all (remember that reactions are external forces), then the two members are null, since both of them lack their aligned partner. <br><br>
+
+If the joint binding two non-aligned members is suffering an external force parallel to one of the members, that member is not null,
+but the other is. The first member, moreover, will suffer a force equal to that external force!<br><br>
+
+Let's summarize again these rules because it is important:<br><br>
+
+-Look for joints binding only two members. If the two members are not aligned and the joint is not suffering an external force, both members are null.
+If they are not aligned but the joint suffers an external force parallel to one member, this member suffers the same force as the external force
+and the other member is null. If the two members are aligned and the joint does not suffer an external force, the force suffered by the two members is equal.<br><br>
+
+-Look for joints binding three members: two aligned and one not-aligned. If the joint does not suffers any external force, or it suffers an external force
+along the two aligned members, the non-aligned member is null. <br><br>
+
+-There can be more complex null-members, but don't worry: if you don't find them, the method should tell you it is zero. <br><br>
+
+-If a joint binds four members, two mutually aligned and two also mutually aligned, each mutual group suffers the same force. If there is an external force
+suffered by the joint that goes parallel to one aligned pair, the other pair still holds the same mutual force. <br><br>
+
 
 The resolution of this node is clear. We can begin by whatever direction we prefer, and trigonometry will not be necessary. By simple
 eye inspection it becomes clear that \( CF_x=\frac{-40}{3}\) and \(CF_y=-10\). Then, we can draw the final version of the joint as <br><br>
